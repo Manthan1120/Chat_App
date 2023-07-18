@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--Signin Page-->
         <scene sceneID="pKB-wL-hob">
             <objects>
-                <viewController storyboardIdentifier="Login_Page" id="efq-uq-7DD" customClass="Signin_Page" customModule="Chat_Buddy_MK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login_Page" id="efq-uq-7DD" customClass="Signin_Page" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0X5-M6-Oqz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,7 +156,7 @@
         <!--Sing Up-->
         <scene sceneID="KlB-bT-aX7">
             <objects>
-                <viewController storyboardIdentifier="Sing_Up" id="MOy-Zx-N40" customClass="Sing_Up" customModule="Chat_Buddy_MK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Sing_Up" id="MOy-Zx-N40" customClass="Sing_Up" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LlP-J8-sm0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,11 +281,29 @@
             </objects>
             <point key="canvasLocation" x="2388.5496183206105" y="-27.464788732394368"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lUo-qY-1RN">
+            <objects>
+                <viewController id="e4U-Z9-mFn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DxA-yt-QfC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="K5V-kF-P6X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vba-65-zgE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3056" y="-27"/>
+        </scene>
     </scenes>
     <resources>
         <image name="facebook" width="24" height="24"/>
         <image name="google" width="24" height="24"/>
         <image name="twitter" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
