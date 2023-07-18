@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="2673" y="660"/>
         </scene>
-        <!--Sing Up-->
+        <!--Sing In Page-->
         <scene sceneID="KlB-bT-aX7">
             <objects>
-                <viewController storyboardIdentifier="Sing_Up" id="MOy-Zx-N40" customClass="Sing_Up" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sing_In_Page" id="MOy-Zx-N40" customClass="sing_In_Page" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LlP-J8-sm0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,6 +276,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signInButtonAction:" destination="MOy-Zx-N40" eventType="touchUpInside" id="lDK-bK-I9z"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Or sign up with -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Daz-JC-LjI">
                                 <rect key="frame" x="20" y="579" width="353" height="35"/>
@@ -295,6 +298,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="facebook"/>
+                                <connections>
+                                    <action selector="facbookButtonAction:" destination="MOy-Zx-N40" eventType="touchUpInside" id="fGp-zg-1h0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blb-Ei-7GY">
                                 <rect key="frame" x="262" y="634" width="111" height="45"/>
@@ -305,6 +311,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="twitter"/>
+                                <connections>
+                                    <action selector="twiterButtonAction:" destination="MOy-Zx-N40" eventType="touchUpInside" id="vgW-kv-fal"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lR-AX-Fle">
                                 <rect key="frame" x="20" y="634" width="111" height="45"/>
@@ -315,6 +324,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="google"/>
+                                <connections>
+                                    <action selector="googleButtonAction:" destination="MOy-Zx-N40" eventType="touchUpInside" id="nP4-aC-pVf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fhe-RU-3em"/>
@@ -348,6 +360,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YSf-4P-UUC"/>
+                    <connections>
+                        <outlet property="confirmPasswordOutlate" destination="eaw-Bp-emp" id="rOS-Db-dKo"/>
+                        <outlet property="emailOutlate" destination="z8M-hz-mu6" id="6wM-rb-ZKY"/>
+                        <outlet property="facbookOutlate" destination="bMh-J5-ked" id="mKb-jo-vmK"/>
+                        <outlet property="googleOutlate" destination="0lR-AX-Fle" id="q21-4E-mt5"/>
+                        <outlet property="passwordOutlate" destination="ZFe-Vm-Ua4" id="DVC-6A-r21"/>
+                        <outlet property="singUpButtonOutlate" destination="DRL-qc-LYV" id="IAQ-vk-Eqh"/>
+                        <outlet property="twiterOutlate" destination="Blb-Ei-7GY" id="tCz-IM-31e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUY-Gj-AqZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
