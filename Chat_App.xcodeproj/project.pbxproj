@@ -17,6 +17,7 @@
 		DE5112DE2A66719C00014723 /* Chat_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112DD2A66719C00014723 /* Chat_AppTests.swift */; };
 		DE5112E82A66719C00014723 /* Chat_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112E72A66719C00014723 /* Chat_AppUITests.swift */; };
 		DE5112EA2A66719C00014723 /* Chat_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112E92A66719C00014723 /* Chat_AppUITestsLaunchTests.swift */; };
+		DE5112F72A66737300014723 /* Signin_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112F62A66737300014723 /* Signin_Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DE5112E32A66719C00014723 /* Chat_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chat_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5112E72A66719C00014723 /* Chat_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat_AppUITests.swift; sourceTree = "<group>"; };
 		DE5112E92A66719C00014723 /* Chat_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DE5112F62A66737300014723 /* Signin_Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin_Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				DE5112C32A66719B00014723 /* AppDelegate.swift */,
 				DE5112C52A66719B00014723 /* SceneDelegate.swift */,
 				DE5112C72A66719B00014723 /* ViewController.swift */,
+				DE5112F62A66737300014723 /* Signin_Page.swift */,
 				DE5112C92A66719B00014723 /* Main.storyboard */,
 				DE5112CF2A66719C00014723 /* Assets.xcassets */,
 				DE5112D12A66719C00014723 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE5112C82A66719B00014723 /* ViewController.swift in Sources */,
+				DE5112F72A66737300014723 /* Signin_Page.swift in Sources */,
 				DE5112CE2A66719B00014723 /* Chat_App.xcdatamodeld in Sources */,
 				DE5112C42A66719B00014723 /* AppDelegate.swift in Sources */,
 				DE5112C62A66719B00014723 /* SceneDelegate.swift in Sources */,
