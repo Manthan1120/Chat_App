@@ -2,7 +2,7 @@
 
 import UIKit
 
-class sing_In_Page: UIViewController {
+class SignUpPage: UIViewController {
     
     @IBOutlet weak var emailOutlate: UITextField!
     @IBOutlet weak var passwordOutlate:

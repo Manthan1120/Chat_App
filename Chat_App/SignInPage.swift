@@ -2,7 +2,7 @@
 
 import UIKit
 
-class Signin_Page: UIViewController {
+class SignInPage: UIViewController {
    
     @IBOutlet weak var passwordOutlet: UITextField!
     @IBOutlet weak var emailOutlet: UITextField!
