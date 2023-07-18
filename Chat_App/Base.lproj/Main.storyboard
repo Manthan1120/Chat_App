@@ -112,6 +112,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="google"/>
+                                <connections>
+                                    <action selector="googleButtonAction:" destination="efq-uq-7DD" eventType="touchUpInside" id="V4T-tl-0F4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HT-pN-aHt">
                                 <rect key="frame" x="262" y="559" width="111" height="45"/>
@@ -122,6 +125,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="twitter"/>
+                                <connections>
+                                    <action selector="twitterButtonAction:" destination="efq-uq-7DD" eventType="touchUpInside" id="vrO-VC-6tn"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqS-D9-DV4">
                                 <rect key="frame" x="80" y="734" width="165" height="35"/>
@@ -144,6 +150,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                     <color key="baseForegroundColor" red="0.0" green="0.29418408629999998" blue="0.61855670100000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signInButtonAction:" destination="efq-uq-7DD" eventType="touchUpInside" id="a96-E2-ibh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgb-nI-Bqx">
                                 <rect key="frame" x="141" y="559" width="111" height="45"/>
@@ -154,6 +163,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="facebook"/>
+                                <connections>
+                                    <action selector="facebookButtonAction:" destination="efq-uq-7DD" eventType="touchUpInside" id="CIv-5n-T5U"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U9P-Bv-ItY"/>
@@ -189,6 +201,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zJK-VX-lom"/>
+                    <connections>
+                        <outlet property="emailOutlet" destination="qI4-MQ-cXH" id="Tds-tl-uYk"/>
+                        <outlet property="faceBookButtonOutlet" destination="mgb-nI-Bqx" id="ebH-31-07a"/>
+                        <outlet property="googleButtonOutlet" destination="SQj-Do-rC9" id="Nic-kS-ZlV"/>
+                        <outlet property="passwordOutlet" destination="hiV-X6-W3e" id="VMd-v4-UFi"/>
+                        <outlet property="signInButtonOutlet" destination="FPg-ah-Usq" id="fl9-Wy-QcY"/>
+                        <outlet property="twitterButtonOutlet" destination="9HT-pN-aHt" id="5XL-CE-rj4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6X2-Jz-CBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
