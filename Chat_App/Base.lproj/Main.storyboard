@@ -52,6 +52,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="MOy-Zx-N40" kind="push" id="5hV-OE-rvK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Or Sign in with -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izT-Sh-wvz">
                                 <rect key="frame" x="20" y="539" width="353" height="35"/>
@@ -345,7 +348,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dk7-gS-9WL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="FHX-TU-PLS" kind="relationship" relationship="viewControllers" id="19M-Cl-pu7"/>
@@ -356,7 +361,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2BE-zX-jgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4073" y="-27"/>
+            <point key="canvasLocation" x="4085" y="-27"/>
         </scene>
         <!--User Page-->
         <scene sceneID="KuT-yZ-VDK">
@@ -366,9 +371,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bbo-AC-26T"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" selectedImage="massage" id="b4n-YD-zDA"/>
+                    <tabBarItem key="tabBarItem" title="" image="massage" selectedImage="massage" id="b4n-YD-zDA">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="wG9-Gy-Dsf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWu-ms-kPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -383,9 +390,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="WEI-sF-qle"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" selectedImage="sarch" id="Ybm-Cc-tLe"/>
+                    <tabBarItem key="tabBarItem" title="" image="sarch" selectedImage="sarch" id="Ybm-Cc-tLe">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="asL-24-W0Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSx-5G-L1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -400,9 +409,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Pdw-Gc-LU5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" selectedImage="person" id="SDn-Wm-eUE"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" selectedImage="person" id="SDn-Wm-eUE">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="zzH-3b-sBb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fw-HW-xzG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -417,9 +428,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6xT-BY-ANY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" selectedImage="settings" id="zai-jC-LhB"/>
+                    <tabBarItem key="tabBarItem" title="" image="settings" selectedImage="settings" id="zai-jC-LhB">
+                        <color key="badgeColor" systemColor="systemGray6Color"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="I8Y-Lf-aLn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8T-rr-MB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -436,7 +449,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="efq-uq-7DD" kind="relationship" relationship="rootViewController" id="emh-7z-pae"/>
+                        <segue destination="efq-uq-7DD" kind="relationship" relationship="rootViewController" id="yPj-Rh-zJj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxV-gV-BFB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -452,9 +465,6 @@
         <image name="sarch" width="24" height="24"/>
         <image name="settings" width="24" height="24"/>
         <image name="twitter" width="24" height="24"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
