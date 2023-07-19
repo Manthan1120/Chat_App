@@ -460,9 +460,9 @@
     <resources>
         <image name="facebook" width="24" height="24"/>
         <image name="google" width="24" height="24"/>
-        <image name="massage" width="24" height="21"/>
+        <image name="massage" width="32" height="32"/>
         <image name="person" width="24" height="24"/>
-        <image name="sarch" width="24" height="24"/>
+        <image name="sarch" width="32" height="32"/>
         <image name="settings" width="24" height="24"/>
         <image name="twitter" width="24" height="24"/>
         <systemColor name="systemGray2Color">
