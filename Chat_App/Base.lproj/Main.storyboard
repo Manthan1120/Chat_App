@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Foz-gk-ky0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -469,17 +469,72 @@
                     <view key="view" contentMode="scaleToFill" id="LAM-IS-EMH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cMP-Ro-vJT">
+                                <rect key="frame" x="0.0" y="102" width="393" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="76" id="M4T-Mv-JWh" customClass="settingPageCell" customModule="Chat_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M4T-Mv-JWh" id="IPQ-Bj-T51">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWb-Hs-UnT">
+                                                    <rect key="frame" x="10" y="16" width="373" height="44"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="xWb-Hs-UnT" secondAttribute="trailing" constant="10" id="kJh-WF-Q9M"/>
+                                                <constraint firstAttribute="bottom" secondItem="xWb-Hs-UnT" secondAttribute="bottom" constant="16" id="sdc-Kr-AoB"/>
+                                                <constraint firstItem="xWb-Hs-UnT" firstAttribute="top" secondItem="IPQ-Bj-T51" secondAttribute="top" constant="16" id="ygg-4W-59x"/>
+                                                <constraint firstItem="xWb-Hs-UnT" firstAttribute="leading" secondItem="IPQ-Bj-T51" secondAttribute="leading" constant="10" id="zza-oj-Ra4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="LableFOrSetting" destination="xWb-Hs-UnT" id="Jfa-Sg-KfT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="uGE-bo-ugq" id="4AT-jb-Wf4"/>
+                                    <outlet property="delegate" destination="uGE-bo-ugq" id="1Ua-10-70L"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOx-Ox-Ehd">
+                                <rect key="frame" x="16" y="59" width="361" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6xT-BY-ANY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="cMP-Ro-vJT" firstAttribute="top" secondItem="6xT-BY-ANY" secondAttribute="top" constant="43" id="7ah-UT-TnU"/>
+                            <constraint firstItem="cMP-Ro-vJT" firstAttribute="leading" secondItem="6xT-BY-ANY" secondAttribute="leading" id="8uc-nO-Zpu"/>
+                            <constraint firstItem="VOx-Ox-Ehd" firstAttribute="leading" secondItem="6xT-BY-ANY" secondAttribute="leading" constant="16" id="Hj3-J8-65T"/>
+                            <constraint firstItem="VOx-Ox-Ehd" firstAttribute="top" secondItem="6xT-BY-ANY" secondAttribute="top" id="h8P-Kd-Ffc"/>
+                            <constraint firstItem="6xT-BY-ANY" firstAttribute="trailing" secondItem="VOx-Ox-Ehd" secondAttribute="trailing" constant="16" id="mWj-KN-4qK"/>
+                            <constraint firstItem="6xT-BY-ANY" firstAttribute="bottom" secondItem="cMP-Ro-vJT" secondAttribute="bottom" id="oQo-Y8-p5f"/>
+                            <constraint firstItem="6xT-BY-ANY" firstAttribute="trailing" secondItem="cMP-Ro-vJT" secondAttribute="trailing" id="pPm-Wj-QYz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="settings" selectedImage="settings" id="zai-jC-LhB">
                         <color key="badgeColor" systemColor="systemGray6Color"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="I8Y-Lf-aLn"/>
+                    <connections>
+                        <outlet property="tableViewForSetting" destination="cMP-Ro-vJT" id="iGC-1Z-5jH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8T-rr-MB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5077" y="1250"/>
+            <point key="canvasLocation" x="5075.5725190839694" y="1250"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dfi-vM-jdI">
