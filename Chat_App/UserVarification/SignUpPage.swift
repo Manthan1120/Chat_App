@@ -5,8 +5,7 @@ import UIKit
 class SignUpPage: UIViewController {
     
     @IBOutlet weak var emailOutlate: UITextField!
-    @IBOutlet weak var passwordOutlate:
-    UITextField!
+    @IBOutlet weak var passwordOutlate:UITextField!
     @IBOutlet weak var confirmPasswordOutlate: UITextField!
     @IBOutlet weak var singUpButtonOutlate: UIButton!
     @IBOutlet weak var googleOutlate: UIButton!
