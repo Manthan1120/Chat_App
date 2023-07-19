@@ -18,6 +18,8 @@ class SignUpPage: UIViewController {
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(identifier: "TabBar") as! TabBar
+        navigationController?.pushViewController(navigation, animated: true)
     }
     
     @IBAction func googleButtonAction(_ sender: Any) {
