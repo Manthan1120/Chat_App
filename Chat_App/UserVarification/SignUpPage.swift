@@ -18,7 +18,7 @@ class SignUpPage: UIViewController {
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
-        let navigation = storyboard?.instantiateViewController(identifier: "TabBar") as! TabBar
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "TabBar") as! TabBar
         navigationController?.pushViewController(navigation, animated: true)
     }
     
