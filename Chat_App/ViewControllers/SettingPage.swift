@@ -94,6 +94,7 @@ class SettingPage: UIViewController {
         countryButton.layer.masksToBounds = false
         
     }
+    
 }
 
     

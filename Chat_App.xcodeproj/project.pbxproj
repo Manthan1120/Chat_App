@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA2259602A67B94D00E48D06 /* settingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22595F2A67B94D00E48D06 /* settingPageCell.swift */; };
+		DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBF0A22A691D16004B7E10 /* ForgotPage.swift */; };
 		DE1B31A52A67CA1800991D57 /* EditableSetinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B31A42A67CA1800991D57 /* EditableSetinPage.swift */; };
 		DE4D4BDF2A6799FE00539859 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BDE2A6799FE00539859 /* TabBar.swift */; };
 		DE4D4BE12A679A4D00539859 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BE02A679A4D00539859 /* SearchPage.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		DA22595F2A67B94D00E48D06 /* settingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPageCell.swift; sourceTree = "<group>"; };
+		DADBF0A22A691D16004B7E10 /* ForgotPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPage.swift; sourceTree = "<group>"; };
 		DE1B31A42A67CA1800991D57 /* EditableSetinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableSetinPage.swift; sourceTree = "<group>"; };
 		DE4D4BDE2A6799FE00539859 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		DE4D4BE02A679A4D00539859 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				DEBBC6E52A690CBD00531235 /* CellFile */,
 				DE4D4BE82A679CB500539859 /* ViewControllers */,
 				DE5112C92A66719B00014723 /* Main.storyboard */,
+				DADBF0A22A691D16004B7E10 /* ForgotPage.swift */,
 				DE4D4BDE2A6799FE00539859 /* TabBar.swift */,
 				DE5112CF2A66719C00014723 /* Assets.xcassets */,
 				DE5112D12A66719C00014723 /* LaunchScreen.storyboard */,
@@ -313,6 +316,7 @@
 				DE4D4BE72A679BAF00539859 /* SettingPage.swift in Sources */,
 				DE5112F72A66737300014723 /* SignInPage.swift in Sources */,
 				DA2259602A67B94D00E48D06 /* settingPageCell.swift in Sources */,
+				DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */,
 				DE1B31A52A67CA1800991D57 /* EditableSetinPage.swift in Sources */,
 				DE5112CE2A66719B00014723 /* Chat_App.xcdatamodeld in Sources */,
 				DE4D4BDF2A6799FE00539859 /* TabBar.swift in Sources */,

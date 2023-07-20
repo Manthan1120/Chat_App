@@ -76,4 +76,8 @@ class SignInPage: UIViewController {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "SignUpPage") as! SignUpPage
         navigationController?.pushViewController(navigation, animated: true)
     }
+    @IBAction func ForGotPage(_ sender: UIButton) {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "ForgotPage") as! ForgotPage
+        navigationController?.pushViewController(navigation, animated: true)
+    }
 }
