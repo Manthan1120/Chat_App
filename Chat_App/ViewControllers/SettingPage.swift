@@ -5,13 +5,95 @@ import UIKit
 class SettingPage: UIViewController {
 
    
+    @IBOutlet weak var editAccountButton: UIButton!
+    @IBOutlet weak var signOutButton: UIButton!
+    @IBOutlet weak var feedBackButton: UIButton!
+    @IBOutlet weak var changePasswordButton: UIButton!
+    @IBOutlet weak var switchAccountButton: UIButton!
+    @IBOutlet weak var aboutButton: UIButton!
+    @IBOutlet weak var languageButton: UIButton!
+    @IBOutlet weak var notificationButton: UIButton!
+    @IBOutlet weak var countryButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        set()
     }
-    //manthan
-
+   
+    func set() {
+        editAccountButton.layer.backgroundColor = UIColor.white.cgColor
+        editAccountButton.layer.cornerRadius = 9
+        editAccountButton.layer.shadowColor = UIColor.systemGray4.cgColor
+        editAccountButton.layer.shadowRadius = 4.0
+        editAccountButton.layer.shadowOpacity = 4.4
+        editAccountButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        editAccountButton.layer.masksToBounds = false
+        
+        signOutButton.layer.backgroundColor = UIColor.white.cgColor
+        signOutButton.layer.cornerRadius = 9
+        signOutButton.layer.shadowColor = UIColor.systemGray4.cgColor
+        signOutButton.layer.shadowRadius = 4.0
+        signOutButton.layer.shadowOpacity = 4.4
+        signOutButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        signOutButton.layer.masksToBounds = false
+        
+        feedBackButton.layer.backgroundColor = UIColor.white.cgColor
+        feedBackButton.layer.cornerRadius = 9
+        feedBackButton.layer.shadowColor = UIColor.systemGray4.cgColor
+        feedBackButton.layer.shadowRadius = 4.0
+        feedBackButton.layer.shadowOpacity = 4.4
+        feedBackButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        feedBackButton.layer.masksToBounds = false
+        
+        changePasswordButton.layer.backgroundColor = UIColor.white.cgColor
+        changePasswordButton.layer.cornerRadius = 9
+        changePasswordButton.layer.shadowColor = UIColor.systemGray4.cgColor
+        changePasswordButton.layer.shadowRadius = 4.0
+        changePasswordButton.layer.shadowOpacity = 4.4
+        changePasswordButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        changePasswordButton.layer.masksToBounds = false
+        
+        switchAccountButton.layer.backgroundColor = UIColor.white.cgColor
+        switchAccountButton.layer.cornerRadius = 9
+        switchAccountButton.layer.shadowColor = UIColor.systemGray4.cgColor
+        switchAccountButton.layer.shadowRadius = 4.0
+        switchAccountButton.layer.shadowOpacity = 4.4
+        switchAccountButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        switchAccountButton.layer.masksToBounds = false
+        
+        aboutButton.layer.backgroundColor = UIColor.white.cgColor
+        aboutButton.layer.cornerRadius = 9
+        aboutButton.layer.shadowColor = UIColor.systemGray4.cgColor
+        aboutButton.layer.shadowRadius = 4.0
+        aboutButton.layer.shadowOpacity = 4.4
+        aboutButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        aboutButton.layer.masksToBounds = false
+        
+        languageButton.layer.backgroundColor = UIColor.white.cgColor
+        languageButton.layer.cornerRadius = 9
+        languageButton.layer.shadowColor = UIColor.systemGray4.cgColor
+        languageButton.layer.shadowRadius = 4.0
+        languageButton.layer.shadowOpacity = 4.4
+        languageButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        languageButton.layer.masksToBounds = false
+        
+        notificationButton.layer.backgroundColor = UIColor.white.cgColor
+        notificationButton.layer.cornerRadius = 9
+        notificationButton.layer.shadowColor = UIColor.systemGray4.cgColor
+        notificationButton.layer.shadowRadius = 4.0
+        notificationButton.layer.shadowOpacity = 4.4
+        notificationButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        notificationButton.layer.masksToBounds = false
+        
+        countryButton.layer.backgroundColor = UIColor.white.cgColor
+        countryButton.layer.cornerRadius = 9
+        countryButton.layer.shadowColor = UIColor.systemGray4.cgColor
+        countryButton.layer.shadowRadius = 4.0
+        countryButton.layer.shadowOpacity = 4.4
+        countryButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        countryButton.layer.masksToBounds = false
+        
+    }
 }
 
     

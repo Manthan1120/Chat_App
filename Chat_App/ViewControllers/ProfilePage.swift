@@ -51,5 +51,9 @@ class ProfilePage: UIViewController {
         editButtonOutlet.layer.masksToBounds = false
     }
     
-
+    @IBAction func editButtonAction(_ sender: Any) {
+        let navigate = storyboard?.instantiateViewController(withIdentifier: "EditableSetinPage") as! EditableSetinPage
+        navigationController?.pushViewController(navigate, animated: true)
+    }
+    
 }
