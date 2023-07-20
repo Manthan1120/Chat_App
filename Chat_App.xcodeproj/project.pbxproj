@@ -100,6 +100,7 @@
 				DE4D4BE62A679BAF00539859 /* SettingPage.swift */,
 				DE4D4BE22A679AB300539859 /* ProfilePage.swift */,
 				DE4D4BE42A679B6F00539859 /* MainPage.swift */,
+				DE1B31A42A67CA1800991D57 /* EditableSetinPage.swift */,
 				DE4D4BE02A679A4D00539859 /* SearchPage.swift */,
 			);
 			path = ViewControllers;
@@ -117,8 +118,6 @@
 		DE5112B72A66719B00014723 = {
 			isa = PBXGroup;
 			children = (
-				DE1B31A42A67CA1800991D57 /* EditableSetinPage.swift */,
-				DA22595F2A67B94D00E48D06 /* settingPageCell.swift */,
 				DE5112C22A66719B00014723 /* Chat_App */,
 				DE5112DC2A66719C00014723 /* Chat_AppTests */,
 				DE5112E62A66719C00014723 /* Chat_AppUITests */,
@@ -142,6 +141,7 @@
 				DE5112C32A66719B00014723 /* AppDelegate.swift */,
 				DE5112C52A66719B00014723 /* SceneDelegate.swift */,
 				DE4D4BE92A679CD200539859 /* UserVarification */,
+				DEBBC6E52A690CBD00531235 /* CellFile */,
 				DE4D4BE82A679CB500539859 /* ViewControllers */,
 				DE5112C92A66719B00014723 /* Main.storyboard */,
 				DE4D4BDE2A6799FE00539859 /* TabBar.swift */,
@@ -168,6 +168,14 @@
 				DE5112E92A66719C00014723 /* Chat_AppUITestsLaunchTests.swift */,
 			);
 			path = Chat_AppUITests;
+			sourceTree = "<group>";
+		};
+		DEBBC6E52A690CBD00531235 /* CellFile */ = {
+			isa = PBXGroup;
+			children = (
+				DA22595F2A67B94D00E48D06 /* settingPageCell.swift */,
+			);
+			path = CellFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

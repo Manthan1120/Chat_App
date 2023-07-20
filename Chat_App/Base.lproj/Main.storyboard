@@ -366,7 +366,7 @@
         <!--Main Page-->
         <scene sceneID="KuT-yZ-VDK">
             <objects>
-                <viewController storyboardIdentifier="UserPage" id="FHX-TU-PLS" customClass="MainPage" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainPage" id="FHX-TU-PLS" customClass="MainPage" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="acs-3g-H17">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,7 +385,7 @@
         <!--Search Page-->
         <scene sceneID="Ri2-TF-k8P">
             <objects>
-                <viewController storyboardIdentifier="HomePage" id="nGf-DY-265" customClass="SearchPage" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchPage" id="nGf-DY-265" customClass="SearchPage" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R2f-VG-83B">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -404,7 +404,7 @@
         <!--Profile Page-->
         <scene sceneID="OGg-SB-cRl">
             <objects>
-                <viewController storyboardIdentifier="SearchPage" id="6e1-Ks-hEv" customClass="ProfilePage" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfilePage" id="6e1-Ks-hEv" customClass="ProfilePage" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="au3-p8-bV2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -986,21 +986,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8T-rr-MB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5075.5725190839694" y="1250"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="nfE-LF-opc">
-            <objects>
-                <viewController id="dXg-if-xGQ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kF2-QB-uT5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="AoP-dF-R7t"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kma-wf-Evr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5739" y="1260"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dfi-vM-jdI">

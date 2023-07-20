@@ -23,7 +23,7 @@ class ProfilePage: UIViewController {
         super.viewDidLoad()
         
         set()
-       
+       //profile
     }
     
     func set() {
