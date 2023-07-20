@@ -10,7 +10,7 @@ class SettingPage: UIViewController {
         super.viewDidLoad()
 
     }
-    
+    //manthan
 
 }
 
