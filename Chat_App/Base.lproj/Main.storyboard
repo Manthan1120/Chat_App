@@ -1130,13 +1130,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter Your E-mail Address To reseve a Varification Code " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSK-cA-rjr">
-                                <rect key="frame" x="60" y="393" width="273" height="65.333333333333314"/>
+                                <rect key="frame" x="60" y="393" width="273" height="40.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" red="0.23390828829999999" green="0.23456878119999999" blue="0.27502818940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YJ-rA-5XS">
-                                <rect key="frame" x="20" y="513.33333333333337" width="353" height="35"/>
+                                <rect key="frame" x="20" y="478.66666666666669" width="353" height="35.000000000000057"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="oMs-81-08F"/>
                                 </constraints>
@@ -1145,7 +1145,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNW-1E-BQx">
-                                <rect key="frame" x="20" y="548.33333333333337" width="353" height="50"/>
+                                <rect key="frame" x="20" y="513.66666666666663" width="353" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ZHB-Tb-HHz"/>
                                 </constraints>
@@ -1153,26 +1153,15 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbI-OF-VI3">
-                                <rect key="frame" x="60" y="718" width="273" height="50"/>
+                                <rect key="frame" x="60" y="713.66666666666663" width="273" height="50"/>
                                 <color key="backgroundColor" red="0.092759154740000002" green="0.15807771679999999" blue="0.42795485259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Qpr-Ya-ATp"/>
+                                    <constraint firstAttribute="height" constant="50" id="b9p-7k-gZw"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Send">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Voj-IC-GhQ">
-                                <rect key="frame" x="114" y="678.33333333333337" width="165" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="JnW-UA-ZrU"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Try Another Way">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
-                                    <color key="baseForegroundColor" systemColor="systemGray2Color"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
@@ -1181,26 +1170,22 @@
                         <constraints>
                             <constraint firstItem="qeD-9W-6Z2" firstAttribute="top" secondItem="no4-tf-5aI" secondAttribute="top" id="1Nl-h6-gwy"/>
                             <constraint firstItem="6dc-gU-MAh" firstAttribute="leading" secondItem="qeD-9W-6Z2" secondAttribute="trailing" constant="52" id="8mB-Wj-UMx"/>
-                            <constraint firstItem="no4-tf-5aI" firstAttribute="bottom" secondItem="SbI-OF-VI3" secondAttribute="bottom" constant="50" id="CKG-yF-ClG"/>
+                            <constraint firstItem="SbI-OF-VI3" firstAttribute="top" secondItem="UNW-1E-BQx" secondAttribute="bottom" constant="150" id="BHZ-Zg-LIu"/>
+                            <constraint firstItem="no4-tf-5aI" firstAttribute="trailing" secondItem="SbI-OF-VI3" secondAttribute="trailing" constant="60" id="EbI-Nx-BCj"/>
                             <constraint firstItem="UNW-1E-BQx" firstAttribute="top" secondItem="2YJ-rA-5XS" secondAttribute="bottom" id="Fcv-p0-Kdh"/>
                             <constraint firstItem="no4-tf-5aI" firstAttribute="trailing" secondItem="oSK-cA-rjr" secondAttribute="trailing" constant="60" id="Jye-tg-eZ4"/>
-                            <constraint firstItem="SbI-OF-VI3" firstAttribute="leading" secondItem="no4-tf-5aI" secondAttribute="leading" constant="60" id="L0Y-Uj-06b"/>
                             <constraint firstItem="oSK-cA-rjr" firstAttribute="top" secondItem="W6y-Fi-36z" secondAttribute="bottom" constant="38" id="L43-tL-sRm"/>
                             <constraint firstItem="2YJ-rA-5XS" firstAttribute="leading" secondItem="no4-tf-5aI" secondAttribute="leading" constant="20" id="MyC-mu-rp1"/>
-                            <constraint firstItem="2YJ-rA-5XS" firstAttribute="top" secondItem="oSK-cA-rjr" secondAttribute="bottom" constant="55" id="TIl-Tn-Lyk"/>
-                            <constraint firstItem="SbI-OF-VI3" firstAttribute="top" secondItem="Voj-IC-GhQ" secondAttribute="bottom" constant="4.6666666666666288" id="TbS-6G-FIa"/>
+                            <constraint firstItem="2YJ-rA-5XS" firstAttribute="top" secondItem="oSK-cA-rjr" secondAttribute="bottom" constant="45" id="TIl-Tn-Lyk"/>
                             <constraint firstItem="6dc-gU-MAh" firstAttribute="top" secondItem="no4-tf-5aI" secondAttribute="top" id="Ufw-bM-RGV"/>
                             <constraint firstItem="W6y-Fi-36z" firstAttribute="leading" secondItem="no4-tf-5aI" secondAttribute="leading" constant="86" id="WlM-px-1am"/>
-                            <constraint firstItem="Voj-IC-GhQ" firstAttribute="top" secondItem="UNW-1E-BQx" secondAttribute="bottom" constant="80" id="XV6-T9-aSe"/>
                             <constraint firstItem="qeD-9W-6Z2" firstAttribute="leading" secondItem="no4-tf-5aI" secondAttribute="leading" constant="16" id="Y4a-uK-v5Q"/>
-                            <constraint firstItem="no4-tf-5aI" firstAttribute="trailing" secondItem="SbI-OF-VI3" secondAttribute="trailing" constant="60" id="Y73-I8-q89"/>
-                            <constraint firstItem="no4-tf-5aI" firstAttribute="trailing" secondItem="Voj-IC-GhQ" secondAttribute="trailing" constant="114" id="YJI-63-O0K"/>
                             <constraint firstItem="no4-tf-5aI" firstAttribute="trailing" secondItem="2YJ-rA-5XS" secondAttribute="trailing" constant="20" id="YzO-ed-9Iq"/>
                             <constraint firstItem="no4-tf-5aI" firstAttribute="trailing" secondItem="W6y-Fi-36z" secondAttribute="trailing" constant="86" id="Z3n-fQ-J7N"/>
+                            <constraint firstItem="SbI-OF-VI3" firstAttribute="leading" secondItem="no4-tf-5aI" secondAttribute="leading" constant="60" id="ciW-nv-k8f"/>
                             <constraint firstItem="6dc-gU-MAh" firstAttribute="leading" secondItem="qeD-9W-6Z2" secondAttribute="trailing" constant="52" id="hl6-bi-I1S"/>
                             <constraint firstItem="no4-tf-5aI" firstAttribute="trailing" secondItem="UNW-1E-BQx" secondAttribute="trailing" constant="20" id="jMA-SC-qzf"/>
                             <constraint firstItem="W6y-Fi-36z" firstAttribute="top" secondItem="6dc-gU-MAh" secondAttribute="bottom" constant="26" id="mrU-ij-ovO"/>
-                            <constraint firstItem="Voj-IC-GhQ" firstAttribute="leading" secondItem="no4-tf-5aI" secondAttribute="leading" constant="114" id="nja-Iw-fQb"/>
                             <constraint firstItem="UNW-1E-BQx" firstAttribute="leading" secondItem="no4-tf-5aI" secondAttribute="leading" constant="20" id="sjr-EC-YAQ"/>
                             <constraint firstItem="oSK-cA-rjr" firstAttribute="leading" secondItem="no4-tf-5aI" secondAttribute="leading" constant="60" id="wiM-bu-aOc"/>
                         </constraints>
@@ -1229,7 +1214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggy-Yn-cDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6613" y="1250"/>
+            <point key="canvasLocation" x="6459" y="1243"/>
         </scene>
     </scenes>
     <resources>
