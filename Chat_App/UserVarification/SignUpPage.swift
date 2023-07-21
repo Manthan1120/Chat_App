@@ -107,6 +107,9 @@ class SignUpPage: UIViewController {
         
     }
     
+    @IBAction func backButtonAction(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     func showAlert(title:String) {
         let alert = UIAlertController(title: "Error!!", message: title, preferredStyle: .alert)
         alert.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))

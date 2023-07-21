@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Foz-gk-ky0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -297,12 +297,23 @@
                                     <action selector="googleButtonAction:" destination="MOy-Zx-N40" eventType="touchUpInside" id="nP4-aC-pVf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooZ-ZE-SdB">
+                                <rect key="frame" x="20" y="59" width="48" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow-left">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="MOy-Zx-N40" eventType="touchUpInside" id="X8s-sp-y0u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fhe-RU-3em"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="Daz-JC-LjI" firstAttribute="leading" secondItem="fhe-RU-3em" secondAttribute="leading" constant="20" id="0Xe-gl-HZU"/>
                             <constraint firstItem="0lR-AX-Fle" firstAttribute="top" secondItem="Daz-JC-LjI" secondAttribute="bottom" constant="20" id="40a-gj-RCb"/>
+                            <constraint firstItem="ooZ-ZE-SdB" firstAttribute="leading" secondItem="US7-Fe-aFB" secondAttribute="leading" id="55c-0G-7vm"/>
                             <constraint firstItem="fhe-RU-3em" firstAttribute="trailing" secondItem="ZFe-Vm-Ua4" secondAttribute="trailing" constant="20" id="85W-0I-SCI"/>
                             <constraint firstItem="ZFe-Vm-Ua4" firstAttribute="top" secondItem="z8M-hz-mu6" secondAttribute="bottom" constant="15" id="8wm-X4-7Le"/>
                             <constraint firstItem="eaw-Bp-emp" firstAttribute="leading" secondItem="fhe-RU-3em" secondAttribute="leading" constant="20" id="AQH-I0-KIV"/>
@@ -317,8 +328,10 @@
                             <constraint firstItem="fhe-RU-3em" firstAttribute="trailing" secondItem="eaw-Bp-emp" secondAttribute="trailing" constant="20" id="UyX-SB-ksF"/>
                             <constraint firstItem="fhe-RU-3em" firstAttribute="trailing" secondItem="Blb-Ei-7GY" secondAttribute="trailing" constant="20" id="Xqo-lL-Lh7"/>
                             <constraint firstItem="eaw-Bp-emp" firstAttribute="top" secondItem="ZFe-Vm-Ua4" secondAttribute="bottom" constant="15" id="YI4-2L-nsO"/>
+                            <constraint firstItem="ooZ-ZE-SdB" firstAttribute="top" secondItem="fhe-RU-3em" secondAttribute="top" id="bUA-CL-UES"/>
                             <constraint firstItem="US7-Fe-aFB" firstAttribute="leading" secondItem="fhe-RU-3em" secondAttribute="leading" constant="20" id="eFU-F4-hJh"/>
                             <constraint firstItem="fhe-RU-3em" firstAttribute="trailing" secondItem="DRL-qc-LYV" secondAttribute="trailing" constant="20" id="fED-SH-JuI"/>
+                            <constraint firstItem="US7-Fe-aFB" firstAttribute="top" secondItem="ooZ-ZE-SdB" secondAttribute="bottom" constant="80" id="j8E-1W-X24"/>
                             <constraint firstItem="Blb-Ei-7GY" firstAttribute="leading" secondItem="bMh-J5-ked" secondAttribute="trailing" constant="10" id="pxD-Ws-glP"/>
                             <constraint firstItem="fhe-RU-3em" firstAttribute="trailing" secondItem="Daz-JC-LjI" secondAttribute="trailing" constant="20" id="rpP-xT-W2C"/>
                             <constraint firstItem="DRL-qc-LYV" firstAttribute="leading" secondItem="fhe-RU-3em" secondAttribute="leading" constant="20" id="t7D-f0-rdl"/>

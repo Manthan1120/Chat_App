@@ -110,7 +110,8 @@ class SignInPage: UIViewController {
     }
     
     @IBAction func signUpButtonAction(_ sender: Any) {
-        
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "SignUpPage") as! SignUpPage
+        navigationController?.pushViewController(navigation, animated: true)
     }
     
     @IBAction func ForGotPage(_ sender: UIButton) {
