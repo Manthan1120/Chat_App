@@ -1,6 +1,10 @@
 
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseCore
+import FirebaseFirestore
 
 class SignInPage: UIViewController {
    
@@ -11,9 +15,14 @@ class SignInPage: UIViewController {
     @IBOutlet weak var faceBookButtonOutlet: UIButton!
     @IBOutlet weak var twitterButtonOutlet: UIButton!
     
+    var fir: Firestore!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         set()
+        fir = Firestore.firestore()
+        
     }
     
     func set() {
@@ -62,22 +71,39 @@ class SignInPage: UIViewController {
         passwordOutlet.layer.masksToBounds = false
     }
     
+    func fireBaseAuth() {
+        Auth.auth().createUser(withEmail: emailOutlet.text!, password: passwordOutlet.text!) {authDataResult, error in
+            if error == nil {
+                let uid = authDataResult?.user.uid
+                self.fir.collection("User").document(uid!).setData(["email":self.emailOutlet.text!,"password":self.passwordOutlet.text!])
+            }
+        }
+    }
     
     @IBAction func twitterButtonAction(_ sender: Any) {
         
     }
+    
     @IBAction func googleButtonAction(_ sender: Any) {
         
     }
+    
     @IBAction func facebookButtonAction(_ sender: Any) {
         
     }
+    
     @IBAction func signInButtonAction(_ sender: Any) {
-        let navigation = storyboard?.instantiateViewController(withIdentifier: "SignUpPage") as! SignUpPage
-        navigationController?.pushViewController(navigation, animated: true)
+        
+        
+        
+        
+//        let navigation = storyboard?.instantiateViewController(withIdentifier: "SignUpPage") as! SignUpPage
+//        navigationController?.pushViewController(navigation, animated: true)
     }
+    
     @IBAction func ForGotPage(_ sender: UIButton) {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "ForgotPage") as! ForgotPage
         navigationController?.pushViewController(navigation, animated: true)
     }
+    
 }

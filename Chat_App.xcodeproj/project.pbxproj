@@ -13,6 +13,7 @@
 		DA2259602A67B94D00E48D06 /* settingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22595F2A67B94D00E48D06 /* settingPageCell.swift */; };
 		DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBF0A22A691D16004B7E10 /* ForgotPage.swift */; };
 		DE088D6F2A6A4A42004B839C /* DPOTPView in Frameworks */ = {isa = PBXBuildFile; productRef = DE088D6E2A6A4A42004B839C /* DPOTPView */; };
+		DE088D712A6A5424004B839C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE088D702A6A5424004B839C /* GoogleService-Info.plist */; };
 		DE1B31A52A67CA1800991D57 /* EditableSetinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B31A42A67CA1800991D57 /* EditableSetinPage.swift */; };
 		DE4D4BDF2A6799FE00539859 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BDE2A6799FE00539859 /* TabBar.swift */; };
 		DE4D4BE12A679A4D00539859 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BE02A679A4D00539859 /* SearchPage.swift */; };
@@ -30,7 +31,6 @@
 		DE5112E82A66719C00014723 /* Chat_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112E72A66719C00014723 /* Chat_AppUITests.swift */; };
 		DE5112EA2A66719C00014723 /* Chat_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112E92A66719C00014723 /* Chat_AppUITestsLaunchTests.swift */; };
 		DE5112F72A66737300014723 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112F62A66737300014723 /* SignInPage.swift */; };
-		DE5FFFF32A6A47BA00E20443 /* GoogleService-Info .plist in Resources */ = {isa = PBXBuildFile; fileRef = DE5FFFF22A6A47BA00E20443 /* GoogleService-Info .plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +58,7 @@
 		AE6F97CAC5D8643244056CE9 /* Pods-Chat_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_App.release.xcconfig"; path = "Target Support Files/Pods-Chat_App/Pods-Chat_App.release.xcconfig"; sourceTree = "<group>"; };
 		DA22595F2A67B94D00E48D06 /* settingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPageCell.swift; sourceTree = "<group>"; };
 		DADBF0A22A691D16004B7E10 /* ForgotPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPage.swift; sourceTree = "<group>"; };
+		DE088D702A6A5424004B839C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE1B31A42A67CA1800991D57 /* EditableSetinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableSetinPage.swift; sourceTree = "<group>"; };
 		DE4D4BDE2A6799FE00539859 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		DE4D4BE02A679A4D00539859 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		DE5112E72A66719C00014723 /* Chat_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat_AppUITests.swift; sourceTree = "<group>"; };
 		DE5112E92A66719C00014723 /* Chat_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DE5112F62A66737300014723 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
-		DE5FFFF22A6A47BA00E20443 /* GoogleService-Info .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info .plist"; sourceTree = "<group>"; };
 		E425BD41DD8F55D2D9538BD8 /* Pods-Chat_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Chat_AppTests/Pods-Chat_AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		E5E2185E734D703265D0908B /* Pods-Chat_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Chat_AppTests/Pods-Chat_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE9A5C71240406B4B7A1A94F /* Pods-Chat_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_App.debug.xcconfig"; path = "Target Support Files/Pods-Chat_App/Pods-Chat_App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 				DE5112CF2A66719C00014723 /* Assets.xcassets */,
 				DE5112D12A66719C00014723 /* LaunchScreen.storyboard */,
 				DE5112D42A66719C00014723 /* Info.plist */,
-				DE5FFFF22A6A47BA00E20443 /* GoogleService-Info .plist */,
+				DE088D702A6A5424004B839C /* GoogleService-Info.plist */,
 				DE5112CC2A66719B00014723 /* Chat_App.xcdatamodeld */,
 			);
 			path = Chat_App;
@@ -342,8 +342,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE5112D32A66719C00014723 /* LaunchScreen.storyboard in Resources */,
+				DE088D712A6A5424004B839C /* GoogleService-Info.plist in Resources */,
 				DE5112D02A66719C00014723 /* Assets.xcassets in Resources */,
-				DE5FFFF32A6A47BA00E20443 /* GoogleService-Info .plist in Resources */,
 				DE5112CB2A66719B00014723 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
