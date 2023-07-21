@@ -53,7 +53,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="MOy-Zx-N40" kind="push" id="5hV-OE-rvK"/>
+                                    <action selector="signInButtonAction:" destination="efq-uq-7DD" eventType="touchUpInside" id="ofr-sw-pbB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Or Sign in with -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izT-Sh-wvz">
@@ -113,7 +113,7 @@
                                     <color key="baseForegroundColor" red="0.0" green="0.29418408629999998" blue="0.61855670100000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="signInButtonAction:" destination="efq-uq-7DD" eventType="touchUpInside" id="a96-E2-ibh"/>
+                                    <action selector="signUpButtonAction:" destination="efq-uq-7DD" eventType="touchUpInside" id="ps4-xc-evo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgb-nI-Bqx">
@@ -210,7 +210,7 @@
                                 <color key="textColor" red="0.23390828829999999" green="0.23456878119999999" blue="0.27502818940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z8M-hz-mu6">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z8M-hz-mu6">
                                 <rect key="frame" x="20" y="239" width="353" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gig-8Q-7Ji"/>
@@ -218,7 +218,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZFe-Vm-Ua4">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZFe-Vm-Ua4">
                                 <rect key="frame" x="20" y="304" width="353" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Jcl-mD-erc"/>
@@ -226,7 +226,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Confirm Pasword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eaw-Bp-emp">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Pasword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eaw-Bp-emp">
                                 <rect key="frame" x="20" y="369" width="353" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ORU-S8-nDg"/>
@@ -330,13 +330,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="YSf-4P-UUC"/>
                     <connections>
-                        <outlet property="confirmPasswordOutlate" destination="eaw-Bp-emp" id="rOS-Db-dKo"/>
-                        <outlet property="emailOutlate" destination="z8M-hz-mu6" id="6wM-rb-ZKY"/>
+                        <outlet property="emailOutlet" destination="ZFe-Vm-Ua4" id="DVC-6A-r21"/>
                         <outlet property="facbookOutlate" destination="bMh-J5-ked" id="mKb-jo-vmK"/>
                         <outlet property="googleOutlate" destination="0lR-AX-Fle" id="q21-4E-mt5"/>
-                        <outlet property="passwordOutlate" destination="ZFe-Vm-Ua4" id="DVC-6A-r21"/>
+                        <outlet property="passwordOutlate" destination="eaw-Bp-emp" id="rOS-Db-dKo"/>
                         <outlet property="singUpButtonOutlate" destination="DRL-qc-LYV" id="IAQ-vk-Eqh"/>
                         <outlet property="twiterOutlate" destination="Blb-Ei-7GY" id="tCz-IM-31e"/>
+                        <outlet property="userOutlet" destination="z8M-hz-mu6" id="6wM-rb-ZKY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUY-Gj-AqZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

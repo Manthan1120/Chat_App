@@ -72,12 +72,25 @@ class SignInPage: UIViewController {
     }
     
     func fireBaseAuth() {
-        Auth.auth().createUser(withEmail: emailOutlet.text!, password: passwordOutlet.text!) {authDataResult, error in
+        Auth.auth().signIn(withEmail: emailOutlet.text!, password: passwordOutlet.text!) {[self] user, error in
             if error == nil {
-                let uid = authDataResult?.user.uid
-                self.fir.collection("User").document(uid!).setData(["email":self.emailOutlet.text!,"password":self.passwordOutlet.text!])
+                print("User Uid = \(user?.user.uid)")
+                navigation()
+            }else{
+                showAlert(title: error!.localizedDescription)
             }
         }
+    }
+    
+    func navigation() {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "TabBar") as! TabBar
+        navigationController?.pushViewController(navigation, animated: true)
+    }
+    
+    func showAlert(title:String) {
+        let alert = UIAlertController(title: "Error!!", message: title, preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+        present(alert, animated:true, completion: nil)
     }
     
     @IBAction func twitterButtonAction(_ sender: Any) {
@@ -93,12 +106,11 @@ class SignInPage: UIViewController {
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
+       fireBaseAuth()
+    }
+    
+    @IBAction func signUpButtonAction(_ sender: Any) {
         
-        
-        
-        
-//        let navigation = storyboard?.instantiateViewController(withIdentifier: "SignUpPage") as! SignUpPage
-//        navigationController?.pushViewController(navigation, animated: true)
     }
     
     @IBAction func ForGotPage(_ sender: UIButton) {
