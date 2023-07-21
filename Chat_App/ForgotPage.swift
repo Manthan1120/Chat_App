@@ -44,7 +44,11 @@ class ForgotPage: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-
+    @IBAction func SendButtonAction(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "E_mailVerifyForOtp") as! E_mailVerifyForOtp
+        navigationController?.pushViewController(navigation, animated: true)
+    }
+    
     }
 
 
