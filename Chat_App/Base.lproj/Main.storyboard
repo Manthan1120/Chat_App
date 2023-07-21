@@ -832,9 +832,9 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countries " translatesAutoresizingMaskIntoConstraints="NO" id="M2F-6W-QB6">
-                                                <rect key="frame" x="21" y="99" width="28" height="26"/>
+                                                <rect key="frame" x="21" y="99" width="24" height="26"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="28" id="IXJ-VB-88h"/>
+                                                    <constraint firstAttribute="width" constant="24" id="IXJ-VB-88h"/>
                                                     <constraint firstAttribute="height" constant="26" id="aRD-YJ-Z3g"/>
                                                 </constraints>
                                             </imageView>
@@ -851,9 +851,9 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification" translatesAutoresizingMaskIntoConstraints="NO" id="kei-2V-XsE">
-                                                <rect key="frame" x="21" y="169" width="28" height="26"/>
+                                                <rect key="frame" x="21" y="169" width="24" height="26"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="28" id="mM7-nD-aXC"/>
+                                                    <constraint firstAttribute="width" constant="24" id="mM7-nD-aXC"/>
                                                     <constraint firstAttribute="height" constant="26" id="mWJ-g7-wl1"/>
                                                 </constraints>
                                             </imageView>
@@ -870,9 +870,9 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="language" translatesAutoresizingMaskIntoConstraints="NO" id="Zzp-dj-QyG">
-                                                <rect key="frame" x="21" y="239" width="28" height="26"/>
+                                                <rect key="frame" x="21" y="239" width="24" height="26"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="28" id="6vx-0x-yOA"/>
+                                                    <constraint firstAttribute="width" constant="24" id="6vx-0x-yOA"/>
                                                     <constraint firstAttribute="height" constant="26" id="PaZ-34-a5I"/>
                                                 </constraints>
                                             </imageView>
@@ -889,9 +889,9 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information" translatesAutoresizingMaskIntoConstraints="NO" id="vGx-w3-cP4">
-                                                <rect key="frame" x="21" y="309" width="28" height="26"/>
+                                                <rect key="frame" x="21" y="309" width="24" height="26"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="28" id="UMQ-gW-fV9"/>
+                                                    <constraint firstAttribute="width" constant="24" id="UMQ-gW-fV9"/>
                                                     <constraint firstAttribute="height" constant="26" id="ZeQ-Jb-yFG"/>
                                                 </constraints>
                                             </imageView>
@@ -908,9 +908,9 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="switch" translatesAutoresizingMaskIntoConstraints="NO" id="8cA-Ui-tEe">
-                                                <rect key="frame" x="21" y="379" width="28" height="26"/>
+                                                <rect key="frame" x="21" y="379" width="24" height="26"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="28" id="fNq-gA-ur1"/>
+                                                    <constraint firstAttribute="width" constant="24" id="fNq-gA-ur1"/>
                                                     <constraint firstAttribute="height" constant="26" id="rae-oy-75r"/>
                                                 </constraints>
                                             </imageView>
@@ -927,10 +927,10 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="padlock" translatesAutoresizingMaskIntoConstraints="NO" id="KEk-xV-ZB6">
-                                                <rect key="frame" x="21" y="449" width="28" height="26"/>
+                                                <rect key="frame" x="21" y="449" width="24" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="26" id="ADd-Wu-66Q"/>
-                                                    <constraint firstAttribute="width" constant="28" id="MQM-xU-ef6"/>
+                                                    <constraint firstAttribute="width" constant="24" id="MQM-xU-ef6"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vD5-fw-wCl">
@@ -946,10 +946,10 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedback" translatesAutoresizingMaskIntoConstraints="NO" id="21g-bJ-3Uq">
-                                                <rect key="frame" x="21" y="519" width="28" height="26"/>
+                                                <rect key="frame" x="21" y="519" width="24" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="26" id="V9G-xf-twE"/>
-                                                    <constraint firstAttribute="width" constant="28" id="Xfb-TU-66b"/>
+                                                    <constraint firstAttribute="width" constant="24" id="Xfb-TU-66b"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYD-tU-gcl">
@@ -965,10 +965,10 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit" translatesAutoresizingMaskIntoConstraints="NO" id="ycj-cL-7x1">
-                                                <rect key="frame" x="21" y="589" width="28" height="26"/>
+                                                <rect key="frame" x="21" y="589" width="24" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="26" id="YOd-ey-OnU"/>
-                                                    <constraint firstAttribute="width" constant="28" id="oZA-IR-kOM"/>
+                                                    <constraint firstAttribute="width" constant="24" id="oZA-IR-kOM"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
@@ -1206,6 +1206,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JmP-uV-MlC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5838.9312977099235" y="1250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oBM-4t-6Ql">
+            <objects>
+                <viewController id="eDK-D6-W82" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CxT-dN-Feu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="x3c-nW-SyO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggy-Yn-cDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6613" y="1250"/>
         </scene>
     </scenes>
     <resources>
