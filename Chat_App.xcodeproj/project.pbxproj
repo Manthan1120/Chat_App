@@ -10,6 +10,7 @@
 		0797EDFF09ABE88AD9918411 /* Pods_Chat_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3591AF3CA35F653D0F77AF62 /* Pods_Chat_AppTests.framework */; };
 		BD4E11A70095AE23F5E2DA62 /* Pods_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D39D139395F06682C5A29 /* Pods_Chat_App.framework */; };
 		D193846A51219B79CF16643E /* Pods_Chat_App_Chat_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA69B17E03BEC1D1B18D68D9 /* Pods_Chat_App_Chat_AppUITests.framework */; };
+		DA14F4A72A6B912500B2C5D2 /* PasswordChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA14F4A62A6B912500B2C5D2 /* PasswordChange.swift */; };
 		DA2259602A67B94D00E48D06 /* settingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22595F2A67B94D00E48D06 /* settingPageCell.swift */; };
 		DAA491C12A6A554000354005 /* E-mailVerifyForOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */; };
 		DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBF0A22A691D16004B7E10 /* ForgotPage.swift */; };
@@ -57,6 +58,7 @@
 		7CA4701B54A4922A94F2C93F /* Pods-Chat_App-Chat_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_App-Chat_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Chat_App-Chat_AppUITests/Pods-Chat_App-Chat_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A36DB06D76FAFA4C85C79141 /* Pods-Chat_App-Chat_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_App-Chat_AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Chat_App-Chat_AppUITests/Pods-Chat_App-Chat_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE6F97CAC5D8643244056CE9 /* Pods-Chat_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_App.release.xcconfig"; path = "Target Support Files/Pods-Chat_App/Pods-Chat_App.release.xcconfig"; sourceTree = "<group>"; };
+		DA14F4A62A6B912500B2C5D2 /* PasswordChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChange.swift; sourceTree = "<group>"; };
 		DA22595F2A67B94D00E48D06 /* settingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPageCell.swift; sourceTree = "<group>"; };
 		DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "E-mailVerifyForOtp.swift"; sourceTree = "<group>"; };
 		DADBF0A22A691D16004B7E10 /* ForgotPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPage.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				DEBBC6E52A690CBD00531235 /* CellFile */,
 				DE4D4BE82A679CB500539859 /* ViewControllers */,
 				DE5112C92A66719B00014723 /* Main.storyboard */,
+				DA14F4A62A6B912500B2C5D2 /* PasswordChange.swift */,
 				DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */,
 				DADBF0A22A691D16004B7E10 /* ForgotPage.swift */,
 				DE4D4BDE2A6799FE00539859 /* TabBar.swift */,
@@ -486,6 +489,7 @@
 				DE5112C42A66719B00014723 /* AppDelegate.swift in Sources */,
 				DAA491C12A6A554000354005 /* E-mailVerifyForOtp.swift in Sources */,
 				DE4D4BE12A679A4D00539859 /* SearchPage.swift in Sources */,
+				DA14F4A72A6B912500B2C5D2 /* PasswordChange.swift in Sources */,
 				DE4D4BE32A679AB300539859 /* ProfilePage.swift in Sources */,
 				DE5112C62A66719B00014723 /* SceneDelegate.swift in Sources */,
 				DE4D4BE52A679B6F00539859 /* MainPage.swift in Sources */,

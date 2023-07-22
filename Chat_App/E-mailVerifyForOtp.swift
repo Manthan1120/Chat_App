@@ -33,7 +33,14 @@ class E_mailVerifyForOtp: UIViewController {
         VerifyButton.layer.shadowOffset = CGSize(width: 4, height: 4)
         VerifyButton.layer.masksToBounds = false
         
+        OtpViewOt.layer.cornerRadius = 15
+        OtpViewOt.layer.masksToBounds = true
+        
     }
     
-
+    @IBAction func SendButtonAction(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "PasswordChange") as! PasswordChange
+        navigationController?.pushViewController(navigation, animated: true)
+    }
+    
 }
