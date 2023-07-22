@@ -83,7 +83,7 @@ class SignUpPage: UIViewController {
     }
     
     func fireBaseAuth() {
-        Auth.auth().createUser(withEmail: userOutlet.text!, password: emailOutlet.text!) { [self]authDataResult, error in
+        Auth.auth().createUser(withEmail: emailOutlet.text!, password: passwordOutlate.text!) { [self]authDataResult, error in
             if error == nil {
                 let uid = authDataResult?.user.uid
                 self.fir.collection("User").document(uid!).setData(["userName":self.userOutlet.text!,"email":self.emailOutlet.text!,"password":self.passwordOutlate.text!])

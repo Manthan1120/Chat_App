@@ -5,6 +5,7 @@ import UIKit
 class SettingPage: UIViewController {
 
    
+    @IBOutlet weak var darkModeButton: UIButton!
     @IBOutlet weak var editAccountButton: UIButton!
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet weak var feedBackButton: UIButton!
@@ -21,6 +22,15 @@ class SettingPage: UIViewController {
     }
    
     func set() {
+        
+        darkModeButton.layer.backgroundColor = UIColor.white.cgColor
+        darkModeButton.layer.cornerRadius = 9
+        darkModeButton.layer.shadowColor = UIColor.systemGray4.cgColor
+        darkModeButton.layer.shadowRadius = 4.0
+        darkModeButton.layer.shadowOpacity = 4.4
+        darkModeButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        darkModeButton.layer.masksToBounds = false
+        
         editAccountButton.layer.backgroundColor = UIColor.white.cgColor
         editAccountButton.layer.cornerRadius = 9
         editAccountButton.layer.shadowColor = UIColor.systemGray4.cgColor
