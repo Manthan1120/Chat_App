@@ -18,11 +18,13 @@ class ForgotPage: UIViewController {
     @IBOutlet weak var TextFieldeOt: UITextField!
     @IBOutlet weak var SendButtonOt: UIButton!
     @IBOutlet weak var LockScrenBcViewOt: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         allUi()
         fir = Firestore.firestore()
     }
+    
     func allUi() {
         
         LockScrenBcViewOt.layer.cornerRadius = 100
@@ -42,38 +44,24 @@ class ForgotPage: UIViewController {
         SendButtonOt.layer.shadowOffset = CGSize(width: 4, height: 4)
         SendButtonOt.layer.masksToBounds = false
         
-        
     }
     
-    func fireBaseAuth() {
-        Auth.auth().signIn(withEmail: TextFieldeOt.text!,link: "") {[self] user, error in
-            if error == nil {
-                print("User Uid = \(user?.user.uid)")
-                TextFieldeOt.text = ""
-                navigation()
-                
-            }else{
-                print(error!.localizedDescription)
-                showAlert(title: error!.localizedDescription)
-            }
-        }
+    func sendOTP() {
+        
     }
+
     func showAlert(title:String) {
         let alert = UIAlertController(title: "Error!!", message: title, preferredStyle: .alert)
         alert.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
         present(alert, animated:true, completion: nil)
     }
-    
 
     @IBAction func backButtonAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func SendButtonAction(_ sender: Any) {
-        
-       
-        
-        fireBaseAuth()
+        sendOTP()
     }
     
     func navigation(){
