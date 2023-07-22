@@ -10,9 +10,13 @@ import DPOTPView
 
 class E_mailVerifyForOtp: UIViewController {
 
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var VerifyButton: UIButton!
     @IBOutlet weak var ViewForOt: UIView!
     @IBOutlet weak var OtpViewOt: DPOTPView!
+    
+    var email = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +28,9 @@ class E_mailVerifyForOtp: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     func AllPageUi(){
+        
+        emailLabel.text = email
+        
         ViewForOt.layer.cornerRadius = 100
         
         VerifyButton.layer.cornerRadius = 9
