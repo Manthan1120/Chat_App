@@ -76,6 +76,8 @@ class SignInPage: UIViewController {
             if error == nil {
                 print("User Uid = \(user?.user.uid)")
                 navigation()
+                emailOutlet.text = ""
+                passwordOutlet.text = ""
             }else{
                 print(error!.localizedDescription)
                 showAlert(title: error!.localizedDescription)
@@ -118,6 +120,8 @@ class SignInPage: UIViewController {
     @IBAction func ForGotPage(_ sender: UIButton) {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "ForgotPage") as! ForgotPage
         navigationController?.pushViewController(navigation, animated: true)
+       
+       
     }
     
 }

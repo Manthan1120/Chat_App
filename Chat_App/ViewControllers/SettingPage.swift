@@ -105,6 +105,13 @@ class SettingPage: UIViewController {
         
     }
     
+    
+    @IBAction func signOutButtonAction(_ sender: Any) {
+        let nvigation = storyboard?.instantiateViewController(withIdentifier: "SignInPage") as! SignInPage
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
 }
 
     
