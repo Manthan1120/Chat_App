@@ -77,6 +77,7 @@ class SignInPage: UIViewController {
                 print("User Uid = \(user?.user.uid)")
                 navigation()
             }else{
+                print(error!.localizedDescription)
                 showAlert(title: error!.localizedDescription)
             }
         }
