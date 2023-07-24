@@ -22,7 +22,7 @@ class E_mailVerifyForOtp: UIViewController {
 
         AllPageUi()
         
-    }
+    } 
 
     func AllPageUi(){
         
