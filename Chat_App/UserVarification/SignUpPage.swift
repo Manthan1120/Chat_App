@@ -88,7 +88,6 @@ class SignUpPage: UIViewController {
                 let uid = authDataResult?.user.uid
                 self.fir.collection("User").document(uid!).setData(["userName":self.userOutlet.text!,"email":self.emailOutlet.text!,"password":self.passwordOutlate.text!])
                 navigate()
-                
             }else{
                 showAlert(title: error!.localizedDescription)
             }
@@ -119,6 +118,9 @@ class SignUpPage: UIViewController {
     func navigate() {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "TabBar") as! TabBar
         navigationController?.pushViewController(navigation, animated: true)
+        userOutlet.text == ""
+        emailOutlet.text == ""
+        passwordOutlate.text == ""
     }
     
 }

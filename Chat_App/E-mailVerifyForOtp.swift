@@ -23,10 +23,7 @@ class E_mailVerifyForOtp: UIViewController {
         AllPageUi()
         
     }
-    
-    @IBAction func backButton(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
+
     func AllPageUi(){
         
         emailLabel.text = email

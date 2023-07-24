@@ -62,6 +62,7 @@ class ForgotPage: UIViewController {
     
     @IBAction func SendButtonAction(_ sender: Any) {
         sendOTP()
+        navigation()
     }
     
     func navigation(){
