@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+
 
 class ProfilePage: UIViewController {
 
@@ -19,12 +21,23 @@ class ProfilePage: UIViewController {
     @IBOutlet weak var userNameLabelOutlet: UILabel!
     @IBOutlet weak var imageOutlet: UIImageView!
     
+    let imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         set()
-       
+        let tapGesture = UITapGestureRecognizer()
+        tapGesture.addTarget(self,action:
+                                #selector(ProfilePage.openGallary(tapGesture:)))
+        imageOutlet.isUserInteractionEnabled = true
+        imageOutlet.addGestureRecognizer(tapGesture)
     }
+    
+    @objc func openGallary(tapGesture:UITapGestureRecognizer) {
+        self.setUpImagePicker()
+    }
+    
+    
     
     func set() {
        
@@ -57,3 +70,31 @@ class ProfilePage: UIViewController {
     }
     
 }
+
+extension ProfilePage: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    func setUpImagePicker() {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.delegate = self
+            imagePicker.isEditing = true
+            
+            self.present(imagePicker, animated: true,completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        imageOutlet.image = image
+        self.dismiss(animated: true,completion: nil)
+    }
+}
+
+extension ProfilePage {
+    
+    
+    func uplodeImage(_ image:UIImage,complition:@escaping((_ url:URL?)->())){
+//        let storageRef =
+    }
+}
+
+

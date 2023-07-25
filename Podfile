@@ -12,6 +12,7 @@ pod 'FirebaseCore'
 pod 'FirebaseFirestore'
 pod 'FirebaseDatabase'
 pod 'FirebaseAnalytics'
+pod 'FirebaseStorage'
 
 
   target 'Chat_AppTests' do

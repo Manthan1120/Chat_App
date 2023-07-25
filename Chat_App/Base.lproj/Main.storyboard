@@ -600,7 +600,7 @@
                                     <constraint firstAttribute="height" constant="200" id="Mct-Rd-jFb"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="I8j-hd-QhB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="I8j-hd-QhB">
                                 <rect key="frame" x="20" y="109" width="170" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="PrT-FM-VeE"/>
@@ -782,6 +782,7 @@
         <!--Editable Setin Page-->
         <scene sceneID="x0J-kS-uRI">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNI-u3-JYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="EditableSetinPage" id="xlE-IE-8uG" customClass="EditableSetinPage" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v7D-2R-Q5H">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -954,7 +955,6 @@
                         <outlet property="userNameLabelOutlet" destination="T42-gl-YYs" id="2aN-2k-Wdh"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SNI-u3-JYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9244" y="436"/>
         </scene>
