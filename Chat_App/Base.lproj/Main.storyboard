@@ -143,6 +143,14 @@
                                     <action selector="ForGotPage:" destination="efq-uq-7DD" eventType="touchUpInside" id="X9G-kB-Mby"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2w-lR-nF9">
+                                <rect key="frame" x="328" y="59" width="45" height="41"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="skipButton:" destination="efq-uq-7DD" eventType="touchUpInside" id="bWM-NH-gEU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U9P-Bv-ItY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -153,11 +161,14 @@
                             <constraint firstItem="hiV-X6-W3e" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="20" id="6zN-6Z-Fnf"/>
                             <constraint firstItem="izT-Sh-wvz" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="20" id="CpF-uq-W1K"/>
                             <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="qI4-MQ-cXH" secondAttribute="trailing" constant="20" id="D4U-EQ-rfy"/>
+                            <constraint firstItem="G8y-1p-cQN" firstAttribute="top" secondItem="k2w-lR-nF9" secondAttribute="bottom" constant="89" id="G9E-25-4iP"/>
                             <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="G8y-1p-cQN" secondAttribute="trailing" constant="20" id="GgA-h5-4lB"/>
                             <constraint firstItem="GqS-D9-DV4" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="80" id="H5s-0t-smY"/>
                             <constraint firstItem="9HT-pN-aHt" firstAttribute="leading" secondItem="mgb-nI-Bqx" secondAttribute="trailing" constant="10" id="ISY-Y6-sEc"/>
+                            <constraint firstItem="k2w-lR-nF9" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="328" id="Kba-Qb-maS"/>
                             <constraint firstItem="GqS-D9-DV4" firstAttribute="top" secondItem="SQj-Do-rC9" secondAttribute="bottom" constant="130" id="OZq-bO-aF8"/>
                             <constraint firstItem="SQj-Do-rC9" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="20" id="Pth-wu-IYE"/>
+                            <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="k2w-lR-nF9" secondAttribute="trailing" constant="20" id="QJv-pZ-gKS"/>
                             <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="FPg-ah-Usq" secondAttribute="trailing" constant="20" id="QUE-CJ-RrE"/>
                             <constraint firstItem="yJO-0R-NxN" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="236" id="R2o-d6-k3e"/>
                             <constraint firstItem="qI4-MQ-cXH" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="20" id="RgV-n4-cqV"/>
@@ -165,6 +176,7 @@
                             <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="yJO-0R-NxN" secondAttribute="trailing" constant="9" id="Ylf-HS-9Gv"/>
                             <constraint firstItem="yJO-0R-NxN" firstAttribute="top" secondItem="hiV-X6-W3e" secondAttribute="bottom" constant="8" symbolic="YES" id="a7V-VT-fOc"/>
                             <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="izT-Sh-wvz" secondAttribute="trailing" constant="20" id="aVJ-Y5-gk1"/>
+                            <constraint firstItem="k2w-lR-nF9" firstAttribute="top" secondItem="U9P-Bv-ItY" secondAttribute="top" id="bV9-rg-ztO"/>
                             <constraint firstItem="Dek-ZO-H1x" firstAttribute="leading" secondItem="GqS-D9-DV4" secondAttribute="trailing" constant="-10" id="c40-nr-lKc"/>
                             <constraint firstItem="Dek-ZO-H1x" firstAttribute="top" secondItem="mgb-nI-Bqx" secondAttribute="bottom" constant="131" id="eiv-yy-CmM"/>
                             <constraint firstItem="FPg-ah-Usq" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="20" id="f2y-ZE-CFP"/>
@@ -191,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6X2-Jz-CBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2654" y="-27"/>
+            <point key="canvasLocation" x="2652.6717557251909" y="-27.464788732394368"/>
         </scene>
         <!--Sign Up Page-->
         <scene sceneID="KlB-bT-aX7">
@@ -856,7 +868,6 @@
         <!--Editable Setin Page-->
         <scene sceneID="x0J-kS-uRI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SNI-u3-JYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="EditableSetinPage" id="xlE-IE-8uG" customClass="EditableSetinPage" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v7D-2R-Q5H">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -1029,6 +1040,7 @@
                         <outlet property="userNameLabelOutlet" destination="T42-gl-YYs" id="2aN-2k-Wdh"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNI-u3-JYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9244" y="436"/>
         </scene>

@@ -15,6 +15,8 @@ class SignInPage: UIViewController {
     @IBOutlet weak var faceBookButtonOutlet: UIButton!
     @IBOutlet weak var twitterButtonOutlet: UIButton!
     
+    
+    
     var fir: Firestore!
     
     override func viewDidLoad() {
@@ -23,6 +25,11 @@ class SignInPage: UIViewController {
         set()
         fir = Firestore.firestore()
         
+    }
+    
+    @IBAction func skipButton(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "TabBar") as! TabBar
+        navigationController?.pushViewController(navigation, animated: true)
     }
     
     func set() {
