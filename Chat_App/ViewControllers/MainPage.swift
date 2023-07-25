@@ -18,7 +18,6 @@ class MainPage: UIViewController {
         setUp()
     }
     
-    
     func setUp() {
         
         searchTextFiled.layer.backgroundColor = UIColor.white.cgColor
