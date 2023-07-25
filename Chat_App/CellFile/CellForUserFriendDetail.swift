@@ -9,6 +9,9 @@ import UIKit
 
 class CellForUserFriendDetail: UITableViewCell {
 
+    @IBOutlet weak var UserName: UILabel!
+    @IBOutlet weak var ProfileImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

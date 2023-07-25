@@ -48,12 +48,17 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CellForUserFriendDetail
+        cell.ProfileImage.layer.cornerRadius = 15
+        cell.ProfileImage.layer.borderWidth = 3
+        cell.ProfileImage.layer.borderColor = UIColor.systemGray4.cgColor
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{
+            let navigation = storyboard?.instantiateViewController(withIdentifier: "MessagePage") as! MessagePage
+            navigationController?.pushViewController(navigation, animated: true)
             
         }
     }
