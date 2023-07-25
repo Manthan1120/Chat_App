@@ -8,6 +8,9 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseStorage
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseCore
 
 
 class ProfilePage: UIViewController {
@@ -22,11 +25,13 @@ class ProfilePage: UIViewController {
     @IBOutlet weak var userNameLabelOutlet: UILabel!
     @IBOutlet weak var imageOutlet: UIImageView!
     
+    var ref : DatabaseReference!
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         set()
+        ref = Database.database().reference()
         let tapGesture = UITapGestureRecognizer()
         tapGesture.addTarget(self,action:
                                 #selector(ProfilePage.openGallary(tapGesture:)))
@@ -37,8 +42,6 @@ class ProfilePage: UIViewController {
     @objc func openGallary(tapGesture:UITapGestureRecognizer) {
         self.setUpImagePicker()
     }
-    
-    
     
     func set() {
        
@@ -65,6 +68,17 @@ class ProfilePage: UIViewController {
         editButtonOutlet.layer.masksToBounds = false
     }
     
+    
+    func saveFirData() {
+        self.uplodeImage(self.imageOutlet.image!) { url in
+            self.saveImage(profileImageUrl: url!) { success in
+                if success != nil {
+                    print("Yehh")
+                }
+            }
+        }
+    }
+    
     @IBAction func editButtonAction(_ sender: Any) {
         let navigate = storyboard?.instantiateViewController(withIdentifier: "EditableSetinPage") as! EditableSetinPage
         navigationController?.pushViewController(navigate, animated: true)
@@ -78,7 +92,6 @@ extension ProfilePage: UIImagePickerControllerDelegate,UINavigationControllerDel
             imagePicker.sourceType = .savedPhotosAlbum
             imagePicker.delegate = self
             imagePicker.isEditing = true
-            
             self.present(imagePicker, animated: true,completion: nil)
         }
     }
@@ -87,14 +100,34 @@ extension ProfilePage: UIImagePickerControllerDelegate,UINavigationControllerDel
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         imageOutlet.image = image
         self.dismiss(animated: true,completion: nil)
+        self.saveFirData()
     }
 }
 
 extension ProfilePage {
     
-    
     func uplodeImage(_ image:UIImage,complition:@escaping((_ url:URL?)->())){
         let storageRef = Storage.storage().reference().child("UserImages.png")
+        let imageData = imageOutlet.image?.pngData()
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/png"
+        
+        storageRef.putData(imageData!,metadata: metaData) { metaData, error in
+            if error == nil{
+                print("Success")
+                storageRef.downloadURL { url, error in
+                    complition(url)
+                }
+            }
+            else{
+                print("Error !")
+            }
+        }
+    }
+    
+    func saveImage(profileImageUrl:URL,complition:@escaping((_ url:URL?)->())) {
+        let directory = ["UserUid": "Manthan","ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
+        self.ref.child("UserProfile").childByAutoId().setValue(directory)
     }
 }
 
