@@ -17,6 +17,10 @@ class MessagePage: UIViewController {
         Allui()
         
     }
+    
+    @IBAction func CloseButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     func Allui() {
         MassegeUserImage.layer.cornerRadius = 20
     }

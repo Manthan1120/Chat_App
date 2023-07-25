@@ -16,6 +16,7 @@ class PasswordChange: UIViewController {
     
     @IBOutlet weak var DoneButtonOt: UIButton!
     
+    @IBOutlet weak var CreatPasswordView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +24,8 @@ class PasswordChange: UIViewController {
     }
     
     func AllUi(){
+        
+        CreatPasswordView.layer.cornerRadius = 100
        
         PasswordTextField.layer.backgroundColor = UIColor.white.cgColor
         PasswordTextField.layer.cornerRadius = 9
