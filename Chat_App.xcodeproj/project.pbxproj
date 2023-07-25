@@ -11,7 +11,6 @@
 		BD4E11A70095AE23F5E2DA62 /* Pods_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D39D139395F06682C5A29 /* Pods_Chat_App.framework */; };
 		D193846A51219B79CF16643E /* Pods_Chat_App_Chat_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA69B17E03BEC1D1B18D68D9 /* Pods_Chat_App_Chat_AppUITests.framework */; };
 		DA14F4A72A6B912500B2C5D2 /* PasswordChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA14F4A62A6B912500B2C5D2 /* PasswordChange.swift */; };
-		DA2259602A67B94D00E48D06 /* settingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22595F2A67B94D00E48D06 /* settingPageCell.swift */; };
 		DAA491C12A6A554000354005 /* E-mailVerifyForOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */; };
 		DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBF0A22A691D16004B7E10 /* ForgotPage.swift */; };
 		DE088D6F2A6A4A42004B839C /* DPOTPView in Frameworks */ = {isa = PBXBuildFile; productRef = DE088D6E2A6A4A42004B839C /* DPOTPView */; };
@@ -33,9 +32,9 @@
 		DE5112E82A66719C00014723 /* Chat_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112E72A66719C00014723 /* Chat_AppUITests.swift */; };
 		DE5112EA2A66719C00014723 /* Chat_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112E92A66719C00014723 /* Chat_AppUITestsLaunchTests.swift */; };
 		DE5112F72A66737300014723 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112F62A66737300014723 /* SignInPage.swift */; };
-		DEA045112A6F8E500012976E /* CellForMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA045102A6F8E500012976E /* CellForMainPage.swift */; };
-		DEA045132A6F90DF0012976E /* CellForMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA045122A6F90DE0012976E /* CellForMainPage.swift */; };
-		DEA045152A6F90E10012976E /* MessagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA045142A6F90E10012976E /* MessagePage.swift */; };
+		DEA045172A6F93A20012976E /* MessagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA045162A6F93A20012976E /* MessagePage.swift */; };
+		DEA0451F2A6F94980012976E /* CellForUserFriendDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA0451D2A6F94980012976E /* CellForUserFriendDetail.swift */; };
+		DEA045202A6F94980012976E /* CellForUserFriendDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA0451E2A6F94980012976E /* CellForUserFriendDetail.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		A36DB06D76FAFA4C85C79141 /* Pods-Chat_App-Chat_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_App-Chat_AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Chat_App-Chat_AppUITests/Pods-Chat_App-Chat_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE6F97CAC5D8643244056CE9 /* Pods-Chat_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_App.release.xcconfig"; path = "Target Support Files/Pods-Chat_App/Pods-Chat_App.release.xcconfig"; sourceTree = "<group>"; };
 		DA14F4A62A6B912500B2C5D2 /* PasswordChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChange.swift; sourceTree = "<group>"; };
-		DA22595F2A67B94D00E48D06 /* settingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPageCell.swift; sourceTree = "<group>"; };
 		DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "E-mailVerifyForOtp.swift"; sourceTree = "<group>"; };
 		DADBF0A22A691D16004B7E10 /* ForgotPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPage.swift; sourceTree = "<group>"; };
 		DE088D702A6A5424004B839C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -87,9 +85,9 @@
 		DE5112E72A66719C00014723 /* Chat_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat_AppUITests.swift; sourceTree = "<group>"; };
 		DE5112E92A66719C00014723 /* Chat_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DE5112F62A66737300014723 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
-		DEA045102A6F8E500012976E /* CellForMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellForMainPage.swift; path = /Users/r86/Documents/Chat_App/Chat_App/CellForMainPage.swift; sourceTree = "<absolute>"; };
-		DEA045122A6F90DE0012976E /* CellForMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellForMainPage.swift; path = /Users/r86/Documents/Chat_App/Chat_App/CellForMainPage.swift; sourceTree = "<absolute>"; };
-		DEA045142A6F90E10012976E /* MessagePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessagePage.swift; path = /Users/r86/Documents/Chat_App/Chat_App/MessagePage.swift; sourceTree = "<absolute>"; };
+		DEA045162A6F93A20012976E /* MessagePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePage.swift; sourceTree = "<group>"; };
+		DEA0451D2A6F94980012976E /* CellForUserFriendDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForUserFriendDetail.swift; sourceTree = "<group>"; };
+		DEA0451E2A6F94980012976E /* CellForUserFriendDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellForUserFriendDetail.xib; sourceTree = "<group>"; };
 		E425BD41DD8F55D2D9538BD8 /* Pods-Chat_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Chat_AppTests/Pods-Chat_AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		E5E2185E734D703265D0908B /* Pods-Chat_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Chat_AppTests/Pods-Chat_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE9A5C71240406B4B7A1A94F /* Pods-Chat_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_App.debug.xcconfig"; path = "Target Support Files/Pods-Chat_App/Pods-Chat_App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,9 +149,13 @@
 		DE4D4BE82A679CB500539859 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DEA045162A6F93A20012976E /* MessagePage.swift */,
 				DE4D4BE62A679BAF00539859 /* SettingPage.swift */,
 				DE4D4BE22A679AB300539859 /* ProfilePage.swift */,
+				DA14F4A62A6B912500B2C5D2 /* PasswordChange.swift */,
 				DE4D4BE42A679B6F00539859 /* MainPage.swift */,
+				DADBF0A22A691D16004B7E10 /* ForgotPage.swift */,
+				DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */,
 				DE1B31A42A67CA1800991D57 /* EditableSetinPage.swift */,
 				DE4D4BE02A679A4D00539859 /* SearchPage.swift */,
 			);
@@ -178,6 +180,7 @@
 				DE5112C12A66719B00014723 /* Products */,
 				6DA497F1853F391899A61078 /* Pods */,
 				8465F862C50B2DBB6884734F /* Frameworks */,
+				DEA0451C2A6F93F00012976E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,12 +203,6 @@
 				DEBBC6E52A690CBD00531235 /* CellFile */,
 				DE4D4BE82A679CB500539859 /* ViewControllers */,
 				DE5112C92A66719B00014723 /* Main.storyboard */,
-				DEA045102A6F8E500012976E /* CellForMainPage.swift */,
-				DEA045122A6F90DE0012976E /* CellForMainPage.swift */,
-				DEA045142A6F90E10012976E /* MessagePage.swift */,
-				DA14F4A62A6B912500B2C5D2 /* PasswordChange.swift */,
-				DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */,
-				DADBF0A22A691D16004B7E10 /* ForgotPage.swift */,
 				DE4D4BDE2A6799FE00539859 /* TabBar.swift */,
 				DE5112CF2A66719C00014723 /* Assets.xcassets */,
 				DE5112D12A66719C00014723 /* LaunchScreen.storyboard */,
@@ -233,10 +230,18 @@
 			path = Chat_AppUITests;
 			sourceTree = "<group>";
 		};
+		DEA0451C2A6F93F00012976E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		DEBBC6E52A690CBD00531235 /* CellFile */ = {
 			isa = PBXGroup;
 			children = (
-				DA22595F2A67B94D00E48D06 /* settingPageCell.swift */,
+				DEA0451D2A6F94980012976E /* CellForUserFriendDetail.swift */,
+				DEA0451E2A6F94980012976E /* CellForUserFriendDetail.xib */,
 			);
 			path = CellFile;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA045202A6F94980012976E /* CellForUserFriendDetail.xib in Resources */,
 				DE5112D32A66719C00014723 /* LaunchScreen.storyboard in Resources */,
 				DE088D712A6A5424004B839C /* GoogleService-Info.plist in Resources */,
 				DE5112D02A66719C00014723 /* Assets.xcassets in Resources */,
@@ -488,20 +494,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE5112C82A66719B00014723 /* SignUpPage.swift in Sources */,
+				DEA0451F2A6F94980012976E /* CellForUserFriendDetail.swift in Sources */,
 				DE4D4BE72A679BAF00539859 /* SettingPage.swift in Sources */,
-				DEA045152A6F90E10012976E /* MessagePage.swift in Sources */,
 				DE5112F72A66737300014723 /* SignInPage.swift in Sources */,
-				DA2259602A67B94D00E48D06 /* settingPageCell.swift in Sources */,
 				DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */,
 				DE1B31A52A67CA1800991D57 /* EditableSetinPage.swift in Sources */,
 				DE5112CE2A66719B00014723 /* Chat_App.xcdatamodeld in Sources */,
 				DE4D4BDF2A6799FE00539859 /* TabBar.swift in Sources */,
 				DE5112C42A66719B00014723 /* AppDelegate.swift in Sources */,
-				DEA045112A6F8E500012976E /* CellForMainPage.swift in Sources */,
 				DAA491C12A6A554000354005 /* E-mailVerifyForOtp.swift in Sources */,
 				DE4D4BE12A679A4D00539859 /* SearchPage.swift in Sources */,
-				DEA045132A6F90DF0012976E /* CellForMainPage.swift in Sources */,
 				DA14F4A72A6B912500B2C5D2 /* PasswordChange.swift in Sources */,
+				DEA045172A6F93A20012976E /* MessagePage.swift in Sources */,
 				DE4D4BE32A679AB300539859 /* ProfilePage.swift in Sources */,
 				DE5112C62A66719B00014723 /* SceneDelegate.swift in Sources */,
 				DE4D4BE52A679B6F00539859 /* MainPage.swift in Sources */,

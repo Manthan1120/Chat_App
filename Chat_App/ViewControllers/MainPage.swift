@@ -47,11 +47,7 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CellForMainPage
-        cell.userProfileImage.layer.cornerRadius = 15
-        cell.userProfileImage.layer.borderWidth = 4
-        cell.userProfileImage.layer.borderColor = UIColor.systemGray3.cgColor
-        cell.userProfileImage.layer.masksToBounds = true
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CellForUserFriendDetail
         
         return cell
     }
