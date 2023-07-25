@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseStorage
 
 
 class ProfilePage: UIViewController {
@@ -93,7 +94,7 @@ extension ProfilePage {
     
     
     func uplodeImage(_ image:UIImage,complition:@escaping((_ url:URL?)->())){
-//        let storageRef =
+        let storageRef = Storage.storage().reference().child("UserImages.png")
     }
 }
 
