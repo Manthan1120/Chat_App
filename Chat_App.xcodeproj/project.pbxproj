@@ -15,7 +15,7 @@
 		DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBF0A22A691D16004B7E10 /* ForgotPage.swift */; };
 		DE088D6F2A6A4A42004B839C /* DPOTPView in Frameworks */ = {isa = PBXBuildFile; productRef = DE088D6E2A6A4A42004B839C /* DPOTPView */; };
 		DE088D712A6A5424004B839C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE088D702A6A5424004B839C /* GoogleService-Info.plist */; };
-		DE1B31A52A67CA1800991D57 /* EditableSetinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B31A42A67CA1800991D57 /* EditableSetinPage.swift */; };
+		DE2C2EAC2A70E33000D36CF9 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C2EAB2A70E33000D36CF9 /* ModelView.swift */; };
 		DE4D4BDF2A6799FE00539859 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BDE2A6799FE00539859 /* TabBar.swift */; };
 		DE4D4BE12A679A4D00539859 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BE02A679A4D00539859 /* SearchPage.swift */; };
 		DE4D4BE32A679AB300539859 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BE22A679AB300539859 /* ProfilePage.swift */; };
@@ -64,7 +64,7 @@
 		DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "E-mailVerifyForOtp.swift"; sourceTree = "<group>"; };
 		DADBF0A22A691D16004B7E10 /* ForgotPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPage.swift; sourceTree = "<group>"; };
 		DE088D702A6A5424004B839C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DE1B31A42A67CA1800991D57 /* EditableSetinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableSetinPage.swift; sourceTree = "<group>"; };
+		DE2C2EAB2A70E33000D36CF9 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		DE4D4BDE2A6799FE00539859 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		DE4D4BE02A679A4D00539859 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
 		DE4D4BE22A679AB300539859 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
@@ -156,7 +156,6 @@
 				DE4D4BE42A679B6F00539859 /* MainPage.swift */,
 				DADBF0A22A691D16004B7E10 /* ForgotPage.swift */,
 				DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */,
-				DE1B31A42A67CA1800991D57 /* EditableSetinPage.swift */,
 				DE4D4BE02A679A4D00539859 /* SearchPage.swift */,
 			);
 			path = ViewControllers;
@@ -167,6 +166,7 @@
 			children = (
 				DE5112C72A66719B00014723 /* SignUpPage.swift */,
 				DE5112F62A66737300014723 /* SignInPage.swift */,
+				DE2C2EAB2A70E33000D36CF9 /* ModelView.swift */,
 			);
 			path = UserVarification;
 			sourceTree = "<group>";
@@ -498,9 +498,9 @@
 				DE4D4BE72A679BAF00539859 /* SettingPage.swift in Sources */,
 				DE5112F72A66737300014723 /* SignInPage.swift in Sources */,
 				DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */,
-				DE1B31A52A67CA1800991D57 /* EditableSetinPage.swift in Sources */,
 				DE5112CE2A66719B00014723 /* Chat_App.xcdatamodeld in Sources */,
 				DE4D4BDF2A6799FE00539859 /* TabBar.swift in Sources */,
+				DE2C2EAC2A70E33000D36CF9 /* ModelView.swift in Sources */,
 				DE5112C42A66719B00014723 /* AppDelegate.swift in Sources */,
 				DAA491C12A6A554000354005 /* E-mailVerifyForOtp.swift in Sources */,
 				DE4D4BE12A679A4D00539859 /* SearchPage.swift in Sources */,

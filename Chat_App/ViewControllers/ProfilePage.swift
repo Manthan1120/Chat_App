@@ -15,8 +15,6 @@ import FirebaseCore
 
 class ProfilePage: UIViewController {
 
-   
-    @IBOutlet weak var editButtonOutlet: UIButton!
     @IBOutlet weak var genderLabelOutlet: UILabel!
     @IBOutlet weak var numberLabelOutlet: UILabel!
     @IBOutlet weak var birthDateLabelOutlet: UILabel!
@@ -27,9 +25,14 @@ class ProfilePage: UIViewController {
     
     var ref : DatabaseReference!
     let imagePicker = UIImagePickerController()
+    var userUid = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Done!!")
+        userUid = Auth.auth().currentUser!.uid
+        print(userUid)
+        
         set()
         ref = Database.database().reference()
         let tapGesture = UITapGestureRecognizer()
@@ -60,12 +63,6 @@ class ProfilePage: UIViewController {
         genderLabelOutlet.layer.cornerRadius = 7
         genderLabelOutlet.layer.masksToBounds = true
         
-        editButtonOutlet.layer.cornerRadius = 11
-        editButtonOutlet.layer.shadowColor = UIColor.systemGray3.cgColor
-        editButtonOutlet.layer.shadowRadius = 4.0
-        editButtonOutlet.layer.shadowOpacity = 4.4
-        editButtonOutlet.layer.shadowOffset = CGSize(width: 4, height: 4)
-        editButtonOutlet.layer.masksToBounds = false
     }
     
     
@@ -79,9 +76,8 @@ class ProfilePage: UIViewController {
         }
     }
     
-    @IBAction func editButtonAction(_ sender: Any) {
-        let navigate = storyboard?.instantiateViewController(withIdentifier: "EditableSetinPage") as! EditableSetinPage
-        navigationController?.pushViewController(navigate, animated: true)
+    @IBAction func doneButtonAction(_ sender: Any) {
+    
     }
     
 }
@@ -125,10 +121,10 @@ extension ProfilePage {
         }
     }
     
-    func saveImage(profileImageUrl:URL,complition:@escaping((_ url:URL?)->())) {
-        let directory = ["UserUid": "Manthan","ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
-        self.ref.child("UserProfile").childByAutoId().setValue(directory)
+    func saveImage(profileImageUrl:URL,complition:@escaping((_ url:URL?)->())){
+        let directory = ["UserUid": Auth.auth().currentUser!.email,"ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
+        self.ref.child("UserProfile").child(userUid).setValue(directory)
     }
+    
+    
 }
-
-

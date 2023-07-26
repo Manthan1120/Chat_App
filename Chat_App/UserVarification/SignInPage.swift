@@ -15,9 +15,8 @@ class SignInPage: UIViewController {
     @IBOutlet weak var faceBookButtonOutlet: UIButton!
     @IBOutlet weak var twitterButtonOutlet: UIButton!
     
-    
-    
     var fir: Firestore!
+    var userUID = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +80,8 @@ class SignInPage: UIViewController {
     func fireBaseAuth() {
         Auth.auth().signIn(withEmail: emailOutlet.text!, password: passwordOutlet.text!) {[self] user, error in
             if error == nil {
-                print("User Uid = \(user?.user.uid)")
+                userUID = user!.user.uid
+                print(userUID)
                 navigation()
                 emailOutlet.text = ""
                 passwordOutlet.text = ""
@@ -90,6 +90,8 @@ class SignInPage: UIViewController {
                 showAlert(title: error!.localizedDescription)
             }
         }
+        
+        Auth.auth().currentUser!.uid
     }
     
     func navigation() {
@@ -130,3 +132,4 @@ class SignInPage: UIViewController {
     }
     
 }
+
