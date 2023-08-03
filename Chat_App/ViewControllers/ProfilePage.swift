@@ -24,16 +24,18 @@ class ProfilePage: UIViewController {
     @IBOutlet weak var imageOutlet: UIImageView!
     
     var ref : DatabaseReference!
+    var db : Firestore!
+    
     let imagePicker = UIImagePickerController()
-    var userUid = ""
+    var userUid = Auth.auth().currentUser!.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Done!!")
-        userUid = Auth.auth().currentUser!.uid
         print(userUid)
-        
+        getAllFireData()
         set()
+        db = Firestore.firestore()
         ref = Database.database().reference()
         let tapGesture = UITapGestureRecognizer()
         tapGesture.addTarget(self,action:
@@ -122,8 +124,18 @@ extension ProfilePage {
     }
     
     func saveImage(profileImageUrl:URL,complition:@escaping((_ url:URL?)->())){
-        let directory = ["UserUid": Auth.auth().currentUser!.email,"ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
+        let directory = ["Email": Auth.auth().currentUser!.email,"ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
         self.ref.child("UserProfile").child(userUid).setValue(directory)
+    }
+    
+    func getAllFireData() {
+      
+    }
+    
+    func urlToImage(link:String) -> UIImage? {
+        let url = URL(string:link)
+        let data = try? Data(contentsOf: url! as URL)
+        return UIImage(data: data!)
     }
     
     

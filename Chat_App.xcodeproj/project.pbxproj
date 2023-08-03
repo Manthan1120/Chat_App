@@ -15,6 +15,7 @@
 		DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBF0A22A691D16004B7E10 /* ForgotPage.swift */; };
 		DE088D6F2A6A4A42004B839C /* DPOTPView in Frameworks */ = {isa = PBXBuildFile; productRef = DE088D6E2A6A4A42004B839C /* DPOTPView */; };
 		DE088D712A6A5424004B839C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE088D702A6A5424004B839C /* GoogleService-Info.plist */; };
+		DE1A51772A7B9A7200FFF0C5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DE1A51762A7B9A7200FFF0C5 /* SDWebImage */; };
 		DE2C2EAC2A70E33000D36CF9 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C2EAB2A70E33000D36CF9 /* ModelView.swift */; };
 		DE4D4BDF2A6799FE00539859 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BDE2A6799FE00539859 /* TabBar.swift */; };
 		DE4D4BE12A679A4D00539859 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BE02A679A4D00539859 /* SearchPage.swift */; };
@@ -99,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1A51772A7B9A7200FFF0C5 /* SDWebImage in Frameworks */,
 				BD4E11A70095AE23F5E2DA62 /* Pods_Chat_App.framework in Frameworks */,
 				DE088D6F2A6A4A42004B839C /* DPOTPView in Frameworks */,
 			);
@@ -266,6 +268,7 @@
 			name = Chat_App;
 			packageProductDependencies = (
 				DE088D6E2A6A4A42004B839C /* DPOTPView */,
+				DE1A51762A7B9A7200FFF0C5 /* SDWebImage */,
 			);
 			productName = Chat_App;
 			productReference = DE5112C02A66719B00014723 /* Chat_App.app */;
@@ -344,6 +347,7 @@
 			mainGroup = DE5112B72A66719B00014723;
 			packageReferences = (
 				DE088D6D2A6A4A42004B839C /* XCRemoteSwiftPackageReference "DPOTPView" */,
+				DE1A51752A7B9A7200FFF0C5 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = DE5112C12A66719B00014723 /* Products */;
 			projectDirPath = "";
@@ -860,6 +864,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		DE1A51752A7B9A7200FFF0C5 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -867,6 +879,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DE088D6D2A6A4A42004B839C /* XCRemoteSwiftPackageReference "DPOTPView" */;
 			productName = DPOTPView;
+		};
+		DE1A51762A7B9A7200FFF0C5 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE1A51752A7B9A7200FFF0C5 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 
