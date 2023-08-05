@@ -27,16 +27,16 @@ class ProfilePage: UIViewController {
     var db : Firestore!
     
     let imagePicker = UIImagePickerController()
-    var userUid = Auth.auth().currentUser!.uid
+    var userUid = Auth.auth().currentUser?.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Done!!")
-        print(userUid)
+        print(userUid!)
         getAllFireData()
         set()
         db = Firestore.firestore()
-        ref = Database.database().reference()
+       
         let tapGesture = UITapGestureRecognizer()
         tapGesture.addTarget(self,action:
                                 #selector(ProfilePage.openGallary(tapGesture:)))
@@ -67,7 +67,6 @@ class ProfilePage: UIViewController {
         
     }
     
-    
     func saveFirData() {
         self.uplodeImage(self.imageOutlet.image!) { url in
             self.saveImage(profileImageUrl: url!) { success in
@@ -77,11 +76,6 @@ class ProfilePage: UIViewController {
             }
         }
     }
-    
-    @IBAction func doneButtonAction(_ sender: Any) {
-    
-    }
-    
 }
 
 extension ProfilePage: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
@@ -124,19 +118,17 @@ extension ProfilePage {
     }
     
     func saveImage(profileImageUrl:URL,complition:@escaping((_ url:URL?)->())){
-        let directory = ["Email": Auth.auth().currentUser!.email,"ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
-        self.ref.child("UserProfile").child(userUid).setValue(directory)
+        let directory = ["Email": Auth.auth().currentUser?.email,"ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
+        self.ref.child("UserProfile").child((userUid!)).setValue(directory)
     }
     
     func getAllFireData() {
-      
+        print(">>>>>")
+
+        ref = Database.database().reference()
+        ref.observeSingleEvent(of: .value) { snapshot in
+            print(snapshot.value!)
+        }
     }
-    
-    func urlToImage(link:String) -> UIImage? {
-        let url = URL(string:link)
-        let data = try? Data(contentsOf: url! as URL)
-        return UIImage(data: data!)
-    }
-    
     
 }

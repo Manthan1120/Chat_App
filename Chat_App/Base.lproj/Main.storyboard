@@ -146,7 +146,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2w-lR-nF9">
                                 <rect key="frame" x="328" y="59" width="45" height="41"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
+                                <buttonConfiguration key="configuration" style="plain" title="radhe radhe">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="7"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="skipButton:" destination="efq-uq-7DD" eventType="touchUpInside" id="bWM-NH-gEU"/>
                                 </connections>
@@ -885,7 +887,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfb-2S-3E4">
-                                <rect key="frame" x="16" y="127" width="361" height="642"/>
+                                <rect key="frame" x="16" y="127" width="372" height="642"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CJ-Ej-fao">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="1000"/>
@@ -1127,7 +1129,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="6CJ-Ej-fao" secondAttribute="bottom" id="JwO-ae-iAA"/>
                                     <constraint firstItem="6CJ-Ej-fao" firstAttribute="leading" secondItem="Vfb-2S-3E4" secondAttribute="leading" id="ODq-DC-UGw"/>
@@ -1142,7 +1144,7 @@
                             <constraint firstItem="RGu-3K-h08" firstAttribute="trailing" secondItem="8C0-Wf-hyA" secondAttribute="trailing" constant="20" id="8N3-xV-zHo"/>
                             <constraint firstItem="Vfb-2S-3E4" firstAttribute="leading" secondItem="RGu-3K-h08" secondAttribute="leading" constant="16" id="BJl-DD-1bT"/>
                             <constraint firstItem="8C0-Wf-hyA" firstAttribute="leading" secondItem="RGu-3K-h08" secondAttribute="leading" constant="20" id="NYf-I0-mc2"/>
-                            <constraint firstItem="RGu-3K-h08" firstAttribute="trailing" secondItem="Vfb-2S-3E4" secondAttribute="trailing" constant="16" id="OSt-fW-Lzv"/>
+                            <constraint firstItem="RGu-3K-h08" firstAttribute="trailing" secondItem="Vfb-2S-3E4" secondAttribute="trailing" constant="5" id="OSt-fW-Lzv"/>
                             <constraint firstItem="8C0-Wf-hyA" firstAttribute="top" secondItem="RGu-3K-h08" secondAttribute="top" constant="20" id="ZCz-05-RTz"/>
                             <constraint firstItem="Vfb-2S-3E4" firstAttribute="bottom" secondItem="RGu-3K-h08" secondAttribute="bottom" id="fUE-do-0hq"/>
                             <constraint firstItem="Vfb-2S-3E4" firstAttribute="top" secondItem="8C0-Wf-hyA" secondAttribute="bottom" constant="8" symbolic="YES" id="sMm-Em-CLY"/>
@@ -1166,7 +1168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQ4-s8-c5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8553" y="1102"/>
+            <point key="canvasLocation" x="8551.9083969465646" y="1101.4084507042255"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dfi-vM-jdI">

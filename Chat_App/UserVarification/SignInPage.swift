@@ -91,7 +91,6 @@ class SignInPage: UIViewController {
             }
         }
         
-        Auth.auth().currentUser!.uid
     }
     
     func navigation() {
