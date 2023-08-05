@@ -93,6 +93,10 @@ class SignInPage: UIViewController {
         
     }
     
+    func fetchData(){
+        
+    }
+    
     func navigation() {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "TabBar") as! TabBar
         navigationController?.pushViewController(navigation, animated: true)
