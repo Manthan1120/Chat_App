@@ -110,6 +110,10 @@ class SettingPage: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func changePassword(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(identifier: "ChangePasswordePage") as! ChangePasswordePage
+        navigationController?.pushViewController(navigation, animated: true)
+    }
     
 }
 

@@ -13,7 +13,7 @@ import FirebaseCore
 import FirebaseAnalytics
 import FirebaseFirestore
 
-@main
+  @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
