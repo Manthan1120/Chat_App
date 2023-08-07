@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/r86/Documents/Chat_App/Chat_App/ViewControllers/EditProfilePage.swift">
+   </FileRef>
+   <FileRef
       location = "group:Chat_App.xcodeproj">
    </FileRef>
    <FileRef

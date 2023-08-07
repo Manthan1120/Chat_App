@@ -11,10 +11,12 @@ import FirebaseStorage
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseCore
+import SDWebImage
 
 
 class ProfilePage: UIViewController {
-
+    
+    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var genderLabelOutlet: UILabel!
     @IBOutlet weak var numberLabelOutlet: UILabel!
     @IBOutlet weak var birthDateLabelOutlet: UILabel!
@@ -24,7 +26,9 @@ class ProfilePage: UIViewController {
     @IBOutlet weak var imageOutlet: UIImageView!
     
     var ref : DatabaseReference!
-    var db : Firestore!
+    var colRef : CollectionReference!
+    var fir : Firestore!
+    var userImage = ""
     
     let imagePicker = UIImagePickerController()
     var userUid = Auth.auth().currentUser?.uid
@@ -35,8 +39,8 @@ class ProfilePage: UIViewController {
         print(userUid!)
         getAllFireData()
         set()
-        db = Firestore.firestore()
-       
+        fir = Firestore.firestore()
+        
         let tapGesture = UITapGestureRecognizer()
         tapGesture.addTarget(self,action:
                                 #selector(ProfilePage.openGallary(tapGesture:)))
@@ -49,9 +53,12 @@ class ProfilePage: UIViewController {
     }
     
     func set() {
-       
+        
         imageOutlet.layer.cornerRadius = 45
         imageOutlet.layer.masksToBounds = true
+        
+        editButton.layer.cornerRadius = 25
+        editButton.layer.masksToBounds = true
         
         bioLabelOutlet.layer.cornerRadius = 7
         bioLabelOutlet.layer.masksToBounds = true
@@ -119,16 +126,45 @@ extension ProfilePage {
     
     func saveImage(profileImageUrl:URL,complition:@escaping((_ url:URL?)->())){
         let directory = ["Email": Auth.auth().currentUser?.email,"ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
-        self.ref.child("UserProfile").child((userUid!)).setValue(directory)
+        //self.ref.child("UserProfile").child((userUid!)).setValue(directory)
+        self.fir.collection("UserProfile").document(userUid!).setData(directory)
     }
     
     func getAllFireData() {
         print(">>>>>")
-
-        ref = Database.database().reference()
-        ref.observeSingleEvent(of: .value) { snapshot in
-            print(snapshot.value!)
+        
+        // realtime get all data
+        //        ref = Database.database().reference()
+        //        ref.observeSingleEvent(of: .value) { snapshot in
+        //            print(snapshot.value!)
+        //        }
+        
+        colRef = Firestore.firestore().collection("UserProfile")
+        colRef.getDocuments() { [self] (docuSnapshot, error) in
+            if let error = error {
+                print("something went wrong:\(error)")
+            }else{
+                for document in docuSnapshot!.documents {
+                    if document.documentID == userUid {
+                        userImage =  document["ProfileImageUrl"] as! String
+                        imageOutlet.sd_setImage(with : URL(string: userImage))
+                        print(userImage)
+                    }
+                }
+            }
+        }
+        
+        colRef = Firestore.firestore().collection("User")
+        colRef.getDocuments() { [self] (docuSnapshot, error) in
+            if let error = error {
+                print("something went wrong:\(error)")
+            }else{
+                for document in docuSnapshot!.documents {
+                    if document.documentID == userUid {
+                        userNameLabelOutlet.text! =  document["userName"] as! String
+                    }
+                }
+            }
         }
     }
-    
 }
