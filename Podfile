@@ -15,6 +15,8 @@ pod 'FirebaseAnalytics'
 pod 'FirebaseStorage'
 pod 'GoogleSignIn'
 
+ 
+
 
   target 'Chat_AppTests' do
     inherit! :search_paths
