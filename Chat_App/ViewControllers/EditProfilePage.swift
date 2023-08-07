@@ -113,7 +113,7 @@ extension EditProfilePage {
     func getallData() {
         
         colRef = Firestore.firestore().collection("UserProfile")
-        colRef.getDocuments() { [self] (docuSnapshot, error) in
+        colRef.addSnapshotListener() { [self] (docuSnapshot, error) in
             if let error = error {
                 print("something went wrong:\(error)")
             }else{
@@ -128,7 +128,7 @@ extension EditProfilePage {
         }
         
         colRef = Firestore.firestore().collection("UserData")
-        colRef.getDocuments() { [self] (docuSnapshot, error) in
+        colRef.addSnapshotListener() { [self] (docuSnapshot, error) in
             if let error = error {
                 print("something went wrong:\(error)")
             }else{
