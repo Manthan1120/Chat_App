@@ -6,12 +6,24 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseStorage
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseCore
+import SDWebImage
 
 class MainPage: UIViewController {
 
     @IBOutlet weak var searchTextFiled: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var tabelView: UITableView!
+    
+    var ref : DatabaseReference!
+    var colRef : CollectionReference!
+    var fir : Firestore!
+    var userUid = Auth.auth().currentUser?.uid
+    var userImage = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +63,35 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
         cell.ProfileImage.layer.cornerRadius = 15
         cell.ProfileImage.layer.borderWidth = 3
         cell.ProfileImage.layer.borderColor = UIColor.systemGray4.cgColor
+        
+        
+        colRef = Firestore.firestore().collection("UserProfile")
+        colRef.getDocuments() { [self] (docuSnapshot, error) in
+            if let error = error {
+                print("something went wrong:\(error)")
+            }else{
+                for document in docuSnapshot!.documents {
+                    if document.documentID == userUid {
+                        userImage =  document["ProfileImageUrl"] as! String
+                        cell.ProfileImage.sd_setImage(with : URL(string: userImage))
+                        print(userImage)
+                    }
+                }
+            }
+        }
+        
+        colRef = Firestore.firestore().collection("UserData")
+        colRef.getDocuments() { [self] (docuSnapshot, error) in
+            if let error = error {
+                print("something went wrong:\(error)")
+            }else{
+                for document in docuSnapshot!.documents {
+                    if document.documentID == userUid {
+                        cell.UserName.text! = document["Name"] as! String
+                    }
+                }
+            }
+        }
         
         return cell
     }
