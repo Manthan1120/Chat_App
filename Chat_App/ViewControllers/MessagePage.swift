@@ -18,6 +18,7 @@ class MessagePage: UIViewController {
     @IBOutlet weak var sendButtonOtlet: UIButton!
     @IBOutlet weak var textFiledForUser: UITextField!
     @IBOutlet weak var MassegeUserImage: UIImageView!
+    @IBOutlet weak var userName: UILabel!
     
     var ref : DatabaseReference!
     var colRef : CollectionReference!
@@ -54,6 +55,8 @@ class MessagePage: UIViewController {
         textFiledForUser.layer.shadowOffset = CGSize(width: 4, height: 4)
         textFiledForUser.layer.masksToBounds = false
         
+        //UserPic
+        
         colRef = Firestore.firestore().collection("UserProfile")
         colRef.addSnapshotListener() { [self] (docuSnapshot, error) in
             if let error = error {
@@ -64,6 +67,22 @@ class MessagePage: UIViewController {
                         userImage =  document["ProfileImageUrl"] as! String
                         MassegeUserImage.sd_setImage(with : URL(string: userImage))
                         print(userImage)
+                    }
+                }
+            }
+        }
+        
+        
+        //userName
+        
+        colRef = Firestore.firestore().collection("UserData")
+        colRef.addSnapshotListener() { [self] (docuSnapshot, error) in
+            if let error = error {
+                print("something went wrong:\(error)")
+            }else{
+                for document in docuSnapshot!.documents {
+                    if document.documentID == userUid {
+                        userName.text! = document["Name"] as! String
                     }
                 }
             }

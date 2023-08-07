@@ -613,6 +613,7 @@
                         <outlet property="MassegeUserImage" destination="x0V-VG-jkL" id="cY5-gN-GgR"/>
                         <outlet property="sendButtonOtlet" destination="rUj-Jw-fTw" id="WdB-Su-dVU"/>
                         <outlet property="textFiledForUser" destination="fiN-CH-xfn" id="AXx-kS-YXF"/>
+                        <outlet property="userName" destination="fhC-Pn-4HI" id="55l-AO-nF8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oOe-Nj-zLO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
