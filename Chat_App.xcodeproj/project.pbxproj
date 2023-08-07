@@ -34,7 +34,7 @@
 		DE5112E82A66719C00014723 /* Chat_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112E72A66719C00014723 /* Chat_AppUITests.swift */; };
 		DE5112EA2A66719C00014723 /* Chat_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112E92A66719C00014723 /* Chat_AppUITestsLaunchTests.swift */; };
 		DE5112F72A66737300014723 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5112F62A66737300014723 /* SignInPage.swift */; };
-		DE9330D42A80BE7000C56807 /* EditProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9330D32A80BE7000C56807 /* EditProfilePage.swift */; };
+		DE9330DC2A80C65D00C56807 /* EditProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9330DB2A80C65D00C56807 /* EditProfilePage.swift */; };
 		DEA045172A6F93A20012976E /* MessagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA045162A6F93A20012976E /* MessagePage.swift */; };
 		DEA0451F2A6F94980012976E /* CellForUserFriendDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA0451D2A6F94980012976E /* CellForUserFriendDetail.swift */; };
 		DEA045202A6F94980012976E /* CellForUserFriendDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA0451E2A6F94980012976E /* CellForUserFriendDetail.xib */; };
@@ -89,7 +89,7 @@
 		DE5112E72A66719C00014723 /* Chat_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat_AppUITests.swift; sourceTree = "<group>"; };
 		DE5112E92A66719C00014723 /* Chat_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DE5112F62A66737300014723 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
-		DE9330D32A80BE7000C56807 /* EditProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfilePage.swift; path = /Users/r86/Documents/Chat_App/Chat_App/ViewControllers/EditProfilePage.swift; sourceTree = "<absolute>"; };
+		DE9330DB2A80C65D00C56807 /* EditProfilePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfilePage.swift; sourceTree = "<group>"; };
 		DEA045162A6F93A20012976E /* MessagePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePage.swift; sourceTree = "<group>"; };
 		DEA0451D2A6F94980012976E /* CellForUserFriendDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForUserFriendDetail.swift; sourceTree = "<group>"; };
 		DEA0451E2A6F94980012976E /* CellForUserFriendDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellForUserFriendDetail.xib; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 				DA14F4A62A6B912500B2C5D2 /* PasswordChange.swift */,
 				DE4D4BE42A679B6F00539859 /* MainPage.swift */,
 				DADBF0A22A691D16004B7E10 /* ForgotPage.swift */,
+				DE9330DB2A80C65D00C56807 /* EditProfilePage.swift */,
 				DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */,
-				DE9330D32A80BE7000C56807 /* EditProfilePage.swift */,
 				DE4D4BE02A679A4D00539859 /* SearchPage.swift */,
 			);
 			path = ViewControllers;
@@ -517,7 +517,7 @@
 				DE4D4BE12A679A4D00539859 /* SearchPage.swift in Sources */,
 				DA14F4A72A6B912500B2C5D2 /* PasswordChange.swift in Sources */,
 				DEA045172A6F93A20012976E /* MessagePage.swift in Sources */,
-				DE9330D42A80BE7000C56807 /* EditProfilePage.swift in Sources */,
+				DE9330DC2A80C65D00C56807 /* EditProfilePage.swift in Sources */,
 				DE4D4BE32A679AB300539859 /* ProfilePage.swift in Sources */,
 				DE5112C62A66719B00014723 /* SceneDelegate.swift in Sources */,
 				DE4D4BE52A679B6F00539859 /* MainPage.swift in Sources */,
