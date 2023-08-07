@@ -14,7 +14,7 @@ pod 'FirebaseDatabase'
 pod 'FirebaseAnalytics'
 pod 'FirebaseStorage'
 pod 'GoogleSignIn'
-
+pod 'Firebase'
  
 
 
