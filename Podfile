@@ -13,6 +13,7 @@ pod 'FirebaseFirestore'
 pod 'FirebaseDatabase'
 pod 'FirebaseAnalytics'
 pod 'FirebaseStorage'
+pod 'GoogleSignIn'
 
 
   target 'Chat_AppTests' do
