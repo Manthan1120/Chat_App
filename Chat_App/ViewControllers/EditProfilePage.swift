@@ -58,8 +58,9 @@ class EditProfilePage: UIViewController {
         }
     }
     
-    
     @IBAction func doneButtonAction(_ sender: Any) {
+        saveData()
+        let navigate = storyboard?.instantiateViewController(withIdentifier: "ProfilePage") as! ProfilePage
         navigationController?.popViewController(animated: true)
     }
 }
@@ -110,6 +111,7 @@ extension EditProfilePage {
     }
     
     func getallData() {
+        
         colRef = Firestore.firestore().collection("UserProfile")
         colRef.getDocuments() { [self] (docuSnapshot, error) in
             if let error = error {
@@ -124,5 +126,33 @@ extension EditProfilePage {
                 }
             }
         }
+        
+        colRef = Firestore.firestore().collection("UserData")
+        colRef.getDocuments() { [self] (docuSnapshot, error) in
+            if let error = error {
+                print("something went wrong:\(error)")
+            }else{
+                for document in docuSnapshot!.documents {
+                    if document.documentID == userUid {
+                        bioTextFiled.text! =  document["Bio"] as! String
+                        numberTextFiled.text! = document["Number"] as! String
+                        usertextField.text! = document["Username"] as! String
+                        nameTextField.text! = document["Name"] as! String
+                        genderTextFiled.text! = document["Gender"] as! String
+                        
+                        if usertextField.text! == ""{
+                            usertextField.text! = "Username"
+                        }else if nameTextField.text! == ""{
+                            nameTextField.text! = "Name"
+                        }
+                    }
+                }
+            }
+        }
     }
+    
+    func saveData() {
+        self.fir.collection("UserData").document(userUid!).setData(["Username":usertextField.text!,"Name":nameTextField.text!,"Bio":bioTextFiled.text!,"Number":numberTextFiled.text!,"Gender":genderTextFiled.text!])
+    }
+    
 }

@@ -96,6 +96,23 @@ extension ProfilePage {
             }
         }
         
+        colRef = Firestore.firestore().collection("UserData")
+        colRef.getDocuments() { [self] (docuSnapshot, error) in
+            if let error = error {
+                print("something went wrong:\(error)")
+            }else{
+                for document in docuSnapshot!.documents {
+                    if document.documentID == userUid {
+                        bioLabelOutlet.text! =  document["Bio"] as! String
+                        numberLabelOutlet.text! = document["Number"] as! String
+                        userNameLabelOutlet.text! = document["Username"] as! String
+                        nameLabelOutlet.text! = document["Name"] as! String
+                        genderLabelOutlet.text! = document["Gender"] as! String
+                    }
+                }
+            }
+        }
+        
         colRef = Firestore.firestore().collection("User")
         colRef.getDocuments() { [self] (docuSnapshot, error) in
             if let error = error {
