@@ -13,14 +13,20 @@ import FirebaseDatabase
 import FirebaseCore
 import SDWebImage
 
-class SearchPage: UIViewController {
 
+struct UserData {
+    var Username : String
+    var ProfileImageUrl : String
+}
+
+
+class SearchPage: UIViewController {
+    
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tabelView: UITableView!
     
-    var arrayOfUsers : Array<String>!
-    var arrayOfUserImage : Array<String>!
+    var arrayOfUsersData = [UserData]()
     var ref : DatabaseReference!
     var colRef : CollectionReference!
     var fir : Firestore!
@@ -29,9 +35,9 @@ class SearchPage: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         getFirData()
         setUI()
+        
     }
     
     func setUI(){
@@ -51,40 +57,39 @@ class SearchPage: UIViewController {
         searchButton.layer.shadowOffset = CGSize(width: 4, height: 4)
         searchButton.layer.masksToBounds = false
     }
-
+    
     func getFirData(){
-        arrayOfUsers = []
-        arrayOfUserImage = []
+        
         colRef = Firestore.firestore().collection("UserProfile")
-        colRef.addSnapshotListener() { [self] (docuSnapshot, error) in
-            if let error = error {
-                print("something went wrong:\(error)")
-            }else{
-                for document in docuSnapshot!.documents {
-                    if document.documentID != userUid! {
-                        self.arrayOfUsers.append(document["Username"] as! String)
-                        self.arrayOfUserImage.append(document["ProfileImageUrl"]as! String)
-                        tabelView.reloadData()
+        colRef.addSnapshotListener() { [self] docuSnapshot, error in
+            if error != nil {
+                print(error?.localizedDescription as Any)
+            }
+            else{
+                arrayOfUsersData = (docuSnapshot?.documents.map({[self] data in
+                    return UserData(Username: data["Username"] as! String, ProfileImageUrl: data["ProfileImageUrl"] as! String)
+                    if data.documentID != userUid! {
+                        return UserData(Username: data["Username"] as! String, ProfileImageUrl: data["ProfileImageUrl"] as! String)
                     }
-                }
-                print(arrayOfUsers!)
-                print(arrayOfUserImage!)
+                }))!
+                tabelView.reloadData()
+                print(arrayOfUsersData)
             }
         }
-        tabelView.reloadData()
     }
+   
 }
 
 extension SearchPage: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfUsers.count
+        return arrayOfUsersData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SearchTableViewCell
-        cell.userNameLabel.text! = arrayOfUsers[indexPath.row]
-        cell.userImage.sd_setImage(with: URL(string: arrayOfUserImage[indexPath.row]))
+        cell.userNameLabel.text! = arrayOfUsersData[indexPath.row].Username
+        cell.userImage.sd_setImage(with: URL(string: arrayOfUsersData[indexPath.row].ProfileImageUrl))
         return cell
     }
     
