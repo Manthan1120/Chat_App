@@ -17,7 +17,7 @@ class SignInPage: UIViewController {
     @IBOutlet weak var signInButtonOutlet: UIButton!
     @IBOutlet weak var googleButtonOutlet: UIButton!
     @IBOutlet weak var twitterButtonOutlet: UIButton!
-    
+    @IBOutlet weak var faceBookButtonOutlet: UIButton!
     
     
     var fir: Firestore!
@@ -46,12 +46,12 @@ class SignInPage: UIViewController {
         twitterButtonOutlet.layer.shadowOffset = CGSize(width: 4, height: 4)
         twitterButtonOutlet.layer.masksToBounds = false
         
-//        faceBookButtonOutlet.layer.cornerRadius = 9
-//        faceBookButtonOutlet.layer.shadowColor = UIColor.systemGray3.cgColor
-//        faceBookButtonOutlet.layer.shadowRadius = 4.0
-//        faceBookButtonOutlet.layer.shadowOpacity = 4.4
-//        faceBookButtonOutlet.layer.shadowOffset = CGSize(width: 4, height: 4)
-//        faceBookButtonOutlet.layer.masksToBounds = false
+        faceBookButtonOutlet.layer.cornerRadius = 9
+        faceBookButtonOutlet.layer.shadowColor = UIColor.systemGray3.cgColor
+        faceBookButtonOutlet.layer.shadowRadius = 4.0
+        faceBookButtonOutlet.layer.shadowOpacity = 4.4
+        faceBookButtonOutlet.layer.shadowOffset = CGSize(width: 4, height: 4)
+        faceBookButtonOutlet.layer.masksToBounds = false
         
         googleButtonOutlet.layer.cornerRadius = 9
         googleButtonOutlet.layer.shadowColor = UIColor.systemGray3.cgColor

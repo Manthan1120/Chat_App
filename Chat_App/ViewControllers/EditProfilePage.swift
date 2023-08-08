@@ -21,6 +21,7 @@ class EditProfilePage: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var usertextField: UITextField!
     @IBOutlet weak var imageOutlet: UIImageView!
+    @IBOutlet weak var birthDateTextField: UITextField!
     
     let imagePicker = UIImagePickerController()
     var ref : DatabaseReference!
@@ -104,7 +105,7 @@ extension EditProfilePage {
     }
     
     func saveImage(profileImageUrl:URL,complition:@escaping((_ url:URL?)->())){
-        let directory = ["Username":usertextField.text!,"Name":nameTextField.text!,"Bio":bioTextFiled.text!,"Number":numberTextFiled.text!,"Gender":genderTextFiled.text!,"Email": Auth.auth().currentUser?.email,"ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
+        let directory = ["BirthDate":birthDateTextField.text!,"Username":usertextField.text!,"Name":nameTextField.text!,"Bio":bioTextFiled.text!,"Number":numberTextFiled.text!,"Gender":genderTextFiled.text!,"Email": Auth.auth().currentUser?.email,"ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
         //self.ref.child("UserProfile").child((userUid!)).setValue(directory)
         self.fir.collection("UserProfile").document(userUid!).setData(directory)
     }
