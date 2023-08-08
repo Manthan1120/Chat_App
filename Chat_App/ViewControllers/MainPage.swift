@@ -64,35 +64,6 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
         cell.ProfileImage.layer.borderWidth = 3
         cell.ProfileImage.layer.borderColor = UIColor.systemGray4.cgColor
         
-        
-        colRef = Firestore.firestore().collection("UserProfile")
-        colRef.addSnapshotListener() { [self] (docuSnapshot, error) in
-            if let error = error {
-                print("something went wrong:\(error)")
-            }else{
-                for document in docuSnapshot!.documents {
-                    if document.documentID == userUid {
-                        userImage =  document["ProfileImageUrl"] as! String
-                        cell.ProfileImage.sd_setImage(with : URL(string: userImage))
-                        print(userImage)
-                    }
-                }
-            }
-        }
-        
-        colRef = Firestore.firestore().collection("UserData")
-        colRef.addSnapshotListener() { [self] (docuSnapshot, error) in
-            if let error = error {
-                print("something went wrong:\(error)")
-            }else{
-                for document in docuSnapshot!.documents {
-                    if document.documentID == userUid {
-                        cell.UserName.text! = document["Name"] as! String
-                    }
-                }
-            }
-        }
-        
         return cell
     }
     
