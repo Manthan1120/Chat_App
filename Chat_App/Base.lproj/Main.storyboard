@@ -667,7 +667,7 @@
                                                 <constraint firstItem="iXA-6e-5I2" firstAttribute="top" secondItem="l1p-FA-Ubl" secondAttribute="top" constant="6" id="wnL-ib-VH4"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="userImage" destination="iXA-6e-5I2" id="W28-V2-o0x"/>
                                             <outlet property="userNameLabel" destination="t22-Sa-BtV" id="Nv0-Wn-NGu"/>
@@ -2041,9 +2041,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -64,12 +64,14 @@ class SearchPage: UIViewController {
                     if document.documentID != userUid! {
                         self.arrayOfUsers.append(document["Username"] as! String)
                         self.arrayOfUserImage.append(document["ProfileImageUrl"]as! String)
+                        tabelView.reloadData()
                     }
                 }
                 print(arrayOfUsers!)
                 print(arrayOfUserImage!)
             }
         }
+        tabelView.reloadData()
     }
 }
 
