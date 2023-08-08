@@ -5,6 +5,10 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseCore
 import FirebaseFirestore
+import FBSDKCoreKit
+
+
+
 
 class SignInPage: UIViewController {
    
@@ -12,8 +16,9 @@ class SignInPage: UIViewController {
     @IBOutlet weak var emailOutlet: UITextField!
     @IBOutlet weak var signInButtonOutlet: UIButton!
     @IBOutlet weak var googleButtonOutlet: UIButton!
-    @IBOutlet weak var faceBookButtonOutlet: UIButton!
     @IBOutlet weak var twitterButtonOutlet: UIButton!
+    
+    
     
     var fir: Firestore!
     var userUID = ""
@@ -23,6 +28,8 @@ class SignInPage: UIViewController {
         
         set()
         fir = Firestore.firestore()
+        
+        
         
     }
     
@@ -39,12 +46,12 @@ class SignInPage: UIViewController {
         twitterButtonOutlet.layer.shadowOffset = CGSize(width: 4, height: 4)
         twitterButtonOutlet.layer.masksToBounds = false
         
-        faceBookButtonOutlet.layer.cornerRadius = 9
-        faceBookButtonOutlet.layer.shadowColor = UIColor.systemGray3.cgColor
-        faceBookButtonOutlet.layer.shadowRadius = 4.0
-        faceBookButtonOutlet.layer.shadowOpacity = 4.4
-        faceBookButtonOutlet.layer.shadowOffset = CGSize(width: 4, height: 4)
-        faceBookButtonOutlet.layer.masksToBounds = false
+//        faceBookButtonOutlet.layer.cornerRadius = 9
+//        faceBookButtonOutlet.layer.shadowColor = UIColor.systemGray3.cgColor
+//        faceBookButtonOutlet.layer.shadowRadius = 4.0
+//        faceBookButtonOutlet.layer.shadowOpacity = 4.4
+//        faceBookButtonOutlet.layer.shadowOffset = CGSize(width: 4, height: 4)
+//        faceBookButtonOutlet.layer.masksToBounds = false
         
         googleButtonOutlet.layer.cornerRadius = 9
         googleButtonOutlet.layer.shadowColor = UIColor.systemGray3.cgColor
@@ -117,7 +124,7 @@ class SignInPage: UIViewController {
     }
     
     @IBAction func facebookButtonAction(_ sender: Any) {
-        
+      
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
@@ -133,6 +140,7 @@ class SignInPage: UIViewController {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "ForgotPage") as! ForgotPage
         navigationController?.pushViewController(navigation, animated: true)
     }
+   
     
 }
 

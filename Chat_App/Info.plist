@@ -25,5 +25,28 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
+    
+    
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb7402527426430725</string>
+      </array>
+      </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>7402527426430725</string>
+    <key>FacebookDisplayName</key>
+    <string>chat_Budy</string>
+    
+    
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>fbapi</string>
+      <string>fb-messenger-share-api</string>
+    </array>
+    
 </dict>
 </plist>

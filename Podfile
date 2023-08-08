@@ -15,6 +15,10 @@ pod 'FirebaseAnalytics'
 pod 'FirebaseStorage'
 pod 'GoogleSignIn'
 pod 'Firebase'
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+
+
  
 
 

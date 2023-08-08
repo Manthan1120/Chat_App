@@ -116,7 +116,7 @@
                                     <action selector="signUpButtonAction:" destination="efq-uq-7DD" eventType="touchUpInside" id="ps4-xc-evo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgb-nI-Bqx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgb-nI-Bqx" customClass="FBLoginButton">
                                 <rect key="frame" x="141" y="594" width="111" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -125,9 +125,6 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="facebook"/>
-                                <connections>
-                                    <action selector="facebookButtonAction:" destination="efq-uq-7DD" eventType="touchUpInside" id="CIv-5n-T5U"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJO-0R-NxN">
                                 <rect key="frame" x="236" y="362" width="148" height="25"/>
@@ -196,7 +193,6 @@
                     <navigationItem key="navigationItem" id="zJK-VX-lom"/>
                     <connections>
                         <outlet property="emailOutlet" destination="qI4-MQ-cXH" id="Tds-tl-uYk"/>
-                        <outlet property="faceBookButtonOutlet" destination="mgb-nI-Bqx" id="ebH-31-07a"/>
                         <outlet property="googleButtonOutlet" destination="SQj-Do-rC9" id="Nic-kS-ZlV"/>
                         <outlet property="passwordOutlet" destination="hiV-X6-W3e" id="VMd-v4-UFi"/>
                         <outlet property="signInButtonOutlet" destination="FPg-ah-Usq" id="fl9-Wy-QcY"/>
