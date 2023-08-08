@@ -59,7 +59,7 @@ class EditProfilePage: UIViewController {
     }
     
     @IBAction func doneButtonAction(_ sender: Any) {
-        saveData()
+        saveFirData()
         let navigate = storyboard?.instantiateViewController(withIdentifier: "ProfilePage") as! ProfilePage
         navigationController?.popViewController(animated: true)
     }
@@ -79,7 +79,6 @@ extension EditProfilePage: UIImagePickerControllerDelegate,UINavigationControlle
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         imageOutlet.image = image
         self.dismiss(animated: true,completion: nil)
-        self.saveFirData()
     }
 }
 
@@ -105,7 +104,7 @@ extension EditProfilePage {
     }
     
     func saveImage(profileImageUrl:URL,complition:@escaping((_ url:URL?)->())){
-        let directory = ["Email": Auth.auth().currentUser?.email,"ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
+        let directory = ["Username":usertextField.text!,"Name":nameTextField.text!,"Bio":bioTextFiled.text!,"Number":numberTextFiled.text!,"Gender":genderTextFiled.text!,"Email": Auth.auth().currentUser?.email,"ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
         //self.ref.child("UserProfile").child((userUid!)).setValue(directory)
         self.fir.collection("UserProfile").document(userUid!).setData(directory)
     }
@@ -121,19 +120,6 @@ extension EditProfilePage {
                     if document.documentID == userUid {
                         userImage =  document["ProfileImageUrl"] as! String
                         imageOutlet.sd_setImage(with : URL(string: userImage))
-                        print(userImage)
-                    }
-                }
-            }
-        }
-        
-        colRef = Firestore.firestore().collection("UserData")
-        colRef.addSnapshotListener() { [self] (docuSnapshot, error) in
-            if let error = error {
-                print("something went wrong:\(error)")
-            }else{
-                for document in docuSnapshot!.documents {
-                    if document.documentID == userUid {
                         bioTextFiled.text! =  document["Bio"] as! String
                         numberTextFiled.text! = document["Number"] as! String
                         usertextField.text! = document["Username"] as! String
@@ -150,9 +136,4 @@ extension EditProfilePage {
             }
         }
     }
-    
-    func saveData() {
-        self.fir.collection("UserData").document(userUid!).setData(["Username":usertextField.text!,"Name":nameTextField.text!,"Bio":bioTextFiled.text!,"Number":numberTextFiled.text!,"Gender":genderTextFiled.text!])
-    }
-    
 }

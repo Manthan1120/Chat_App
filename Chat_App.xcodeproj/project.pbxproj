@@ -17,6 +17,7 @@
 		DE088D6F2A6A4A42004B839C /* DPOTPView in Frameworks */ = {isa = PBXBuildFile; productRef = DE088D6E2A6A4A42004B839C /* DPOTPView */; };
 		DE088D712A6A5424004B839C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE088D702A6A5424004B839C /* GoogleService-Info.plist */; };
 		DE1A51772A7B9A7200FFF0C5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DE1A51762A7B9A7200FFF0C5 /* SDWebImage */; };
+		DE1C0B3A2A81FB97009880F4 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1C0B392A81FB97009880F4 /* SearchTableViewCell.swift */; };
 		DE2C2EAC2A70E33000D36CF9 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C2EAB2A70E33000D36CF9 /* ModelView.swift */; };
 		DE4D4BDF2A6799FE00539859 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BDE2A6799FE00539859 /* TabBar.swift */; };
 		DE4D4BE12A679A4D00539859 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BE02A679A4D00539859 /* SearchPage.swift */; };
@@ -69,6 +70,7 @@
 		DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "E-mailVerifyForOtp.swift"; sourceTree = "<group>"; };
 		DADBF0A22A691D16004B7E10 /* ForgotPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPage.swift; sourceTree = "<group>"; };
 		DE088D702A6A5424004B839C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DE1C0B392A81FB97009880F4 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		DE2C2EAB2A70E33000D36CF9 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		DE4D4BDE2A6799FE00539859 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		DE4D4BE02A679A4D00539859 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				DEBBC6E52A690CBD00531235 /* CellFile */,
 				DE4D4BE82A679CB500539859 /* ViewControllers */,
 				DE5112C92A66719B00014723 /* Main.storyboard */,
+				DE1C0B392A81FB97009880F4 /* SearchTableViewCell.swift */,
 				DA4224202A7E5061008E0D2F /* ChangePasswordePage.swift */,
 				DE4D4BDE2A6799FE00539859 /* TabBar.swift */,
 				DE5112CF2A66719C00014723 /* Assets.xcassets */,
@@ -515,6 +518,7 @@
 				DE4D4BDF2A6799FE00539859 /* TabBar.swift in Sources */,
 				DE2C2EAC2A70E33000D36CF9 /* ModelView.swift in Sources */,
 				DE5112C42A66719B00014723 /* AppDelegate.swift in Sources */,
+				DE1C0B3A2A81FB97009880F4 /* SearchTableViewCell.swift in Sources */,
 				DAA491C12A6A554000354005 /* E-mailVerifyForOtp.swift in Sources */,
 				DE4D4BE12A679A4D00539859 /* SearchPage.swift in Sources */,
 				DA14F4A72A6B912500B2C5D2 /* PasswordChange.swift in Sources */,
