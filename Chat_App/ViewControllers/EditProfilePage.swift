@@ -108,6 +108,7 @@ extension EditProfilePage {
         let directory = ["BirthDate":birthDateTextField.text!,"Username":usertextField.text!,"Name":nameTextField.text!,"Bio":bioTextFiled.text!,"Number":numberTextFiled.text!,"Gender":genderTextFiled.text!,"Email": Auth.auth().currentUser?.email,"ProfileImageUrl":profileImageUrl.absoluteString] as! [String: Any]
         //self.ref.child("UserProfile").child((userUid!)).setValue(directory)
         self.fir.collection("UserProfile").document(userUid!).setData(directory)
+    
     }
     
     func getallData() {
