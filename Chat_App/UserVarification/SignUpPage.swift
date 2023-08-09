@@ -87,6 +87,9 @@ class SignUpPage: UIViewController {
             if error == nil {
                 let uid = authDataResult?.user.uid
                 self.fir.collection("User").document(uid!).setData(["userName":self.userOutlet.text!,"email":self.emailOutlet.text!,"password":self.passwordOutlate.text!])
+                let directory = ["BirthDate":"-","Username":userOutlet.text!,"Name":"-","Bio":"","Number":"-","Gender":"-","Email": emailOutlet.text!,"ProfileImageUrl":"https://firebasestorage.googleapis.com/v0/b/chatbuddy-d0c0a.appspot.com/o/UserImages.png?alt=media&token=6bd52511-bb27-4eab-ad43-66f4de9efa78","UserUID":uid!] as! [String: Any]
+                //self.ref.child("UserProfile").child((userUid!)).setValue(directory)
+                self.fir.collection("UserProfile").document(uid!).setData(directory)
                 navigate()
             }else{
                 showAlert(title: error!.localizedDescription)

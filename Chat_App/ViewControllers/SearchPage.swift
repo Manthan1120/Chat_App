@@ -68,8 +68,7 @@ class SearchPage: UIViewController {
             else{
                 arrayOfUsersData = docuSnapshot!.documents.compactMap { document in
                     if document.documentID != userUid! {
-                        let data = document.data()
-                        return UserData(Username: data["Username"] as! String, ProfileImageUrl: data["ProfileImageUrl"] as! String)
+                        return UserData(Username: document["Username"] as! String, ProfileImageUrl: document["ProfileImageUrl"] as! String)
                     }
                     return nil
                 }
