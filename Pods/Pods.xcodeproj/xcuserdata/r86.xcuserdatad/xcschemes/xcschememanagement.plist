@@ -21,7 +21,7 @@
 		<key>FBAEMKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>32</integer>
+			<integer>35</integer>
 		</dict>
 		<key>FBSDKCoreKit.xcscheme_^#shared#^_</key>
 		<dict>
@@ -31,12 +31,12 @@
 		<key>FBSDKCoreKit_Basics.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>33</integer>
+			<integer>32</integer>
 		</dict>
 		<key>FBSDKLoginKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>35</integer>
+			<integer>33</integer>
 		</dict>
 		<key>Firebase.xcscheme</key>
 		<dict>

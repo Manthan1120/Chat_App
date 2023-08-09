@@ -66,21 +66,18 @@ class SearchPage: UIViewController {
                 print(error?.localizedDescription as Any)
             }
             else{
-                arrayOfUsersData = (docuSnapshot?.documents.map({[self] data in
-                   
-                    if data.documentID != userUid! {
-                        UserData(Username: "", ProfileImageUrl: "")
+                arrayOfUsersData = docuSnapshot!.documents.compactMap { document in
+                    if document.documentID != userUid! {
+                        let data = document.data()
+                        return UserData(Username: data["Username"] as! String, ProfileImageUrl: data["ProfileImageUrl"] as! String)
                     }
-                    return UserData(Username: data["Username"] as! String, ProfileImageUrl: data["ProfileImageUrl"] as! String)
-                        
-                    
-                }))!
+                    return nil
+                }
                 tabelView.reloadData()
                 print(arrayOfUsersData)
             }
         }
     }
-   
 }
 
 extension SearchPage: UITableViewDelegate,UITableViewDataSource{
