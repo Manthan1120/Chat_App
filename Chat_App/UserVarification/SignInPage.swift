@@ -5,6 +5,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseCore
 import FirebaseFirestore
+import GoogleSignIn
 
 
 
@@ -15,7 +16,7 @@ class SignInPage: UIViewController {
     @IBOutlet weak var passwordOutlet: UITextField!
     @IBOutlet weak var emailOutlet: UITextField!
     @IBOutlet weak var signInButtonOutlet: UIButton!
-    @IBOutlet weak var googleButtonOutlet: UIButton!
+    @IBOutlet weak var googleButtonOutlet: GIDSignInButton!
     @IBOutlet weak var twitterButtonOutlet: UIButton!
     @IBOutlet weak var faceBookButtonOutlet: UIButton!
     
@@ -29,13 +30,39 @@ class SignInPage: UIViewController {
         set()
         fir = Firestore.firestore()
         
-        
+       
         
     }
+    
     
     @IBAction func skipButton(_ sender: Any) {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "TabBar") as! TabBar
         navigationController?.pushViewController(navigation, animated: true)
+    }
+    
+    func GoogleClicked(){
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+          guard error == nil else {
+              return
+          }
+
+          guard let user = result?.user,
+            let idToken = user.idToken?.tokenString
+          else {
+            return
+          }
+
+          let credential = GoogleAuthProvider.credential(withIDToken: idToken,accessToken: user.accessToken.tokenString)
+
+          // ...
+        }
     }
     
     func set() {
@@ -120,7 +147,7 @@ class SignInPage: UIViewController {
     }
     
     @IBAction func googleButtonAction(_ sender: Any) {
-        
+        GoogleClicked()
     }
     
     @IBAction func facebookButtonAction(_ sender: Any) {

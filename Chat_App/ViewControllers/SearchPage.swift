@@ -67,10 +67,13 @@ class SearchPage: UIViewController {
             }
             else{
                 arrayOfUsersData = (docuSnapshot?.documents.map({[self] data in
-                    return UserData(Username: data["Username"] as! String, ProfileImageUrl: data["ProfileImageUrl"] as! String)
+                   
                     if data.documentID != userUid! {
-                        return UserData(Username: data["Username"] as! String, ProfileImageUrl: data["ProfileImageUrl"] as! String)
+                        UserData(Username: "", ProfileImageUrl: "")
                     }
+                    return UserData(Username: data["Username"] as! String, ProfileImageUrl: data["ProfileImageUrl"] as! String)
+                        
+                    
                 }))!
                 tabelView.reloadData()
                 print(arrayOfUsersData)
