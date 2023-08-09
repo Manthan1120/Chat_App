@@ -688,41 +688,29 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4B-Sl-F5h">
-                                <rect key="frame" x="323" y="199" width="50" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="UM5-jF-ys1">
+                                <rect key="frame" x="10" y="202" width="363" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="1kx-yP-Rke"/>
-                                    <constraint firstAttribute="height" constant="50" id="wF8-J6-ChE"/>
+                                    <constraint firstAttribute="height" constant="44" id="zvW-fY-lId"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="graySearchIcon">
-                                    <color key="baseForegroundColor" systemColor="systemGray2Color"/>
-                                </buttonConfiguration>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Search your Friend" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="32y-Hn-PFy">
-                                <rect key="frame" x="20" y="199" width="295" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="295" id="EhP-t3-rsl"/>
-                                    <constraint firstAttribute="height" constant="50" id="nYp-cK-1Rh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="yes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nGf-DY-265" id="FKT-qv-axj"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WEI-sF-qle"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="32y-Hn-PFy" firstAttribute="top" secondItem="wJk-nM-VGL" secondAttribute="bottom" constant="10" id="AFx-F1-Fjn"/>
-                            <constraint firstItem="h4B-Sl-F5h" firstAttribute="top" secondItem="wJk-nM-VGL" secondAttribute="bottom" constant="10" id="EAe-PF-3La"/>
-                            <constraint firstItem="WEI-sF-qle" firstAttribute="trailing" secondItem="h4B-Sl-F5h" secondAttribute="trailing" constant="20" id="GYB-Cg-kYC"/>
+                            <constraint firstItem="UM5-jF-ys1" firstAttribute="leading" secondItem="WEI-sF-qle" secondAttribute="leading" constant="10" id="1U8-4c-9ky"/>
                             <constraint firstItem="wJk-nM-VGL" firstAttribute="leading" secondItem="WEI-sF-qle" secondAttribute="leading" constant="20" id="N1e-Ep-feu"/>
-                            <constraint firstItem="32y-Hn-PFy" firstAttribute="leading" secondItem="WEI-sF-qle" secondAttribute="leading" constant="20" id="PFS-YO-2ok"/>
                             <constraint firstItem="wJk-nM-VGL" firstAttribute="top" secondItem="WEI-sF-qle" secondAttribute="top" constant="30" id="PZB-Y4-Jli"/>
+                            <constraint firstItem="UM5-jF-ys1" firstAttribute="top" secondItem="wJk-nM-VGL" secondAttribute="bottom" constant="13" id="S6R-rl-2eO"/>
                             <constraint firstItem="WEI-sF-qle" firstAttribute="trailing" secondItem="wJk-nM-VGL" secondAttribute="trailing" constant="20" id="ZHd-gk-vdZ"/>
+                            <constraint firstItem="UM5-jF-ys1" firstAttribute="trailing" secondItem="WEI-sF-qle" secondAttribute="trailing" constant="-20" id="e8I-gl-vlz"/>
                             <constraint firstItem="WEI-sF-qle" firstAttribute="trailing" secondItem="1jz-Sy-7do" secondAttribute="trailing" constant="20" id="hsg-Hu-KhK"/>
                             <constraint firstItem="1jz-Sy-7do" firstAttribute="leading" secondItem="WEI-sF-qle" secondAttribute="leading" constant="20" id="qvp-rJ-3sw"/>
-                            <constraint firstItem="1jz-Sy-7do" firstAttribute="top" secondItem="h4B-Sl-F5h" secondAttribute="bottom" constant="8" symbolic="YES" id="xI5-2E-Lb3"/>
+                            <constraint firstItem="1jz-Sy-7do" firstAttribute="bottom" secondItem="WEI-sF-qle" secondAttribute="bottom" id="uq4-8E-Hxd"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="sarch" selectedImage="sarch" id="Ybm-Cc-tLe">
@@ -730,8 +718,7 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="asL-24-W0Z"/>
                     <connections>
-                        <outlet property="searchButton" destination="h4B-Sl-F5h" id="76G-0E-J8d"/>
-                        <outlet property="searchTextField" destination="32y-Hn-PFy" id="w9Y-M2-UEs"/>
+                        <outlet property="searchBar" destination="UM5-jF-ys1" id="we5-HJ-jsJ"/>
                         <outlet property="tabelView" destination="1jz-Sy-7do" id="igU-d0-1ju"/>
                     </connections>
                 </viewController>
