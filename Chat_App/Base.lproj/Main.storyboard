@@ -370,7 +370,7 @@
         <!--Tab Bar-->
         <scene sceneID="YXz-ys-WmM">
             <objects>
-                <tabBarController storyboardIdentifier="TabBar" id="tFg-XO-pWi" customClass="TabBar" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="TabBar" storyboardIdentifier="TabBar" id="tFg-XO-pWi" customClass="TabBar" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="vIl-ch-mz2"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dk7-gS-9WL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
