@@ -17,6 +17,7 @@ import SDWebImage
 struct UserData {
     var Username : String
     var ProfileImageUrl : String
+    var Email : String
 }
 
 
@@ -48,7 +49,7 @@ class SearchPage: UIViewController {
             else{
                 arrayOfUsersData = docuSnapshot!.documents.compactMap { document in
                     if document.documentID != userUid! {
-                        return UserData(Username: document["Username"] as! String, ProfileImageUrl: document["ProfileImageUrl"] as! String)
+                        return UserData(Username: document["Username"] as! String, ProfileImageUrl: document["ProfileImageUrl"] as! String, Email: document["Email"] as! String)
                     }
                     return nil
                 }
@@ -71,6 +72,12 @@ extension SearchPage: UITableViewDelegate,UITableViewDataSource{
         cell.userNameLabel.text! = nullArr[indexPath.row].Username
         cell.userImage.sd_setImage(with: URL(string: nullArr[indexPath.row].ProfileImageUrl))
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "inspactPage") as! inspactPage
+        navigationController?.pushViewController(navigation, animated: true)
+        navigation.userEmail = nullArr[indexPath.row].Email
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
