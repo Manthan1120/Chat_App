@@ -76,20 +76,20 @@ extension SearchPage: UITableViewDelegate,UITableViewDataSource{
         cell.userImage.sd_setImage(with: URL(string: nullArr[indexPath.row].ProfileImageUrl))
         cell.addButton.tag = indexPath.row
         cell.addButton.addTarget(self, action: #selector(addToButton), for: .touchUpInside)
-//        colRef = Firestore.firestore().collection("\(Auth.auth().currentUser!.uid)")
-//        colRef.addSnapshotListener() {(docuSnapshot, error) in
-//            if let error = error {
-//                print("something went wrong:\(error)")
-//            }else{
-//                for document in docuSnapshot!.documents {
-//                    if document.documentID == self.nullArr[indexPath.row].Email {
-//                        cell.addButton.imageView!.image =  UIImage(named: "done")
-//                    }else{
-//                        cell.addButton.imageView!.image = UIImage(named: "add")
-//                    }
-//                }
-//            }
-//        }
+        colRef = Firestore.firestore().collection("\(Auth.auth().currentUser!.uid)")
+        colRef.addSnapshotListener() {(docuSnapshot, error) in
+            if let error = error {
+                print("something went wrong:\(error)")
+            }else{
+                for document in docuSnapshot!.documents {
+                    if document.documentID == self.nullArr[indexPath.row].Email {
+                        cell.addButton.imageView!.image =  UIImage(named: "done")
+                    }else{
+                        cell.addButton.imageView!.image = UIImage(named: "add")
+                    }
+                }
+            }
+        }
         return cell
     }
     

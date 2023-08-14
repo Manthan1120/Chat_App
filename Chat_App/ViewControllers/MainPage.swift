@@ -84,6 +84,7 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
 }
 
 extension MainPage: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text!.isEmpty{
             nullArr = arrayOfFriendList
@@ -94,4 +95,5 @@ extension MainPage: UISearchBarDelegate {
         }
         tabelView.reloadData()
     }
+    
 }
