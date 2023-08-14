@@ -21,6 +21,7 @@ struct FriendList {
 
 class MainPage: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tabelView: UITableView!
    
     var ref : DatabaseReference!
@@ -29,6 +30,7 @@ class MainPage: UIViewController {
     var userUid = Auth.auth().currentUser?.uid
     var userImage = ""
     var arrayOfFriendList = [FriendList]()
+    var nullArr = [FriendList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +38,6 @@ class MainPage: UIViewController {
         getFirData()
     }
     
-
     func getFirData(){
         
         colRef = Firestore.firestore().collection(Auth.auth().currentUser!.uid)
@@ -48,6 +49,7 @@ class MainPage: UIViewController {
                 arrayOfFriendList = docuSnapshot!.documents.compactMap { document in
                     return FriendList(Username: document["Username"] as! String,UserImage: document["UserImage"] as! String,UserEmail:document["UserEmail"] as! String)
                 }
+                nullArr = arrayOfFriendList
                 tabelView.reloadData()
                 print(">>>>>>>>>")
                 print(arrayOfFriendList)
@@ -57,28 +59,39 @@ class MainPage: UIViewController {
     
 }
 
-
 extension MainPage: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfFriendList.count
+        return nullArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CellForUserFriendDetail
         cell.ProfileImage.layer.cornerRadius = 27
-        cell.UserName.text! = arrayOfFriendList[indexPath.row].Username
-        cell.ProfileImage.sd_setImage(with: URL(string: arrayOfFriendList[indexPath.row].UserImage))
+        cell.UserName.text! = nullArr[indexPath.row].Username
+        cell.ProfileImage.sd_setImage(with: URL(string: nullArr[indexPath.row].UserImage))
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0{
-            let navigation = storyboard?.instantiateViewController(withIdentifier: "MessagePage") as! MessagePage
-            navigationController?.pushViewController(navigation, animated: true)
-            
-        }
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "MessagePage") as! MessagePage
+        navigationController?.pushViewController(navigation, animated: true)
+        print(nullArr[indexPath.row].Username)
+        navigation.userNameForUserLabel = nullArr[indexPath.row].Username
+        navigation.userImage = nullArr[indexPath.row].UserImage
     }
     
-    
+}
+
+extension MainPage: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text!.isEmpty{
+            nullArr = arrayOfFriendList
+            print(nullArr)
+        }else{
+            nullArr = arrayOfFriendList.filter{$0.Username.hasPrefix(searchBar.text!)}
+            print(nullArr)
+        }
+        tabelView.reloadData()
+    }
 }

@@ -25,10 +25,12 @@ class MessagePage: UIViewController {
     var fir : Firestore!
     var userUid = Auth.auth().currentUser?.uid
     var userImage = ""
+    var userNameForUserLabel = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userName.text! = userNameForUserLabel
+        MassegeUserImage.sd_setImage(with: URL(string: userImage))
         Allui()
         
     }

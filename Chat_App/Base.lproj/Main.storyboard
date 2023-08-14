@@ -487,6 +487,7 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="wG9-Gy-Dsf"/>
                     <connections>
+                        <outlet property="searchBar" destination="PYD-b5-dDa" id="DL4-Pp-cft"/>
                         <outlet property="tabelView" destination="5mt-ED-Fxh" id="7Bc-y3-27N"/>
                     </connections>
                 </viewController>
