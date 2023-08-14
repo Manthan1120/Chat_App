@@ -37,6 +37,8 @@ class SearchPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getFirData()
+        fir = Firestore.firestore()
+       
     }
 
     func getFirData(){
@@ -68,9 +70,26 @@ extension SearchPage: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SearchTableViewCell
         cell.userNameLabel.text! = nullArr[indexPath.row].Username
         cell.userImage.sd_setImage(with: URL(string: nullArr[indexPath.row].ProfileImageUrl))
+        cell.addButton.tag = indexPath.row
+        cell.addButton.addTarget(self, action: #selector(addToButton), for: .touchUpInside)
+//        colRef = Firestore.firestore().collection("\(Auth.auth().currentUser!.uid)")
+//        colRef.addSnapshotListener() {(docuSnapshot, error) in
+//            if let error = error {
+//                print("something went wrong:\(error)")
+//            }else{
+//                for document in docuSnapshot!.documents {
+//                    if document.documentID == self.nullArr[indexPath.row].Email {
+//                        cell.addButton.imageView!.image =  UIImage(named: "done")
+//                    }else{
+//                        cell.addButton.imageView!.image = UIImage(named: "add")
+//                    }
+//                }
+//            }
+//        }
         return cell
     }
     
@@ -83,6 +102,14 @@ extension SearchPage: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
         
+    }
+    
+    @objc func addToButton(sender: UIButton) {
+        let indexPathForData = IndexPath(row: sender.tag, section: 0)
+        let userData = nullArr[indexPathForData.row]
+        print(userData)
+        let directory  = ["Username":nullArr[indexPathForData.row].Username,"UserImage":nullArr[indexPathForData.row].ProfileImageUrl,"UserEmail":nullArr[indexPathForData.row].Email] as [String : Any]
+        self.fir.collection("\(Auth.auth().currentUser!.uid)").document("\(nullArr[indexPathForData.row].Email)").setData(directory)
     }
     
 }

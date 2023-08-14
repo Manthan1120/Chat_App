@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Foz-gk-ky0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -407,26 +407,6 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Find Your Friends" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f1q-EA-VOz">
-                                <rect key="frame" x="20" y="144" width="295" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1Ar-ii-kgd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBg-6q-Zf0">
-                                <rect key="frame" x="323" y="144" width="50" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="8id-hM-tPM"/>
-                                    <constraint firstAttribute="width" constant="50" id="Hpn-na-NHM"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="graySearchIcon">
-                                    <color key="baseForegroundColor" systemColor="systemGray2Color"/>
-                                </buttonConfiguration>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5mt-ED-Fxh">
                                 <rect key="frame" x="20" y="202" width="353" height="577"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -477,21 +457,29 @@
                                     <outlet property="delegate" destination="FHX-TU-PLS" id="pSz-On-Bgy"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="PYD-b5-dDa">
+                                <rect key="frame" x="11" y="150" width="366" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="S59-fH-Z8h"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="FHX-TU-PLS" id="YOg-en-GGb"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bbo-AC-26T"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="bbo-AC-26T" firstAttribute="trailing" secondItem="f1q-EA-VOz" secondAttribute="trailing" constant="78" id="1rI-oP-3iN"/>
-                            <constraint firstItem="TBg-6q-Zf0" firstAttribute="top" secondItem="f1q-EA-VOz" secondAttribute="top" id="4X6-bh-VLk"/>
-                            <constraint firstItem="f1q-EA-VOz" firstAttribute="top" secondItem="Eyq-7T-Fb9" secondAttribute="bottom" constant="30" id="Dif-zG-3Bp"/>
-                            <constraint firstItem="5mt-ED-Fxh" firstAttribute="top" secondItem="f1q-EA-VOz" secondAttribute="bottom" constant="8" id="JIt-aL-UKi"/>
                             <constraint firstItem="bbo-AC-26T" firstAttribute="trailing" secondItem="5mt-ED-Fxh" secondAttribute="trailing" constant="20" id="RJx-Ma-ykj"/>
+                            <constraint firstItem="PYD-b5-dDa" firstAttribute="top" secondItem="Eyq-7T-Fb9" secondAttribute="bottom" constant="36" id="TKe-xK-Fb4"/>
                             <constraint firstItem="bbo-AC-26T" firstAttribute="trailing" secondItem="Eyq-7T-Fb9" secondAttribute="trailing" constant="20" id="UAB-e7-WnF"/>
                             <constraint firstItem="5mt-ED-Fxh" firstAttribute="leading" secondItem="bbo-AC-26T" secondAttribute="leading" constant="20" id="dJe-L5-bZM"/>
+                            <constraint firstItem="PYD-b5-dDa" firstAttribute="leading" secondItem="bbo-AC-26T" secondAttribute="leading" constant="11" id="fcc-kL-yEb"/>
+                            <constraint firstItem="5mt-ED-Fxh" firstAttribute="top" secondItem="PYD-b5-dDa" secondAttribute="bottom" constant="8" id="iSd-Qe-hmA"/>
+                            <constraint firstItem="bbo-AC-26T" firstAttribute="trailing" secondItem="PYD-b5-dDa" secondAttribute="trailing" constant="16" id="ive-qN-Kig"/>
                             <constraint firstItem="Eyq-7T-Fb9" firstAttribute="leading" secondItem="bbo-AC-26T" secondAttribute="leading" constant="20" id="ja0-2D-Ljq"/>
-                            <constraint firstItem="TBg-6q-Zf0" firstAttribute="leading" secondItem="f1q-EA-VOz" secondAttribute="trailing" constant="8" symbolic="YES" id="kbe-ZN-zPo"/>
                             <constraint firstItem="Eyq-7T-Fb9" firstAttribute="top" secondItem="bbo-AC-26T" secondAttribute="top" constant="20" id="srB-FD-HbS"/>
-                            <constraint firstItem="f1q-EA-VOz" firstAttribute="leading" secondItem="bbo-AC-26T" secondAttribute="leading" constant="20" id="tot-Uf-Ydj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="massage" selectedImage="massage" id="b4n-YD-zDA">
@@ -499,8 +487,6 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="wG9-Gy-Dsf"/>
                     <connections>
-                        <outlet property="searchButton" destination="TBg-6q-Zf0" id="98G-j7-PnR"/>
-                        <outlet property="searchTextFiled" destination="f1q-EA-VOz" id="jiD-3Q-9r0"/>
                         <outlet property="tabelView" destination="5mt-ED-Fxh" id="7Bc-y3-27N"/>
                     </connections>
                 </viewController>
@@ -656,19 +642,35 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8o-wJ-jvH">
+                                                    <rect key="frame" x="311" y="14" width="42" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="GWp-Pr-w7Q"/>
+                                                        <constraint firstAttribute="width" constant="42" id="Zko-8U-97C"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="add"/>
+                                                    <connections>
+                                                        <action selector="addButtonAction:" destination="IzY-3D-6Uw" eventType="touchUpInside" id="Wev-Yh-Z4C"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="iXA-6e-5I2" secondAttribute="bottom" constant="6" id="B82-A8-pXB"/>
                                                 <constraint firstItem="t22-Sa-BtV" firstAttribute="top" secondItem="l1p-FA-Ubl" secondAttribute="top" constant="11" id="DhF-0G-Lnx"/>
                                                 <constraint firstItem="iXA-6e-5I2" firstAttribute="leading" secondItem="l1p-FA-Ubl" secondAttribute="leading" id="Erj-lG-trb"/>
+                                                <constraint firstAttribute="trailing" secondItem="R8o-wJ-jvH" secondAttribute="trailing" id="NFm-H8-VLd"/>
                                                 <constraint firstItem="t22-Sa-BtV" firstAttribute="leading" secondItem="iXA-6e-5I2" secondAttribute="trailing" constant="8" id="cSU-5u-uWI"/>
                                                 <constraint firstAttribute="trailing" secondItem="iXA-6e-5I2" secondAttribute="trailing" constant="295" id="i1w-4C-ALy"/>
                                                 <constraint firstAttribute="trailing" secondItem="t22-Sa-BtV" secondAttribute="trailing" constant="105" id="oMS-T9-u1J"/>
+                                                <constraint firstAttribute="bottom" secondItem="R8o-wJ-jvH" secondAttribute="bottom" constant="14" id="vOa-iG-Nqh"/>
+                                                <constraint firstItem="R8o-wJ-jvH" firstAttribute="top" secondItem="l1p-FA-Ubl" secondAttribute="top" constant="14" id="wU6-6t-Yrp"/>
                                                 <constraint firstItem="iXA-6e-5I2" firstAttribute="top" secondItem="l1p-FA-Ubl" secondAttribute="top" constant="6" id="wnL-ib-VH4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="addButton" destination="R8o-wJ-jvH" id="tEp-mz-SRY"/>
                                             <outlet property="userImage" destination="iXA-6e-5I2" id="W28-V2-o0x"/>
                                             <outlet property="userNameLabel" destination="t22-Sa-BtV" id="Nv0-Wn-NGu"/>
                                         </connections>
@@ -2224,6 +2226,7 @@
         <image name="EmailVerify" width="786" height="714"/>
         <image name="Key" width="750" height="750"/>
         <image name="ResetPassword" width="156" height="149"/>
+        <image name="add" width="32" height="32"/>
         <image name="arrow-left" width="24" height="24"/>
         <image name="close" width="16" height="16"/>
         <image name="countries " width="24" height="24"/>
@@ -2233,7 +2236,6 @@
         <image name="facebook" width="24" height="24"/>
         <image name="feedback" width="24" height="24"/>
         <image name="google" width="24" height="24"/>
-        <image name="graySearchIcon" width="24" height="24"/>
         <image name="information" width="24" height="24"/>
         <image name="language" width="24" height="24"/>
         <image name="lock" width="767" height="732"/>
