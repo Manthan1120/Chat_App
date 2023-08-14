@@ -12,10 +12,11 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseCore
 import SDWebImage
+import iOSDropDown
 
 class EditProfilePage: UIViewController {
 
-    @IBOutlet weak var genderTextFiled: UITextField!
+    @IBOutlet weak var genderTextFiled: DropDown!
     @IBOutlet weak var numberTextFiled: UITextField!
     @IBOutlet weak var bioTextFiled: UITextView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -32,10 +33,15 @@ class EditProfilePage: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        allUI()
         fir = Firestore.firestore()
+    }
+    func allUI() {
         
         imageOutlet.layer.cornerRadius = 45
         imageOutlet.layer.masksToBounds = true
+        
+        genderTextFiled.optionArray = ["  male","  Female"]
         
         let tapGesture = UITapGestureRecognizer()
         tapGesture.addTarget(self,action:
@@ -43,6 +49,25 @@ class EditProfilePage: UIViewController {
         imageOutlet.isUserInteractionEnabled = true
         imageOutlet.addGestureRecognizer(tapGesture)
         getallData()
+        
+        usertextField.layer.cornerRadius = 12
+        usertextField.layer.masksToBounds = true
+        
+        nameTextField.layer.cornerRadius = 12
+        nameTextField.layer.masksToBounds = true
+        
+        bioTextFiled.layer.cornerRadius = 12
+        bioTextFiled.layer.masksToBounds = true
+        
+        birthDateTextField.layer.cornerRadius = 12
+        birthDateTextField.layer.masksToBounds = true
+        
+        numberTextFiled.layer.cornerRadius = 12
+        numberTextFiled.layer.masksToBounds = true
+        
+        genderTextFiled.layer.cornerRadius = 12
+        genderTextFiled.layer.masksToBounds = true
+         
     }
     
     @objc func openGallary(tapGesture:UITapGestureRecognizer) {

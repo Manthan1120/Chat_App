@@ -17,6 +17,7 @@ pod 'GoogleSignIn'
 pod 'Firebase'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
+pod 'iOSDropDown'
 
 
  
