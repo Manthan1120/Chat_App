@@ -21,8 +21,6 @@ struct FriendList {
 
 class MainPage: UIViewController {
 
-    @IBOutlet weak var searchTextFiled: UITextField!
-    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var tabelView: UITableView!
    
     var ref : DatabaseReference!
@@ -34,28 +32,10 @@ class MainPage: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUp()
+   
         getFirData()
     }
     
-    func setUp() {
-        
-        searchTextFiled.layer.backgroundColor = UIColor.white.cgColor
-        searchTextFiled.layer.cornerRadius = 9
-        searchTextFiled.layer.shadowColor = UIColor.systemGray3.cgColor
-        searchTextFiled.layer.shadowRadius = 4.0
-        searchTextFiled.layer.shadowOpacity = 4.4
-        searchTextFiled.layer.shadowOffset = CGSize(width: 4, height: 4)
-        searchTextFiled.layer.masksToBounds = false
-        
-        searchButton.layer.backgroundColor = UIColor.white.cgColor
-        searchButton.layer.cornerRadius = 9
-        searchButton.layer.shadowColor = UIColor.systemGray3.cgColor
-        searchButton.layer.shadowRadius = 4.0
-        searchButton.layer.shadowOpacity = 4.4
-        searchButton.layer.shadowOffset = CGSize(width: 4, height: 4)
-        searchButton.layer.masksToBounds = false
-    }
 
     func getFirData(){
         
