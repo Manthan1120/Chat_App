@@ -11,10 +11,10 @@ class SearchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var addButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         userImage.layer.cornerRadius = 27
         userImage.layer.masksToBounds = true
     }
@@ -22,7 +22,8 @@ class SearchTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
+    @IBAction func addButtonAction(_ sender: Any) {
+    }
 }
