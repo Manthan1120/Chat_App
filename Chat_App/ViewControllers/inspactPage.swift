@@ -14,7 +14,7 @@ import FirebaseCore
 import SDWebImage
 
 class inspactPage: UIViewController {
-
+    
     @IBOutlet weak var uiViewForInspectPage: UIView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var img: UIImageView!
@@ -22,8 +22,8 @@ class inspactPage: UIViewController {
     @IBOutlet weak var addButtonOt: UIButton!
     @IBOutlet weak var genderTextFiled: UILabel!
     @IBOutlet weak var bioTextView: UILabel!
-    
-    
+    @IBOutlet weak var birthDate: UILabel!
+    @IBOutlet weak var MoNumber: UILabel!
     
     var ref : DatabaseReference!
     var colRef : CollectionReference!
@@ -39,27 +39,52 @@ class inspactPage: UIViewController {
         getallData()
     }
     
-   func AllUi(){
-       img.layer.cornerRadius = 84
-       img.layer.masksToBounds = true
-       
-       uiViewForInspectPage.layer.cornerRadius = 30
-       uiViewForInspectPage.layer.shadowColor = UIColor.systemGray3.cgColor
-       uiViewForInspectPage.layer.shadowRadius = 8.0
-       uiViewForInspectPage.layer.shadowOpacity = 6.0
-       uiViewForInspectPage.layer.shadowOffset = CGSize(width: 4, height: 4)
-       uiViewForInspectPage.layer.masksToBounds = false
-       
-       addButtonOt.layer.cornerRadius = 9
-       addButtonOt.layer.shadowColor = UIColor.systemGray3.cgColor
-       addButtonOt.layer.shadowRadius = 4.0
-       addButtonOt.layer.shadowOpacity = 4.4
-       addButtonOt.layer.shadowOffset = CGSize(width: 4, height: 4)
-       addButtonOt.layer.masksToBounds = false
-       
-       bioTextView.numberOfLines = 5
-       //howMore.setTitle("read more", for: .normal)
-       
+    
+    func AllUi(){
+        bioTextView.layer.borderWidth = 1
+        bioTextView.layer.borderColor = UIColor.systemGray6.cgColor
+        bioTextView.layer.backgroundColor = UIColor.white.cgColor
+        bioTextView.layer.cornerRadius = 12
+        bioTextView.layer.masksToBounds = true
+        
+        birthDate.layer.borderWidth = 1
+        birthDate.layer.borderColor = UIColor.systemGray6.cgColor
+        birthDate.layer.backgroundColor = UIColor.white.cgColor
+        birthDate.layer.cornerRadius = 12
+        birthDate.layer.masksToBounds = true
+        
+        MoNumber.layer.borderWidth = 1
+        MoNumber.layer.borderColor = UIColor.systemGray6.cgColor
+        MoNumber.layer.backgroundColor = UIColor.white.cgColor
+        MoNumber.layer.cornerRadius = 12
+        MoNumber.layer.masksToBounds = true
+        
+        genderTextFiled.layer.borderWidth = 1
+        genderTextFiled.layer.borderColor = UIColor.systemGray6.cgColor
+        genderTextFiled.layer.backgroundColor = UIColor.white.cgColor
+        genderTextFiled.layer.cornerRadius = 12
+        genderTextFiled.layer.masksToBounds = true
+        
+        img.layer.cornerRadius = 84
+        img.layer.masksToBounds = true
+        
+        uiViewForInspectPage.layer.cornerRadius = 30
+        uiViewForInspectPage.layer.shadowColor = UIColor.systemGray3.cgColor
+        uiViewForInspectPage.layer.shadowRadius = 8.0
+        uiViewForInspectPage.layer.shadowOpacity = 6.0
+        uiViewForInspectPage.layer.shadowOffset = CGSize(width: 4, height: 4)
+        uiViewForInspectPage.layer.masksToBounds = false
+        
+        addButtonOt.layer.cornerRadius = 9
+        addButtonOt.layer.shadowColor = UIColor.systemGray4.cgColor
+        addButtonOt.layer.shadowRadius = 4.0
+        addButtonOt.layer.shadowOpacity = 4.4
+        addButtonOt.layer.shadowOffset = CGSize(width: 4, height: 4)
+        addButtonOt.layer.masksToBounds = false
+        
+        bioTextView.numberOfLines = 5
+        //howMore.setTitle("read more", for: .normal)
+        
         
     }
     
@@ -83,6 +108,8 @@ extension inspactPage {
                         userImage =  document["ProfileImageUrl"] as! String
                         img.sd_setImage(with : URL(string: userImage))
                         bioTextView.text! =  document["Bio"] as! String
+                        birthDate.text! = document["BirthDate"] as! String
+                        MoNumber.text! = document["Number"] as! String
                         userNameLabel.text! = document["Username"] as! String
                         nameLabel.text! = document["Name"] as! String
                         genderTextFiled.text! = document["Gender"] as! String
@@ -94,8 +121,10 @@ extension inspactPage {
                         }
                     }
                 }
+                
                 print(userEmail)
             }
         }
+        
     }
 }
