@@ -21,7 +21,9 @@ class inspactPage: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addButtonOt: UIButton!
     @IBOutlet weak var genderTextFiled: UILabel!
-    @IBOutlet weak var bioTextView: UITextView!
+    @IBOutlet weak var bioTextView: UILabel!
+    
+    
     
     var ref : DatabaseReference!
     var colRef : CollectionReference!
@@ -54,6 +56,10 @@ class inspactPage: UIViewController {
        addButtonOt.layer.shadowOpacity = 4.4
        addButtonOt.layer.shadowOffset = CGSize(width: 4, height: 4)
        addButtonOt.layer.masksToBounds = false
+       
+       bioTextView.numberOfLines = 5
+       //howMore.setTitle("read more", for: .normal)
+       
         
     }
     
