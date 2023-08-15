@@ -487,7 +487,6 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="wG9-Gy-Dsf"/>
                     <connections>
-                        <outlet property="searchBar" destination="PYD-b5-dDa" id="DL4-Pp-cft"/>
                         <outlet property="tabelView" destination="5mt-ED-Fxh" id="7Bc-y3-27N"/>
                     </connections>
                 </viewController>
@@ -650,7 +649,7 @@
                                                         <constraint firstAttribute="width" constant="42" id="Zko-8U-97C"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="add"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
                                                     <connections>
                                                         <action selector="addButtonAction:" destination="IzY-3D-6Uw" eventType="touchUpInside" id="Wev-Yh-Z4C"/>
                                                     </connections>
@@ -2227,7 +2226,6 @@
         <image name="EmailVerify" width="786" height="714"/>
         <image name="Key" width="750" height="750"/>
         <image name="ResetPassword" width="156" height="149"/>
-        <image name="add" width="32" height="32"/>
         <image name="arrow-left" width="24" height="24"/>
         <image name="close" width="16" height="16"/>
         <image name="countries " width="24" height="24"/>

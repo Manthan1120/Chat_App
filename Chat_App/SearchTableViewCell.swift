@@ -17,6 +17,8 @@ class SearchTableViewCell: UITableViewCell {
         super.awakeFromNib()
         userImage.layer.cornerRadius = 27
         userImage.layer.masksToBounds = true
+        
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,5 +27,6 @@ class SearchTableViewCell: UITableViewCell {
     }
 
     @IBAction func addButtonAction(_ sender: Any) {
+      
     }
 }
