@@ -5,15 +5,19 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseCore
 import FirebaseFirestore
+import FBSDKLoginKit
+import GoogleSignIn
 
 class SignUpPage: UIViewController {
+
+    
     
     @IBOutlet weak var userOutlet: UITextField!
     @IBOutlet weak var emailOutlet:UITextField!
     @IBOutlet weak var passwordOutlate: UITextField!
     @IBOutlet weak var singUpButtonOutlate: UIButton!
-    @IBOutlet weak var googleOutlate: UIButton!
-    @IBOutlet weak var facbookOutlate: UIButton!
+    @IBOutlet weak var googleOutlate: GIDSignInButton!
+    @IBOutlet weak var facbookOutlate: FBLoginButton!
     @IBOutlet weak var twiterOutlate: UIButton!
     
     var fir: Firestore!
@@ -22,7 +26,26 @@ class SignUpPage: UIViewController {
         super.viewDidLoad()
         set()
         fir = Firestore.firestore()
+        
+        if let token = AccessToken.current,
+                !token.isExpired {
+                // User is logged in, do work such as go to next view controller.
+            let token = token.tokenString
+            
+            let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
+            request.start{(connection,result,error) in
+                print("\(result)")
+                
+            }
+        }else {
+            facbookOutlate.permissions = ["public_profile", "email"]
+            facbookOutlate.delegate = self
+
+        }
+        
     }
+    
+    
     
     func set() {
         twiterOutlate.layer.cornerRadius = 9
@@ -78,6 +101,28 @@ class SignUpPage: UIViewController {
         userOutlet.layer.masksToBounds = false
     }
     
+    func GoogleClicked(){
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+          guard error == nil else {
+              return
+          }
+
+          guard let user = result?.user,
+            let idToken = user.idToken?.tokenString
+          else {
+            return
+          }
+            
+          let credential = GoogleAuthProvider.credential(withIDToken: idToken,accessToken: user.accessToken.tokenString)
+        }
+    }
+    
+    
     @IBAction func signInButtonAction(_ sender: Any) {
         fireBaseAuth()
     }
@@ -98,11 +143,7 @@ class SignUpPage: UIViewController {
     }
     
     @IBAction func googleButtonAction(_ sender: Any) {
-        
-    }
-    
-    @IBAction func facbookButtonAction(_ sender: Any) {
-        
+        GoogleClicked()
     }
     
     @IBAction func twiterButtonAction(_ sender: Any) {
@@ -127,4 +168,24 @@ class SignUpPage: UIViewController {
     }
     
 }
+
+extension SignUpPage : LoginButtonDelegate {
+    func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: Error?) {
+        let token = result?.token?.tokenString
+        
+        let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
+        request.start{(connection,result,error) in
+            print("\(result)")
+            
+        }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
+        print("log out")
+    }
+    
+    
+}
+    
+    
 
