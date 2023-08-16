@@ -19,7 +19,6 @@ class inspactPage: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var addButtonOt: UIButton!
     @IBOutlet weak var genderTextFiled: UILabel!
     @IBOutlet weak var bioTextView: UILabel!
     @IBOutlet weak var birthDate: UILabel!
@@ -74,28 +73,18 @@ class inspactPage: UIViewController {
         uiViewForInspectPage.layer.shadowOpacity = 6.0
         uiViewForInspectPage.layer.shadowOffset = CGSize(width: 4, height: 4)
         uiViewForInspectPage.layer.masksToBounds = false
-        
-        addButtonOt.layer.cornerRadius = 9
-        addButtonOt.layer.shadowColor = UIColor.systemGray4.cgColor
-        addButtonOt.layer.shadowRadius = 4.0
-        addButtonOt.layer.shadowOpacity = 4.4
-        addButtonOt.layer.shadowOffset = CGSize(width: 4, height: 4)
-        addButtonOt.layer.masksToBounds = false
-        
-        bioTextView.numberOfLines = 5
-        //howMore.setTitle("read more", for: .normal)
-        
-        
+     
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
-        let navigation = storyboard?.instantiateViewController(withIdentifier: "SearchPage") as! SearchPage
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "MessagePage") as! MessagePage
         navigationController?.popViewController(animated: true)
     }
     
 }
 
 extension inspactPage {
+    
     func getallData() {
         
         colRef = Firestore.firestore().collection("UserProfile")

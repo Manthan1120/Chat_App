@@ -13,23 +13,12 @@ import FirebaseDatabase
 import FirebaseCore
 import SDWebImage
 
-struct GetData {
-    var AddOrNot : String
-}
-
-struct UserData {
-    var Username : String
-    var ProfileImageUrl : String
-    var Email : String
-}
-
 
 class SearchPage: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tabelView: UITableView!
     
-    var arrayOfAddOrNot = [GetData]()
     var arrayOfUsersData = [UserData]()
     var nullArr = [UserData]()
     var ref : DatabaseReference!
@@ -45,27 +34,7 @@ class SearchPage: UIViewController {
     }
 
     func getFirData(){
-        
-        colRef = Firestore.firestore().collection(Auth.auth().currentUser!.uid)
-        colRef.addSnapshotListener() { [self] docuSnapshot, error in
-            if error != nil {
-                print(error?.localizedDescription as Any)
-            }
-            else{
-                arrayOfAddOrNot = docuSnapshot!.documents.compactMap { document in
-                    
-                    if document["AddOrNot"] as? String == nil {
-                        return GetData(AddOrNot: "https://firebasestorage.googleapis.com/v0/b/chatbuddy-d0c0a.appspot.com/o/UserImages.png?alt=media&token=35b27d69-432e-4d45-aa58-b10e4a9b5198")
-                    }
-                    else {
-                        return GetData(AddOrNot: document["AddOrNot"] as! String)
-                    }
-                }
-                tabelView.reloadData()
-                print(">>>>>>>>>")
-                print(arrayOfAddOrNot)
-            }
-        }
+      
         
         colRef = Firestore.firestore().collection("UserProfile")
         colRef.addSnapshotListener() { [self] docuSnapshot, error in
@@ -99,7 +68,7 @@ extension SearchPage: UITableViewDelegate,UITableViewDataSource{
         cell.userImage.sd_setImage(with: URL(string: nullArr[indexPath.row].ProfileImageUrl))
         cell.addButton.tag = indexPath.row
         cell.addButton.addTarget(self, action: #selector(addToButton), for: .touchUpInside)
-        cell.addButton.sd_setImage(with: URL(string: arrayOfAddOrNot[indexPath.row].AddOrNot), for: .normal)
+     
         
         return cell
     }

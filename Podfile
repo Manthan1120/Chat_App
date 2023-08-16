@@ -18,6 +18,7 @@ pod 'Firebase'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'iOSDropDown'
+pod 'MessageKit'
 
 
  
