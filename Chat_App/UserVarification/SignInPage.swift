@@ -6,19 +6,24 @@ import FirebaseDatabase
 import FirebaseCore
 import FirebaseFirestore
 import GoogleSignIn
+import FBSDKLoginKit
 
 
-
+var id = 1
 
 
 class SignInPage: UIViewController {
+    
+    
+    
+    
    
     @IBOutlet weak var passwordOutlet: UITextField!
     @IBOutlet weak var emailOutlet: UITextField!
     @IBOutlet weak var signInButtonOutlet: UIButton!
     @IBOutlet weak var googleButtonOutlet: GIDSignInButton!
     @IBOutlet weak var twitterButtonOutlet: UIButton!
-    @IBOutlet weak var faceBookButtonOutlet: UIButton!
+    @IBOutlet weak var faceBookButtonOutlet: FBLoginButton!
     
     
     var fir: Firestore!
@@ -30,7 +35,23 @@ class SignInPage: UIViewController {
         set()
         fir = Firestore.firestore()
         
-       
+        if let token = AccessToken.current,
+                !token.isExpired {
+                // User is logged in, do work such as go to next view controller.
+            let token = token.tokenString
+            
+            let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
+            request.start{(connection,result,error) in
+                print("\(result)")
+                
+            }
+        }else {
+            faceBookButtonOutlet.permissions = ["public_profile", "email"]
+            faceBookButtonOutlet.delegate = self
+
+        }
+        print("__----------__")
+       print(id)
         
     }
     
@@ -146,10 +167,6 @@ class SignInPage: UIViewController {
         GoogleClicked()
     }
     
-    @IBAction func facebookButtonAction(_ sender: Any) {
-      
-    }
-    
     @IBAction func signInButtonAction(_ sender: Any) {
        fireBaseAuth()
     }
@@ -166,4 +183,27 @@ class SignInPage: UIViewController {
    
     
 }
+
+extension SignInPage : LoginButtonDelegate {
+    func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: Error?) {
+        let token = result?.token?.tokenString
+        
+        let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
+        request.start{(connection,result,error) in
+            print("\(result)")
+            
+        }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
+        print("log out")
+
+    }
+    
+    
+    
+    
+}
+    
+    
 
