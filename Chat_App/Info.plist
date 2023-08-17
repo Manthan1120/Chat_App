@@ -24,7 +24,7 @@
 	<key>FacebookAppID</key>
 	<string>7402527426430725</string>
 	<key>FacebookDisplayName</key>
-	<string>chat_Budy</string>
+	<string>FacebookClientToken</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
