@@ -50,6 +50,7 @@ class MainPage: UIViewController {
                     if document.documentID != userUid! {
                         return UserData(Username: document["Username"] as! String, ProfileImageUrl: document["ProfileImageUrl"] as! String, Email: document["Email"] as! String)
                     }
+                    print(document.documentID)
                     return nil
                 }
                 nullArr = arrayOfUsersData
@@ -78,8 +79,7 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "MessagePage") as! MessagePage
         navigationController?.pushViewController(navigation, animated: true)
         print(nullArr[indexPath.row].Username)
-        navigation.userNameForUserLabel = nullArr[indexPath.row].Username
-        navigation.userImage = nullArr[indexPath.row].ProfileImageUrl
+       
     }
     
 }

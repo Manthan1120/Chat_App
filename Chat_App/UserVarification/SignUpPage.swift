@@ -9,8 +9,6 @@ import FBSDKLoginKit
 import GoogleSignIn
 
 class SignUpPage: UIViewController {
-
-    
     
     @IBOutlet weak var userOutlet: UITextField!
     @IBOutlet weak var emailOutlet:UITextField!
