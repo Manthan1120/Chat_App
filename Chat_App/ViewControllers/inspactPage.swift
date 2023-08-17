@@ -103,6 +103,7 @@ extension inspactPage {
                         nameLabel.text! = document["Name"] as! String
                         genderTextFiled.text! = document["Gender"] as! String
                         
+                        
                         if userNameLabel.text! == ""{
                             userNameLabel.text! = "Username"
                         }else if nameLabel.text! == ""{
