@@ -116,6 +116,10 @@ class SettingPage: UIViewController {
         navigationController?.pushViewController(navigation, animated: true)
     }
     
+    @IBAction func feedBackAction(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(identifier: "FeedBackPage") as! FeedBackPage
+        navigationController?.pushViewController(navigation, animated: true)
+    }
 }
 
     
