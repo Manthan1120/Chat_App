@@ -2,7 +2,7 @@
 //  ForgotPage.swift
 //  Chat_App
 //
-//  Created by r85 on 20/07/23.
+//  Created by r85 on 20/07/23
 //
 
 import UIKit
