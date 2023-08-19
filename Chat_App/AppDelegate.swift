@@ -3,7 +3,7 @@ import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
 import CoreData
-import TwitterKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

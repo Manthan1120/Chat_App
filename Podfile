@@ -19,7 +19,7 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'iOSDropDown'
 pod 'MessageKit'
-pod 'TwitterKit'
+
 
 
 
