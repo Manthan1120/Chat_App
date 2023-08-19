@@ -3,6 +3,7 @@ import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
 import CoreData
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -12,9 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
+        //twitter
+        //TWTRTwitter.sharedInstance().start(withConsumerKey: "UwMBxyDpos3695IZF5hm5ic4s", consumerSecret: "tfgNLJjuIsBzNhr0u6zJybjncj0c399TG0lQR9lDXB5x9kebUv")
+        
         // Initialize Google Sign-In
-//        GIDSignIn.sharedInstance.clientID = FirebaseApp.app()?.options.clientID{
-//        }
+        //        GIDSignIn.sharedInstance.clientID = FirebaseApp.app()?.options.clientID{
+        //        }
         
         // Initialize Facebook Login
         ApplicationDelegate.shared.application(
@@ -35,9 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         // Handle Google Sign-In callback
-//        if GIDSignIn.sharedInstance.handle(url) {
-//            return true
-//        }
+        //        if GIDSignIn.sharedInstance.handle(url) {
+        //            return true
+        //        }
         
         // Handle Facebook Login callback
         if ApplicationDelegate.shared.application(app, open: url, options: options) {
@@ -53,6 +57,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return false
     }
     
+    
+    
+    //twitter
+    // func applicatio(_app:UIApplication,open url:URL,option:[] = [:]->Bool)
     
     
     
@@ -118,5 +126,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     
+    
 }
-
