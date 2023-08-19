@@ -13,6 +13,7 @@ import FirebaseDatabase
 import FirebaseCore
 import SDWebImage
 import MessageKit
+import InputBarAccessoryView
 
 struct Sender : SenderType {
     var senderId: String
@@ -29,19 +30,27 @@ struct Message : MessageType{
 
 class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDelegate,MessagesDisplayDelegate {
 
+    @IBOutlet weak var labelForUserFriend: UILabel!
+    @IBOutlet weak var imageViewForUserFriend: UIImageView!
+    
     var ref : DatabaseReference!
     var colRef : CollectionReference!
     var fir : Firestore!
     var userUid = Auth.auth().currentUser!.uid
     var messageArray = [MessageType]()
+    var userName = ""
+    var imageUrl = ""
     private let selfSender = Sender(senderId: "1", displayName: "Manthan", photoUrl: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        labelForUserFriend.text! = userName
+        imageViewForUserFriend.sd_setImage(with: URL(string: imageUrl))
+        print(userName)
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+        messageInputBar.delegate = self
         
         messageArray.append(Message(sender: selfSender, messageId: "1", sentDate: Date(), kind: .text("Hii World")))
         
@@ -66,4 +75,16 @@ class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDeleg
         return messageArray.count
     }
     
+}
+
+extension MessagePage : InputBarAccessoryViewDelegate {
+    
+    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+        if text.isEmpty {
+            
+        }
+        else {
+            print(text)
+        }
+    }
 }

@@ -837,6 +837,9 @@ PODS:
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
   - PromisesObjC (2.3.1)
+  - TwitterCore (3.2.0)
+  - TwitterKit (3.4.2):
+    - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
   - FBSDKCoreKit
@@ -851,6 +854,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - iOSDropDown
   - MessageKit
+  - TwitterKit
 
 SPEC REPOS:
   trunk:
@@ -886,6 +890,8 @@ SPEC REPOS:
     - MessageKit
     - nanopb
     - PromisesObjC
+    - TwitterCore
+    - TwitterKit
 
 SPEC CHECKSUMS:
   abseil: 926fb7a82dc6d2b8e1f2ed7f3a718bce691d1e46
@@ -920,7 +926,9 @@ SPEC CHECKSUMS:
   MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 3197c34994aab22416ecad08191f6f172335689c
+PODFILE CHECKSUM: 07f607570224dd500e99bf5456988dda936c5e32
 
 COCOAPODS: 1.12.1
