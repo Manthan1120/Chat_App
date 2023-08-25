@@ -35,21 +35,7 @@ class SignInPage: UIViewController {
         set()
         fir = Firestore.firestore()
         
-        if let token = AccessToken.current,
-                !token.isExpired {
-                // User is logged in, do work such as go to next view controller.
-            let token = token.tokenString
-            
-            let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
-            request.start{(connection,result,error) in
-                print("\(result)")
-                
-            }
-        }else {
-            faceBookButtonOutlet.permissions = ["public_profile", "email"]
-            faceBookButtonOutlet.delegate = self
-
-        }
+    
         print("__----------__")
        print(id)
         
@@ -83,6 +69,26 @@ class SignInPage: UIViewController {
     }
     
     func set() {
+        //facebook
+        if let token = AccessToken.current,
+                !token.isExpired {
+                // User is logged in, do work such as go to next view controller.
+            let token = token.tokenString
+            
+            let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
+            request.start{(connection,result,error) in
+                print("\(result)")
+                
+            }
+        }
+        else {
+            faceBookButtonOutlet.permissions = ["public_profile", "email"]
+            faceBookButtonOutlet.delegate = self
+
+        }
+        
+        //endFAcebook
+        
         twitterButtonOutlet.layer.cornerRadius = 9
         twitterButtonOutlet.layer.shadowColor = UIColor.systemGray3.cgColor
         twitterButtonOutlet.layer.shadowRadius = 4.0
@@ -180,7 +186,12 @@ class SignInPage: UIViewController {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "ForgotPage") as! ForgotPage
         navigationController?.pushViewController(navigation, animated: true)
     }
-   
+    
+    
+    @IBAction func facebook(_ sender: Any) {
+       
+    }
+    
     
 }
 

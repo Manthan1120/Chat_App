@@ -120,6 +120,17 @@ class SettingPage: UIViewController {
         let navigation = storyboard?.instantiateViewController(identifier: "FeedBackPage") as! FeedBackPage
         navigationController?.pushViewController(navigation, animated: true)
     }
+    
+    @IBAction func editProfile(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(identifier: "EditProfilePage") as! EditProfilePage
+        navigationController?.pushViewController(navigation, animated: true)
+    }
+    
+    @IBAction func notification(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(identifier: "NotificationPage") as! NotificationPage
+        navigationController?.pushViewController(navigation, animated: true)
+    }
+    
 }
 
     

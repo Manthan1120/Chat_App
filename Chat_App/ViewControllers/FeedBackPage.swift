@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
+
 
 class FeedBackPage: UIViewController {
 
@@ -15,12 +18,14 @@ class FeedBackPage: UIViewController {
     @IBOutlet weak var fourthStar: UIImageView!
     @IBOutlet weak var fifthStar: UIImageView!
     @IBOutlet weak var textviewForFeedBack: UITextView!
-    @IBOutlet weak var feedbackSendButton: UILabel!
+    @IBOutlet weak var feedbackSendButton: UIButton!
     
+    var fir : Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         allUi()
+        fir = Firestore.firestore()
 
     }
     func allUi(){
@@ -40,8 +45,23 @@ class FeedBackPage: UIViewController {
         
     }
     
+    @IBAction func feedBackAction(_ sender: Any) {
+        saveData()
+    }
+    
+    @IBAction func showAllFeedBack(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(identifier: "showFeedBackPage") as! showFeedBackPage
+        navigationController?.pushViewController(navigation, animated: true)
+        
+    }
+    
     @IBAction func backAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func saveData() {
+        let directory = ["Feedback":textviewForFeedBack.text] as! [String : Any]
+        self.fir.collection("Feedback").document(Auth.auth().currentUser!.uid).setData(directory)
     }
     
 
