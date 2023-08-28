@@ -131,6 +131,11 @@ class SettingPage: UIViewController {
         navigationController?.pushViewController(navigation, animated: true)
     }
     
+    @IBAction func SwichAccount(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(identifier: "SignInPage") as! SignInPage
+        navigationController?.pushViewController(navigation, animated: true)
+    }
+    
 }
 
     

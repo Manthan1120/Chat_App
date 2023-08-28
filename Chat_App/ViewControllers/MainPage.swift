@@ -28,7 +28,7 @@ class MainPage: UIViewController {
     var colRef : CollectionReference!
     var fir : Firestore!
     var userUid = Auth.auth().currentUser?.uid
-    var userImage = ""
+//    var userImage = ""
     var arrayOfUsersData = [UserData]()
     var nullArr = [UserData]()
     
