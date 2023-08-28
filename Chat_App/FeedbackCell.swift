@@ -15,7 +15,7 @@ class FeedbackCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        textViewForFeedBack.layer.cornerRadius = 20
+        textViewForFeedBack.layer.cornerRadius = 19
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
