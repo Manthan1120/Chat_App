@@ -47,6 +47,8 @@ class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDeleg
         labelForUserFriend.text! = userName
         imageViewForUserFriend.sd_setImage(with: URL(string: imageUrl))
         print(userName)
+        fir = Firestore.firestore()
+        ref = Database.database().reference()
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
@@ -54,14 +56,9 @@ class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDeleg
         
         messageArray.append(Message(sender: selfSender, messageId: "1", sentDate: Date(), kind: .text("Hii World")))
         
-        print(messageArray)
+        getConversation()
         
     }
-    
-//    func getConversation() {
-//        fir.collection("Conversation").document("\(userUid)").setData("":"")
-//    }
-    
     
     func currentSender() -> MessageKit.SenderType {
         return selfSender
@@ -81,10 +78,22 @@ extension MessagePage : InputBarAccessoryViewDelegate {
     
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         if text.isEmpty {
-            
+            print("Null")
         }
         else {
             print(text)
+            ref.child("Conversation").child(userUid) .childByAutoId().setValue(["Text":text,"Time":Date().formatted()])
         }
     }
+    
+    func getConversation() {
+        ref.child("Conversation").observe(.value) { (snapShot) in
+            if let directory = snapShot.value as? [String:Any] {
+                
+            }
+        }
+    }
+    
+    
 }
+ 
