@@ -1,17 +1,21 @@
 //
-//  feedBackTableViewCell.swift
+//  FeedbackCell.swift
 //  Chat_App
 //
-//  Created by r86 on 28/08/23.
+//  Created by r85 on 28/08/23.
 //
 
 import UIKit
 
-class feedBackTableViewCell: UITableViewCell {
+class FeedbackCell: UITableViewCell {
 
+    @IBOutlet weak var textViewForFeedBack: UITextView!
+    @IBOutlet weak var imgUser: UIImageView!
+    @IBOutlet weak var userName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        textViewForFeedBack.layer.cornerRadius = 20
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

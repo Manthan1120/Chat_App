@@ -3,19 +3,16 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
-
+import SDWebImage
 
 class FeedBackPage: UIViewController {
 
-    @IBOutlet weak var FirstStar: UIImageView!
-    @IBOutlet weak var secondStar: UIImageView!
-    @IBOutlet weak var thirdStar: UIImageView!
-    @IBOutlet weak var fourthStar: UIImageView!
-    @IBOutlet weak var fifthStar: UIImageView!
     @IBOutlet weak var textviewForFeedBack: UITextView!
     @IBOutlet weak var feedbackSendButton: UIButton!
     
     var fir : Firestore!
+    var colRef : CollectionReference!
+    var userUid = Auth.auth().currentUser?.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +20,7 @@ class FeedBackPage: UIViewController {
         fir = Firestore.firestore()
 
     }
+    
     func allUi(){
         
         textviewForFeedBack.layer.borderWidth = 1.5
@@ -47,7 +45,6 @@ class FeedBackPage: UIViewController {
     @IBAction func showAllFeedBack(_ sender: Any) {
         let navigation = storyboard?.instantiateViewController(identifier: "showFeedBackPage") as! showFeedBackPage
         navigationController?.pushViewController(navigation, animated: true)
-        
     }
     
     @IBAction func backAction(_ sender: Any) {
@@ -55,8 +52,23 @@ class FeedBackPage: UIViewController {
     }
     
     func saveData() {
-        let directory = ["Feedback":textviewForFeedBack.text] as! [String : Any]
-        self.fir.collection("Feedback").document(Auth.auth().currentUser!.uid).setData(directory)
+        
+       let userUid = Auth.auth().currentUser!.uid
+        
+        colRef = Firestore.firestore().collection("UserProfile")
+        colRef.addSnapshotListener() { [self] (docuSnapshot, error) in
+            if let error = error {
+                print("something went wrong:\(error)")
+            }else{
+                for document in docuSnapshot!.documents {
+                    if document.documentID == userUid {
+                        let directory = ["Feedback":textviewForFeedBack.text! ,"UserUID":userUid,"Username": document["Username"],"ProfileImageUrl":document["ProfileImageUrl"] ]as [String : Any]
+                        self.fir.collection("Feedback").document().setData(directory)
+                       
+                    }
+                }
+            }
+        }
     }
     
 

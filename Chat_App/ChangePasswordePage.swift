@@ -46,6 +46,10 @@ class ChangePasswordePage: UIViewController {
         DoneButton.layer.masksToBounds = false
     }
     
-
+    @IBAction func back(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
 
 }
