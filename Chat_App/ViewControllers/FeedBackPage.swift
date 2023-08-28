@@ -1,9 +1,4 @@
-//
-//  FeedBackPage.swift
-//  Chat_App
-//
-//  Created by r85 on 19/08/23.
-//
+
 
 import UIKit
 import FirebaseFirestore
