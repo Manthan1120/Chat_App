@@ -43,7 +43,6 @@
 		DA52F47C2A83573500B10293 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = DA52F47B2A83573500B10293 /* FirebaseStorageCombine-Community */; };
 		DA9F825B2A9C65AA00EF54C7 /* haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F82582A9C65AA00EF54C7 /* haptic.swift */; };
 		DA9F825C2A9C65AA00EF54C7 /* NotificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F82592A9C65AA00EF54C7 /* NotificationPage.swift */; };
-		DA9F825D2A9C65AA00EF54C7 /* showFeedBackPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F825A2A9C65AA00EF54C7 /* showFeedBackPage.swift */; };
 		DA9F825F2A9C694F00EF54C7 /* FeedbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F825E2A9C694F00EF54C7 /* FeedbackCell.swift */; };
 		DAA491C12A6A554000354005 /* E-mailVerifyForOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */; };
 		DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBF0A22A691D16004B7E10 /* ForgotPage.swift */; };
@@ -73,6 +72,7 @@
 		DEA045172A6F93A20012976E /* MessagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA045162A6F93A20012976E /* MessagePage.swift */; };
 		DEA0451F2A6F94980012976E /* CellForUserFriendDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA0451D2A6F94980012976E /* CellForUserFriendDetail.swift */; };
 		DEA045202A6F94980012976E /* CellForUserFriendDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA0451E2A6F94980012976E /* CellForUserFriendDetail.xib */; };
+		DEC37B062A9CBEC500A4D481 /* showFeedBackPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC37B052A9CBEC500A4D481 /* showFeedBackPage.swift */; };
 		DED96FF92A84A50A00A0CA33 /* Containt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED96FF82A84A50A00A0CA33 /* Containt.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +105,6 @@
 		DA4463FA2A932A620063C388 /* FeedBackPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackPage.swift; sourceTree = "<group>"; };
 		DA9F82582A9C65AA00EF54C7 /* haptic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = haptic.swift; path = ../../../../Downloads/haptic.swift; sourceTree = "<group>"; };
 		DA9F82592A9C65AA00EF54C7 /* NotificationPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationPage.swift; path = ../../../../Downloads/NotificationPage.swift; sourceTree = "<group>"; };
-		DA9F825A2A9C65AA00EF54C7 /* showFeedBackPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = showFeedBackPage.swift; path = ../../../../Downloads/showFeedBackPage.swift; sourceTree = "<group>"; };
 		DA9F825E2A9C694F00EF54C7 /* FeedbackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackCell.swift; sourceTree = "<group>"; };
 		DAA199802A820CBF0032EF40 /* Chat_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chat_App.entitlements; sourceTree = "<group>"; };
 		DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "E-mailVerifyForOtp.swift"; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 		DEA045162A6F93A20012976E /* MessagePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePage.swift; sourceTree = "<group>"; };
 		DEA0451D2A6F94980012976E /* CellForUserFriendDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForUserFriendDetail.swift; sourceTree = "<group>"; };
 		DEA0451E2A6F94980012976E /* CellForUserFriendDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellForUserFriendDetail.xib; sourceTree = "<group>"; };
+		DEC37B052A9CBEC500A4D481 /* showFeedBackPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = showFeedBackPage.swift; path = ../../../../Downloads/showFeedBackPage.swift; sourceTree = "<group>"; };
 		DED96FF82A84A50A00A0CA33 /* Containt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Containt.swift; sourceTree = "<group>"; };
 		E425BD41DD8F55D2D9538BD8 /* Pods-Chat_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Chat_AppTests/Pods-Chat_AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		E5E2185E734D703265D0908B /* Pods-Chat_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Chat_AppTests/Pods-Chat_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +228,7 @@
 		DE4D4BE82A679CB500539859 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DEC37B052A9CBEC500A4D481 /* showFeedBackPage.swift */,
 				DA2D6C962A909B1F0015899F /* FeedBackPage.swift */,
 				DEA045162A6F93A20012976E /* MessagePage.swift */,
 				DE4D4BE62A679BAF00539859 /* SettingPage.swift */,
@@ -235,7 +236,6 @@
 				DE4D4BE22A679AB300539859 /* ProfilePage.swift */,
 				DA9F82582A9C65AA00EF54C7 /* haptic.swift */,
 				DA9F82592A9C65AA00EF54C7 /* NotificationPage.swift */,
-				DA9F825A2A9C65AA00EF54C7 /* showFeedBackPage.swift */,
 				DA14F4A62A6B912500B2C5D2 /* PasswordChange.swift */,
 				DE4D4BE42A679B6F00539859 /* MainPage.swift */,
 				DADBF0A22A691D16004B7E10 /* ForgotPage.swift */,
@@ -616,8 +616,8 @@
 			files = (
 				DE5112C82A66719B00014723 /* SignUpPage.swift in Sources */,
 				DA9F825C2A9C65AA00EF54C7 /* NotificationPage.swift in Sources */,
-				DA9F825D2A9C65AA00EF54C7 /* showFeedBackPage.swift in Sources */,
 				DEA0451F2A6F94980012976E /* CellForUserFriendDetail.swift in Sources */,
+				DEC37B062A9CBEC500A4D481 /* showFeedBackPage.swift in Sources */,
 				DE4D4BE72A679BAF00539859 /* SettingPage.swift in Sources */,
 				DA4224212A7E5061008E0D2F /* ChangePasswordePage.swift in Sources */,
 				DE5112F72A66737300014723 /* SignInPage.swift in Sources */,

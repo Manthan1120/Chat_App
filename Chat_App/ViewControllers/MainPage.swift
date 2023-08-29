@@ -35,7 +35,7 @@ class MainPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
    
-        getFirData()
+//        getFirData()
     }
     
     func getFirData(){
@@ -48,7 +48,11 @@ class MainPage: UIViewController {
             else{
                 arrayOfUsersData = docuSnapshot!.documents.compactMap { document in
                     if document.documentID != userUid! {
+                        
+                        print("..")
+                        
                         return UserData(Username: document["Username"] as! String, ProfileImageUrl: document["ProfileImageUrl"] as! String, Email: document["Email"] as! String)
+                        
                     }
                     print(document.documentID)
                     return nil
@@ -72,14 +76,27 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
         cell.ProfileImage.layer.cornerRadius = 27
         cell.UserName.text! = nullArr[indexPath.row].Username
         cell.ProfileImage.sd_setImage(with: URL(string: nullArr[indexPath.row].ProfileImageUrl))
+        
+        let tapGesture = UITapGestureRecognizer()
+        tapGesture.addTarget(self,action:
+                                #selector(MainPage.navigate(tapGesture:sender:)))
+        cell.ProfileImage.isUserInteractionEnabled = true
+        cell.ProfileImage.addGestureRecognizer(tapGesture)
+        
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let navigation = storyboard?.instantiateViewController(withIdentifier: "MessagePage") as! MessagePage
+    @objc func navigate(tapGesture:UITapGestureRecognizer,sender:UIButton) {
+        let indexPath1 = IndexPath(row:sender.tag, section: 0)
+        null = nullArr[indexPath1.row].Email
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "inspactPage") as! inspactPage
         navigationController?.pushViewController(navigation, animated: true)
-        navigation.userName = nullArr[indexPath.row].Username
-        navigation.imageUrl = nullArr[indexPath.row].ProfileImageUrl
+       
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Hii")
     }
     
 }
