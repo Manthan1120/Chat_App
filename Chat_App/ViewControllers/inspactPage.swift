@@ -13,8 +13,11 @@ import FirebaseDatabase
 import FirebaseCore
 import SDWebImage
 
+var null = ""
+
 class inspactPage: UIViewController {
     
+    @IBOutlet weak var messgaButton: UIButton!
     @IBOutlet weak var uiViewForInspectPage: UIView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var img: UIImageView!
@@ -36,6 +39,7 @@ class inspactPage: UIViewController {
         fir = Firestore.firestore()
         AllUi()
         getallData()
+        userEmail = null
     }
     
     
@@ -67,6 +71,9 @@ class inspactPage: UIViewController {
         img.layer.cornerRadius = 84
         img.layer.masksToBounds = true
         
+        messgaButton.layer.cornerRadius = 11
+        messgaButton.layer.masksToBounds = true
+        
         uiViewForInspectPage.layer.cornerRadius = 30
         uiViewForInspectPage.layer.shadowColor = UIColor.systemGray3.cgColor
         uiViewForInspectPage.layer.shadowRadius = 8.0
@@ -76,8 +83,13 @@ class inspactPage: UIViewController {
      
     }
     
-    @IBAction func backButtonAction(_ sender: Any) {
+    @IBAction func messageButtonAction(_ sender: Any) {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "MessagePage") as! MessagePage
+        navigationController?.pushViewController(navigation, animated: true)
+    }
+    
+    @IBAction func backButtonAction(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "MainPage") as! MainPage
         navigationController?.popViewController(animated: true)
     }
     

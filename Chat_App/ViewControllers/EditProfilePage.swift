@@ -48,6 +48,7 @@ class EditProfilePage: UIViewController {
                                 #selector(EditProfilePage.openGallary(tapGesture:)))
         imageOutlet.isUserInteractionEnabled = true
         imageOutlet.addGestureRecognizer(tapGesture)
+        
         getallData()
         
         usertextField.layer.cornerRadius = 12
