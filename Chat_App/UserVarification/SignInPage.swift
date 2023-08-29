@@ -34,7 +34,7 @@ class SignInPage: UIViewController {
         
         set()
         fir = Firestore.firestore()
-        
+        facebook()
     
         print("__----------__")
        print(id)
@@ -157,6 +157,21 @@ class SignInPage: UIViewController {
     func navigation() {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "TabBar") as! TabBar
         navigationController?.pushViewController(navigation, animated: true)
+    }
+    func facebook(){
+        let Facebook = UIButton(type: .system)
+        Facebook.frame = CGRect(x: 140, y: 595, width: 111, height: 45)
+        Facebook.layer.cornerRadius = 9
+        Facebook.layer.backgroundColor = UIColor.white.cgColor
+       // Facebook.setImage(UIImage(named: "facebook"))
+
+        Facebook.setTitle("", for: .normal)
+        view.addSubview(Facebook)
+        Facebook.addTarget(self, action: #selector(handelFbButton), for: .touchUpInside)
+        
+    }
+    @objc func handelFbButton() {
+        
     }
     
     func showAlert(title:String) {

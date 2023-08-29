@@ -12,10 +12,11 @@ class FeedbackCell: UITableViewCell {
     @IBOutlet weak var textViewForFeedBack: UITextView!
     @IBOutlet weak var imgUser: UIImageView!
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var time: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        textViewForFeedBack.layer.cornerRadius = 19
+    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
