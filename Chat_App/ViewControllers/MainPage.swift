@@ -35,7 +35,7 @@ class MainPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
    
-//        getFirData()
+        getFirData()
     }
     
     func getFirData(){
