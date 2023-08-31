@@ -102,10 +102,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dek-ZO-H1x">
-                                <rect key="frame" x="235" y="770" width="77" height="32"/>
+                                <rect key="frame" x="235" y="770.66666666666663" width="77" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="ePF-Wc-Hj5"/>
-                                    <constraint firstAttribute="width" constant="77" id="fxz-pB-uiJ"/>
+                                    <constraint firstAttribute="height" constant="32" id="d12-Jj-WfX"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign up">
@@ -163,6 +162,7 @@
                             <constraint firstItem="hiV-X6-W3e" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="20" id="6zN-6Z-Fnf"/>
                             <constraint firstItem="izT-Sh-wvz" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="20" id="CpF-uq-W1K"/>
                             <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="qI4-MQ-cXH" secondAttribute="trailing" constant="20" id="D4U-EQ-rfy"/>
+                            <constraint firstItem="Dek-ZO-H1x" firstAttribute="centerY" secondItem="GqS-D9-DV4" secondAttribute="centerY" id="DZP-Yy-mXk"/>
                             <constraint firstItem="G8y-1p-cQN" firstAttribute="top" secondItem="k2w-lR-nF9" secondAttribute="bottom" constant="89" id="G9E-25-4iP"/>
                             <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="G8y-1p-cQN" secondAttribute="trailing" constant="20" id="GgA-h5-4lB"/>
                             <constraint firstItem="GqS-D9-DV4" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="80" id="H5s-0t-smY"/>
@@ -177,18 +177,17 @@
                             <constraint firstItem="9HT-pN-aHt" firstAttribute="top" secondItem="izT-Sh-wvz" secondAttribute="bottom" constant="20" id="Xzo-wG-Ses"/>
                             <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="yJO-0R-NxN" secondAttribute="trailing" constant="9" id="Ylf-HS-9Gv"/>
                             <constraint firstItem="yJO-0R-NxN" firstAttribute="top" secondItem="hiV-X6-W3e" secondAttribute="bottom" constant="8" symbolic="YES" id="a7V-VT-fOc"/>
+                            <constraint firstItem="Dek-ZO-H1x" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="235" id="aSH-bL-cVu"/>
                             <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="izT-Sh-wvz" secondAttribute="trailing" constant="20" id="aVJ-Y5-gk1"/>
                             <constraint firstItem="k2w-lR-nF9" firstAttribute="top" secondItem="U9P-Bv-ItY" secondAttribute="top" id="bV9-rg-ztO"/>
-                            <constraint firstItem="Dek-ZO-H1x" firstAttribute="leading" secondItem="GqS-D9-DV4" secondAttribute="trailing" constant="-10" id="c40-nr-lKc"/>
-                            <constraint firstItem="Dek-ZO-H1x" firstAttribute="top" secondItem="mgb-nI-Bqx" secondAttribute="bottom" constant="131" id="eiv-yy-CmM"/>
                             <constraint firstItem="FPg-ah-Usq" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="20" id="f2y-ZE-CFP"/>
                             <constraint firstItem="mgb-nI-Bqx" firstAttribute="leading" secondItem="SQj-Do-rC9" secondAttribute="trailing" constant="10" id="fL0-e6-42F"/>
                             <constraint firstItem="izT-Sh-wvz" firstAttribute="top" secondItem="FPg-ah-Usq" secondAttribute="bottom" constant="85" id="fza-gm-9BB"/>
                             <constraint firstItem="G8y-1p-cQN" firstAttribute="top" secondItem="U9P-Bv-ItY" secondAttribute="top" constant="130" id="jIy-z4-iHR"/>
                             <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="hiV-X6-W3e" secondAttribute="trailing" constant="20" id="mYG-Kj-VUj"/>
-                            <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="Dek-ZO-H1x" secondAttribute="trailing" constant="81" id="n6v-YT-Uwm"/>
                             <constraint firstItem="SQj-Do-rC9" firstAttribute="top" secondItem="izT-Sh-wvz" secondAttribute="bottom" constant="20" id="uB7-xH-RMb"/>
                             <constraint firstItem="qI4-MQ-cXH" firstAttribute="top" secondItem="G8y-1p-cQN" secondAttribute="bottom" constant="15" id="uSh-lu-2kn"/>
+                            <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="Dek-ZO-H1x" secondAttribute="trailing" constant="81" id="ugr-yX-tQY"/>
                             <constraint firstItem="G8y-1p-cQN" firstAttribute="leading" secondItem="U9P-Bv-ItY" secondAttribute="leading" constant="20" id="x3c-Fu-ors"/>
                             <constraint firstItem="U9P-Bv-ItY" firstAttribute="trailing" secondItem="9HT-pN-aHt" secondAttribute="trailing" constant="20" id="xgh-tK-avo"/>
                         </constraints>
