@@ -1,6 +1,8 @@
 
 
 import UIKit
+import FirebaseAuth
+import FBSDKCoreKit
 
 class SettingPage: UIViewController {
 
@@ -107,8 +109,15 @@ class SettingPage: UIViewController {
     
     
     @IBAction func signOutButtonAction(_ sender: Any) {
-        let navigation = storyboard?.instantiateViewController(withIdentifier: "SignInPage") as! SignInPage
-        navigationController?.popViewController(animated: true)
+        do {
+                try Auth.auth().signOut()
+            let navigation = storyboard?.instantiateViewController(withIdentifier: "SignInPage") as! SignInPage
+            navigationController?.popViewController(animated: true)
+            present(navigation, animated: true)
+            } catch let error as NSError {
+                print("Error signing out: \(error.localizedDescription)")
+            }
+       
     }
     
     @IBAction func changePassword(_ sender: Any) {

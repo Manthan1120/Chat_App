@@ -10,19 +10,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var authListener: AuthStateDidChangeListenerHandle?
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        guard let url = URLContexts.first?.url else {
-            return
-        }
+//        guard let url = URLContexts.first?.url else {
+//            return
+//        }
 
-        ApplicationDelegate.shared.application(
-            UIApplication.shared,
-            open: url,
-            sourceApplication: nil,
-            annotation: [UIApplication.OpenURLOptionsKey.annotation]
-        )
+//        ApplicationDelegate.shared.application(
+//            UIApplication.shared,
+//            open: url,
+//            sourceApplication: nil,
+//            annotation: [UIApplication.OpenURLOptionsKey.annotation]
+//        )
+       
     }
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
+        //guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        guard let _ = (scene as? UIWindowScene) else {return}
+        if Auth.auth().currentUser != nil{
+            print(",,,,",Auth.auth().currentUser?.email as Any)
+            let a = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBar")
+            window?.rootViewController = a
+        }
+        else{
+            let a = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInPage")
+            window?.rootViewController = a
+        }
            
     }
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -55,21 +67,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-    func autoLogin() {
-        authListener = Auth.auth().addStateDidChangeListener({ auth, user in
-            Auth.auth().removeStateDidChangeListener(self.authListener!)
-            print(user as Any)
-            if user != nil {
-                DispatchQueue.main.async {
-                    self.gotoApp()
-                }
-            }
-        })
-    }
-    private func gotoApp() {
-        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBar") as! TabBar
-        self.window?.rootViewController = mainView
-    }
+   
+   
     
     
 }

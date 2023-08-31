@@ -30,8 +30,7 @@ struct Message : MessageType{
 
 class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDelegate,MessagesDisplayDelegate {
     
-    @IBOutlet weak var labelForUserFriend: UILabel!
-    @IBOutlet weak var imageViewForUserFriend: UIImageView!
+   
     
     var ref : DatabaseReference!
     var colRef : CollectionReference!
@@ -45,11 +44,8 @@ class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        labelForUserFriend.text! = userName
-        imageViewForUserFriend.sd_setImage(with: URL(string: imageUrl))
-        print(userName)
-        
+      
+      
         fir = Firestore.firestore()
         ref = Database.database().reference()
         

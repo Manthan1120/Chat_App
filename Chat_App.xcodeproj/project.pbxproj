@@ -228,6 +228,8 @@
 		DE4D4BE82A679CB500539859 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DED96FF82A84A50A00A0CA33 /* Containt.swift */,
+				DA4224202A7E5061008E0D2F /* ChangePasswordePage.swift */,
 				DEC37B052A9CBEC500A4D481 /* showFeedBackPage.swift */,
 				DA2D6C962A909B1F0015899F /* FeedBackPage.swift */,
 				DEA045162A6F93A20012976E /* MessagePage.swift */,
@@ -289,12 +291,8 @@
 				DE4D4BE92A679CD200539859 /* UserVarification */,
 				DEBBC6E52A690CBD00531235 /* CellFile */,
 				DE4D4BE82A679CB500539859 /* ViewControllers */,
-				DE5112C92A66719B00014723 /* Main.storyboard */,
-				DA9F825E2A9C694F00EF54C7 /* FeedbackCell.swift */,
-				DE1C0B392A81FB97009880F4 /* SearchTableViewCell.swift */,
-				DED96FF82A84A50A00A0CA33 /* Containt.swift */,
-				DA4224202A7E5061008E0D2F /* ChangePasswordePage.swift */,
 				DE4D4BDE2A6799FE00539859 /* TabBar.swift */,
+				DE5112C92A66719B00014723 /* Main.storyboard */,
 				DE5112CF2A66719C00014723 /* Assets.xcassets */,
 				DE5112D12A66719C00014723 /* LaunchScreen.storyboard */,
 				DE5112D42A66719C00014723 /* Info.plist */,
@@ -331,6 +329,8 @@
 		DEBBC6E52A690CBD00531235 /* CellFile */ = {
 			isa = PBXGroup;
 			children = (
+				DE1C0B392A81FB97009880F4 /* SearchTableViewCell.swift */,
+				DA9F825E2A9C694F00EF54C7 /* FeedbackCell.swift */,
 				DEA0451D2A6F94980012976E /* CellForUserFriendDetail.swift */,
 				DEA0451E2A6F94980012976E /* CellForUserFriendDetail.xib */,
 			);
