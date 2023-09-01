@@ -94,6 +94,7 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "MessagePage") as! MessagePage
         navigationController?.pushViewController(navigation, animated: true)
+        navigation.receiverEmail = nullArr[indexPath.row].Email
     }
     
 }

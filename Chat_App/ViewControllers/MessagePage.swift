@@ -37,15 +37,19 @@ class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDeleg
     var messageArray = [MessageType]()
     var userName = ""
     var imageUrl = ""
+    var receiverEmail = ""
+    var senderImage = ""
+    var receiverImage = ""
     
     private let selfSender = Sender(senderId: "1", displayName: "Manthan", photoUrl: "")
     private let senderFriend = Sender(senderId: "2", displayName: "Kirtan", photoUrl: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         messageArray.append(Message(sender: senderFriend, messageId: "2", sentDate: Date(), kind: .text("How are you ?")))
         
+        print(null)
         fir = Firestore.firestore()
         ref = Database.database().reference()
         
@@ -74,40 +78,44 @@ class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDeleg
 extension MessagePage : InputBarAccessoryViewDelegate {
     
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+        
         if text.isEmpty {
             
         }
         else {
-            print(text)
+            
+            ref.child("Conversation").child(userUid).childByAutoId().setValue(["Text":text,"Time":Date().formatted(),"Sender":userUid,"Receiver":receiverEmail])
             messageArray.append(Message(sender: selfSender, messageId: "1", sentDate: Date(), kind: .text(text)))
-            ref.child("Conversation").child(userUid).childByAutoId().setValue(["Text":text,"Time":Date().formatted(),"Sender":userUid])
+            messagesCollectionView.reloadData()
+            
+            inputBar.inputTextView.text = nil
         }
+        
     }
     
     func getConversation() {
+        
         var conversation = [String:Any]()
         
-        for dictionary in conversation {
-            if let text = conversation["Text"] as? String {
-                print("Text: \(text)")
-            }
-            print(dictionary)
-        }
-       
-        
-        ref.child("Conversation").child(userUid).observe(.value, with: { (snapShot) in
+        ref.child("Conversation").child(userUid).observeSingleEvent(of:.value, with: { [self] (snapShot) in
             if let value = snapShot.children.allObjects as? [DataSnapshot] {
                 for directory in value {
                     conversation = directory.value! as! [String :Any]
                     
+                    if conversation["Receiver"] as? String == receiverEmail{
+                        if let text = conversation["Text"] as? String {
+                            print(text)
+                            messageArray.append(Message(sender: selfSender, messageId: "1", sentDate: Date(), kind: .text(text)))
+                            messagesCollectionView.reloadData()
+                        }
+                    }
+                    
                 }
-              
+                
             }
             
-        }) { (error) in
-            
-        }
-    
+        })
+        
     }
     
 }

@@ -113,7 +113,7 @@ class SettingPage: UIViewController {
                 try Auth.auth().signOut()
             let navigation = storyboard?.instantiateViewController(withIdentifier: "SignInPage") as! SignInPage
             navigationController?.popViewController(animated: true)
-            present(navigation, animated: true)
+            
             } catch let error as NSError {
                 print("Error signing out: \(error.localizedDescription)")
             }

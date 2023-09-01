@@ -11,7 +11,7 @@
         <!--Sign In Page-->
         <scene sceneID="pKB-wL-hob">
             <objects>
-                <viewController storyboardIdentifier="SignInPage" modalPresentationStyle="fullScreen" id="efq-uq-7DD" customClass="SignInPage" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInPage" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="efq-uq-7DD" customClass="SignInPage" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0X5-M6-Oqz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1687,6 +1687,7 @@
                                 <rect key="frame" x="16" y="235" width="360" height="228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your review will be poste in thi app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN6-e6-a9R">
@@ -2364,7 +2365,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMl-8I-4i6">
                                 <rect key="frame" x="16" y="143" width="361" height="675"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">1. Introduction
+                                <string key="text">1. Introduction
 
 Welcome to Chatbuddy, a service provided by Load One Telecomms, Inc. Load One Telecomms, Inc. (“us”, “we”, or “our”) operates https://www.chatbuddy.com.ph (hereinafter referred to as “Service”). Our Privacy Policy governs your visit to http://www.chatbuddy.com.ph, and explains how we collect, safeguard and disclose information that results from your use of our Service.
 
@@ -2561,7 +2562,7 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 18. Contact Us
 
 
-If you have any questions about this Privacy Policy, please contact us by visiting this page on our website: http://www.load1.com.ph/#contact-us</mutableString>
+If you have any questions about this Privacy Policy, please contact us by visiting this page on our website: http://www.load1.com.ph/#contact-us</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
