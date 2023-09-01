@@ -11,7 +11,6 @@
 		BD4E11A70095AE23F5E2DA62 /* Pods_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D39D139395F06682C5A29 /* Pods_Chat_App.framework */; };
 		D193846A51219B79CF16643E /* Pods_Chat_App_Chat_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA69B17E03BEC1D1B18D68D9 /* Pods_Chat_App_Chat_AppUITests.framework */; };
 		DA14F4A72A6B912500B2C5D2 /* PasswordChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA14F4A62A6B912500B2C5D2 /* PasswordChange.swift */; };
-		DA1AB20A2AA0B3E500AFE4FE /* aboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AB2092AA0B3E500AFE4FE /* aboutPage.swift */; };
 		DA2D6C972A909B1F0015899F /* FeedBackPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D6C962A909B1F0015899F /* FeedBackPage.swift */; };
 		DA4224212A7E5061008E0D2F /* ChangePasswordePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4224202A7E5061008E0D2F /* ChangePasswordePage.swift */; };
 		DA4463FB2A932A620063C388 /* FeedBackPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4463FA2A932A620063C388 /* FeedBackPage.swift */; };
@@ -53,6 +52,7 @@
 		DE1A51772A7B9A7200FFF0C5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DE1A51762A7B9A7200FFF0C5 /* SDWebImage */; };
 		DE1C0B3A2A81FB97009880F4 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1C0B392A81FB97009880F4 /* SearchTableViewCell.swift */; };
 		DE2C2EAC2A70E33000D36CF9 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C2EAB2A70E33000D36CF9 /* ModelView.swift */; };
+		DE4CAC302AA19EAE002487E3 /* aboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CAC2F2AA19EAE002487E3 /* aboutPage.swift */; };
 		DE4D4BDF2A6799FE00539859 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BDE2A6799FE00539859 /* TabBar.swift */; };
 		DE4D4BE12A679A4D00539859 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BE02A679A4D00539859 /* SearchPage.swift */; };
 		DE4D4BE32A679AB300539859 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D4BE22A679AB300539859 /* ProfilePage.swift */; };
@@ -101,7 +101,6 @@
 		A36DB06D76FAFA4C85C79141 /* Pods-Chat_App-Chat_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_App-Chat_AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Chat_App-Chat_AppUITests/Pods-Chat_App-Chat_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE6F97CAC5D8643244056CE9 /* Pods-Chat_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_App.release.xcconfig"; path = "Target Support Files/Pods-Chat_App/Pods-Chat_App.release.xcconfig"; sourceTree = "<group>"; };
 		DA14F4A62A6B912500B2C5D2 /* PasswordChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChange.swift; sourceTree = "<group>"; };
-		DA1AB2092AA0B3E500AFE4FE /* aboutPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = aboutPage.swift; path = /Users/r85/Documents/Chat_App/Chat_App/ViewControllers/aboutPage.swift; sourceTree = "<absolute>"; };
 		DA2D6C962A909B1F0015899F /* FeedBackPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackPage.swift; sourceTree = "<group>"; };
 		DA4224202A7E5061008E0D2F /* ChangePasswordePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordePage.swift; sourceTree = "<group>"; };
 		DA4463FA2A932A620063C388 /* FeedBackPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackPage.swift; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		DE088D702A6A5424004B839C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE1C0B392A81FB97009880F4 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		DE2C2EAB2A70E33000D36CF9 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		DE4CAC2F2AA19EAE002487E3 /* aboutPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = aboutPage.swift; path = ../../../../Downloads/aboutPage.swift; sourceTree = "<group>"; };
 		DE4D4BDE2A6799FE00539859 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		DE4D4BE02A679A4D00539859 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
 		DE4D4BE22A679AB300539859 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
@@ -233,9 +233,9 @@
 				DE5112C92A66719B00014723 /* Main.storyboard */,
 				DED96FF82A84A50A00A0CA33 /* Containt.swift */,
 				DA4224202A7E5061008E0D2F /* ChangePasswordePage.swift */,
-				DA1AB2092AA0B3E500AFE4FE /* aboutPage.swift */,
 				DEC37B052A9CBEC500A4D481 /* showFeedBackPage.swift */,
 				DA2D6C962A909B1F0015899F /* FeedBackPage.swift */,
+				DE4CAC2F2AA19EAE002487E3 /* aboutPage.swift */,
 				DEA045162A6F93A20012976E /* MessagePage.swift */,
 				DE4D4BE62A679BAF00539859 /* SettingPage.swift */,
 				DA4463FA2A932A620063C388 /* FeedBackPage.swift */,
@@ -627,7 +627,7 @@
 				DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */,
 				DA9F825B2A9C65AA00EF54C7 /* haptic.swift in Sources */,
 				DE5112CE2A66719B00014723 /* Chat_App.xcdatamodeld in Sources */,
-				DA1AB20A2AA0B3E500AFE4FE /* aboutPage.swift in Sources */,
+				DE4CAC302AA19EAE002487E3 /* aboutPage.swift in Sources */,
 				DE4D4BDF2A6799FE00539859 /* TabBar.swift in Sources */,
 				DE2C2EAC2A70E33000D36CF9 /* ModelView.swift in Sources */,
 				DE5112C42A66719B00014723 /* AppDelegate.swift in Sources */,
