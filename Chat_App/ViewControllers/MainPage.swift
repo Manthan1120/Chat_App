@@ -17,6 +17,7 @@ struct UserData {
     var Username : String
     var ProfileImageUrl : String
     var Email : String
+    var Useruid : String
 }
 
 class MainPage: UIViewController {
@@ -51,7 +52,7 @@ class MainPage: UIViewController {
                         
                         print("..")
                         
-                        return UserData(Username: document["Username"] as! String, ProfileImageUrl: document["ProfileImageUrl"] as! String, Email: document["Email"] as! String)
+                        return UserData(Username: document["Username"] as! String, ProfileImageUrl: document["ProfileImageUrl"] as! String, Email: document["Email"] as! String, Useruid: document.documentID)
                         
                     }
                     print(document.documentID)
@@ -95,6 +96,7 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "MessagePage") as! MessagePage
         navigationController?.pushViewController(navigation, animated: true)
         navigation.receiverEmail = nullArr[indexPath.row].Email
+        navigation.receiverUrl = nullArr[indexPath.row].Useruid
     }
     
 }

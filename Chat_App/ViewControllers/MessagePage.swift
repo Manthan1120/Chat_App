@@ -39,15 +39,15 @@ class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDeleg
     var imageUrl = ""
     var receiverEmail = ""
     var senderImage = ""
-    var receiverImage = ""
+    var receiverUrl = ""
     
-    private let selfSender = Sender(senderId: "1", displayName: "Manthan", photoUrl: "")
-    private let senderFriend = Sender(senderId: "2", displayName: "Kirtan", photoUrl: "")
+    private let sender = Sender(senderId: "1", displayName: "Manthan", photoUrl: "")
+    private let receiver = Sender(senderId: "2", displayName: "Kirtan", photoUrl: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        messageArray.append(Message(sender: senderFriend, messageId: "2", sentDate: Date(), kind: .text("How are you ?")))
+        messageArray.append(Message(sender: sender, messageId: "2", sentDate: Date(), kind: .text("How are you ?")))
         
         print(null)
         fir = Firestore.firestore()
@@ -62,7 +62,7 @@ class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDeleg
     }
     
     func currentSender() -> MessageKit.SenderType {
-        return selfSender
+        return sender
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessageKit.MessagesCollectionView) -> MessageKit.MessageType {
@@ -84,8 +84,11 @@ extension MessagePage : InputBarAccessoryViewDelegate {
         }
         else {
             
-            ref.child("Conversation").child(userUid).childByAutoId().setValue(["Text":text,"Time":Date().formatted(),"Sender":userUid,"Receiver":receiverEmail])
-            messageArray.append(Message(sender: selfSender, messageId: "1", sentDate: Date(), kind: .text(text)))
+            ref.child("Conversation").child(userUid).childByAutoId().setValue(["Text":text,"Time":Date().formatted(),"Sender":userUid,"Receiver":receiverUrl])
+            
+            ref.child("Conversation").child(receiverUrl).childByAutoId().setValue(["Text":text,"Time":Date().formatted(),"Sender":receiverUrl,"Receiver":userUid])
+            
+            messageArray.append(Message(sender: sender, messageId: "1", sentDate: Date(), kind: .text(text)))
             messagesCollectionView.reloadData()
             
             inputBar.inputTextView.text = nil
@@ -101,11 +104,12 @@ extension MessagePage : InputBarAccessoryViewDelegate {
             if let value = snapShot.children.allObjects as? [DataSnapshot] {
                 for directory in value {
                     conversation = directory.value! as! [String :Any]
-                    
-                    if conversation["Receiver"] as? String == receiverEmail{
+                    if conversation["Receiver"] as? String == receiverUrl{
                         if let text = conversation["Text"] as? String {
                             print(text)
-                            messageArray.append(Message(sender: selfSender, messageId: "1", sentDate: Date(), kind: .text(text)))
+                            
+                            messageArray.append(Message(sender: Sender(senderId: "", displayName: "", photoUrl: ""), messageId: "1", sentDate: Date(), kind: .text(text)))
+                            
                             messagesCollectionView.reloadData()
                         }
                     }
