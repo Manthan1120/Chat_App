@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let _ = (scene as? UIWindowScene) else {return}
         if Auth.auth().currentUser != nil{
-            print(",,,,",Auth.auth().currentUser?.email as Any)
+            print(">>>>>>",Auth.auth().currentUser?.email as Any)
             let a = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBar")
             window?.rootViewController = a
         }

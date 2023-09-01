@@ -9,6 +9,7 @@ import UIKit
 
 class CellForUserFriendDetail: UITableViewCell {
 
+    @IBOutlet weak var buttonForTap: UIButton!
     @IBOutlet weak var UserName: UILabel!
     @IBOutlet weak var ProfileImage: UIImageView!
     

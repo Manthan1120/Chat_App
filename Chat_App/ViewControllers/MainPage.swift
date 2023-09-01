@@ -77,17 +77,13 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
         cell.UserName.text! = nullArr[indexPath.row].Username
         cell.ProfileImage.sd_setImage(with: URL(string: nullArr[indexPath.row].ProfileImageUrl))
         
-        let tapGesture = UITapGestureRecognizer()
-        tapGesture.addTarget(self,action:
-                                #selector(MainPage.navigate(tapGesture:sender:)))
-        cell.ProfileImage.isUserInteractionEnabled = true
-        cell.ProfileImage.addGestureRecognizer(tapGesture)
-        
-        
+        cell.buttonForTap.tag = indexPath.row
+        cell.buttonForTap.addTarget(self, action: #selector(MainPage.navigate(sender:)), for: .touchUpInside)
+       
         return cell
     }
     
-    @objc func navigate(tapGesture:UITapGestureRecognizer,sender:UIButton) {
+    @objc func navigate(sender:UIButton) {
         let indexPath1 = IndexPath(row:sender.tag, section: 0)
         null = nullArr[indexPath1.row].Email
         let navigation = storyboard?.instantiateViewController(withIdentifier: "inspactPage") as! inspactPage
@@ -96,7 +92,8 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Hii")
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "MessagePage") as! MessagePage
+        navigationController?.pushViewController(navigation, animated: true)
     }
     
 }

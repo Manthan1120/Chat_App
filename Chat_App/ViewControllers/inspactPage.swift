@@ -88,10 +88,7 @@ class inspactPage: UIViewController {
         navigationController?.pushViewController(navigation, animated: true)
     }
     
-    @IBAction func backButtonAction(_ sender: Any) {
-        let navigation = storyboard?.instantiateViewController(withIdentifier: "MainPage") as! MainPage
-        navigationController?.popViewController(animated: true)
-    }
+ 
     
 }
 
