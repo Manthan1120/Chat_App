@@ -1220,6 +1220,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <color key="baseForegroundColor" systemColor="systemGray2Color"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="darkMode:" destination="IIz-df-o73" eventType="touchUpInside" id="dRh-Ij-17g"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dark-mode" translatesAutoresizingMaskIntoConstraints="NO" id="GT1-bD-2rC">
                                                 <rect key="frame" x="23" y="22" width="24" height="26"/>
@@ -1339,6 +1342,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <color key="baseForegroundColor" systemColor="systemGray2Color"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="legalAction:" destination="IIz-df-o73" eventType="touchUpInside" id="dsE-ZF-S24"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information" translatesAutoresizingMaskIntoConstraints="NO" id="vGx-w3-cP4">
                                                 <rect key="frame" x="21" y="558" width="24" height="27"/>
@@ -1675,12 +1681,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bC6-dr-vmg">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Add FeedBack Hear." translatesAutoresizingMaskIntoConstraints="NO" id="bC6-dr-vmg">
                                 <rect key="frame" x="16" y="235" width="360" height="228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your review will be poste in thi app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN6-e6-a9R">
@@ -2346,6 +2350,261 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcm-it-Q5p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8552" y="-1335"/>
+        </scene>
+        <!--About Page-->
+        <scene sceneID="zuo-Bf-mIp">
+            <objects>
+                <viewController storyboardIdentifier="aboutPage" id="101-au-fUE" customClass="aboutPage" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mz0-Tl-8Oa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMl-8I-4i6">
+                                <rect key="frame" x="16" y="143" width="361" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">1. Introduction
+
+Welcome to Chatbuddy, a service provided by Load One Telecomms, Inc. Load One Telecomms, Inc. (“us”, “we”, or “our”) operates https://www.chatbuddy.com.ph (hereinafter referred to as “Service”). Our Privacy Policy governs your visit to http://www.chatbuddy.com.ph, and explains how we collect, safeguard and disclose information that results from your use of our Service.
+
+
+
+We use your data to provide and improve Service. By using Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.
+
+
+
+Our Terms and Conditions (“Terms”) govern all use of our Service and together with the Privacy Policy constitutes your agreement with us (“agreement”).
+
+
+
+2. Definitions
+
+SERVICE means the https://www.chatbuddy.com.ph website operated by Load One Telecomms, Inc..
+PERSONAL DATA means data about a living individual who can be identified from those data (or from those and other information either in our possession or likely to come into our possession).
+USAGE DATA is data collected automatically either generated by the use of Service or from Service infrastructure itself (for example, the duration of a page visit).
+COOKIES are small files stored on your device (computer or mobile device).
+DATA CONTROLLER means a natural or legal person who (either alone or jointly or in common with other persons) determines the purposes for which and the manner in which any personal data are, or are to be, processed. For the purpose of this Privacy Policy, we are a Data Controller of your data.
+DATA PROCESSORS (OR SERVICE PROVIDERS) means any natural or legal person who processes the data on behalf of the Data Controller. We may use the services of various Service Providers in order to process your data more effectively.
+DATA SUBJECT is any living individual who is the subject of Personal Data.
+THE USER is the individual using our Service. The User corresponds to the Data Subject, who is the subject of Personal Data.
+
+
+3. Information Collection and Use
+
+We collect several different types of information for various purposes to provide and improve our Service to you.
+
+
+
+4. Types of Data Collected
+
+Personal Data
+
+While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (“Personal Data”). Personally identifiable information may include, but is not limited to:
+
+Email address
+First name and last name
+Phone number
+Address, Country, State, Province, ZIP/Postal code, City
+Cookies and Usage Data
+We may use your Personal Data to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link.
+
+
+
+Usage Data
+
+We may also collect information that your browser sends whenever you visit our Service or when you access Service by or through any device (“Usage Data”). This Usage Data may include information such as your computer’s Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data. When you access Service with a device, this Usage Data may include information such as the type of device you use, your device unique ID, the IP address of your device, your device operating system, the type of Internet browser you use, unique device identifiers and other diagnostic data.
+
+
+
+Tracking Cookies Data
+
+We use cookies and similar tracking technologies to track the activity on our Service and we hold certain information.
+
+Cookies are files with a small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Other tracking technologies are also used such as beacons, tags and scripts to collect and track information and to improve and analyze our Service.
+
+
+
+You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.
+
+
+
+Examples of Cookies we use:
+
+Session Cookies: We use Session Cookies to operate our Service.
+Preference Cookies: We use Preference Cookies to remember your preferences and various settings.
+Security Cookies: We use Security Cookies for security purposes.
+Advertising Cookies: Advertising Cookies are used to serve you with advertisements that may be relevant to you and your interests.
+
+
+Other Data
+
+While using our Service, we may also collect the following information: sex, age, date of birth, place of birth, passport details, citizenship, registration at place of residence and actual address, telephone number (work, mobile), details of documents on education, qualification, professional training, employment agreements, non-disclosure agreements, information on bonuses and compensation, information on marital status, family members, social security (or other taxpayer identification) number, office location and other data.
+
+
+
+5. Use of Data
+
+Load One Telecomms, Inc. uses the collected data for various purposes:
+
+to provide and maintain our Service;
+to notify you about changes to our Service;
+to allow you to participate in interactive features of our Service when you choose to do so;
+to provide customer support;
+to gather analysis or valuable information so that we can improve our Service;
+to monitor the usage of our Service;
+to detect, prevent and address technical issues;
+to fulfil any other purpose for which you provide it;
+to carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection;
+to provide you with notices about your account and/or subscription, including expiration and renewal notices, email-instructions, etc.;
+to provide you with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless you have opted not to receive such information;
+in any other way we may describe when you provide the information;
+for any other purpose with your consent.
+
+
+6. Retention of Data
+
+We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
+
+
+
+We will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer time periods.
+
+
+
+7. Transfer of Data
+
+Your information, including Personal Data, may be transferred to – and maintained on – computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction. If you are located outside Philippines and choose to provide information to us, please note that we transfer the data, including Personal Data, to Philippines and process it there. Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.
+
+
+
+Load One Telecomms, Inc. will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless there are adequate controls in place including the security of your data and other personal information.
+
+
+
+8. Disclosure of Data
+
+We may disclose personal information that we collect, or you provide:
+
+Disclosure for Law Enforcement.
+Under certain circumstances, we may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities.
+Business Transaction.
+If we or our subsidiaries are involved in a merger, acquisition or asset sale, your Personal Data may be transferred.
+Other cases. We may disclose your information also:
+to our subsidiaries and affiliates;
+to contractors, service providers, and other third parties we use to support our business;
+to fulfill the purpose for which you provide it;
+for the purpose of including your company’s logo on our website;
+for any other purpose disclosed by us when you provide the information;
+with your consent in any other cases;
+if we believe disclosure is necessary or appropriate to protect the rights, property, or safety of the Company, our customers, or others.
+
+
+9. Security of Data
+
+The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.
+
+
+
+10. Service Providers
+
+We may employ third party companies and individuals to facilitate our Service (“Service Providers”), provide Service on our behalf, perform Service-related services or assist us in analysing how our Service is used. These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.
+
+
+
+11. Analytics
+
+We may use third-party Service Providers to monitor and analyze the use of our Service.
+
+
+
+12. CI/CD tools
+
+We may use third-party Service Providers to automate the development process of our Service.
+
+
+
+13. Behavioral Remarketing
+
+We may use remarketing services to advertise on third party websites to you after you visited our Service. We and our third-party vendors use cookies to inform, optimise and serve ads based on your past visits to our Service.
+
+
+
+14. Payments
+
+We may provide paid products and/or services within Service. In that case, we use third-party services for payment processing (e.g. payment processors). We will not store or collect your payment card details. That information is provided directly to our third-party payment processors whose use of your personal information is governed by their Privacy Policy. These payment processors adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, Mastercard, American Express and Discover. PCI-DSS requirements help ensure the secure handling of payment information.
+
+
+
+15. Links to Other Sites
+
+Our Service may contain links to other sites that are not operated by us. If you click a third party link, you will be directed to that third party’s site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
+
+
+
+16. Children’s Privacy
+
+Our Services are not intended for use by children under the age of 18 (“Child” or “Children”).
+
+
+
+We do not knowingly collect personally identifiable information from Children under 18. If you become aware that a Child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from Children without verification of parental consent, we take steps to remove that information from our servers.
+
+
+
+17. Changes to This Privacy Policy
+
+We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update “effective date” at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
+
+
+
+18. Contact Us
+
+
+If you have any questions about this Privacy Policy, please contact us by visiting this page on our website: http://www.load1.com.ph/#contact-us</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipn-gM-f9K">
+                                <rect key="frame" x="16" y="95" width="353" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fBD-dM-T5z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="textColor" red="0.23390828829999999" green="0.23456878119999999" blue="0.27502818940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJD-rN-tMb">
+                                <rect key="frame" x="0.0" y="37" width="48" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4lu-Ym-jyE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow-left">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="back:" destination="101-au-fUE" eventType="touchUpInside" id="LTb-rS-cti"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fio-g5-NrM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ipn-gM-f9K" firstAttribute="top" secondItem="Fio-g5-NrM" secondAttribute="top" constant="36" id="4yC-nM-tss"/>
+                            <constraint firstItem="ipn-gM-f9K" firstAttribute="top" secondItem="SJD-rN-tMb" secondAttribute="bottom" constant="8" symbolic="YES" id="A3y-rD-aHk"/>
+                            <constraint firstItem="WMl-8I-4i6" firstAttribute="bottom" secondItem="Fio-g5-NrM" secondAttribute="bottom" id="EvU-ty-VRL"/>
+                            <constraint firstItem="Fio-g5-NrM" firstAttribute="trailing" secondItem="ipn-gM-f9K" secondAttribute="trailing" constant="24" id="Fkr-G8-tRu"/>
+                            <constraint firstItem="WMl-8I-4i6" firstAttribute="top" secondItem="ipn-gM-f9K" secondAttribute="bottom" constant="8" id="Ws8-Xx-lx9"/>
+                            <constraint firstItem="ipn-gM-f9K" firstAttribute="leading" secondItem="mz0-Tl-8Oa" secondAttribute="leadingMargin" id="e7Y-uS-u6j"/>
+                            <constraint firstItem="SJD-rN-tMb" firstAttribute="leading" secondItem="mz0-Tl-8Oa" secondAttribute="leading" id="hd3-KC-tOz"/>
+                            <constraint firstItem="ipn-gM-f9K" firstAttribute="leading" secondItem="WMl-8I-4i6" secondAttribute="leading" id="lCy-te-1bX"/>
+                            <constraint firstItem="WMl-8I-4i6" firstAttribute="trailing" secondItem="mz0-Tl-8Oa" secondAttribute="trailingMargin" id="ngL-hR-EsF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VpP-te-Vlp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8551.9083969465646" y="1288.7323943661972"/>
         </scene>
     </scenes>
     <resources>
