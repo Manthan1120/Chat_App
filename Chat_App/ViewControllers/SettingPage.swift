@@ -144,7 +144,15 @@ class SettingPage: UIViewController {
         let navigation = storyboard?.instantiateViewController(identifier: "SignInPage") as! SignInPage
         navigationController?.pushViewController(navigation, animated: true)
     }
+    @IBAction func legalAction(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(identifier: "aboutPage") as! aboutPage
+        navigationController?.pushViewController(navigation, animated: true)
+    }
     
+    @IBAction func darkMode(_ sender: Any) {
+      
+
+    }
 }
 
     
