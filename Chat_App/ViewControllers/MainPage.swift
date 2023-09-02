@@ -96,7 +96,8 @@ extension MainPage: UITableViewDelegate,UITableViewDataSource {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "MessagePage") as! MessagePage
         navigationController?.pushViewController(navigation, animated: true)
         navigation.receiverEmail = nullArr[indexPath.row].Email
-        navigation.receiverUrl = nullArr[indexPath.row].Useruid
+        navigation.receiverUid = nullArr[indexPath.row].Useruid
+        navigation.userName = nullArr[indexPath.row].Username
     }
     
 }
