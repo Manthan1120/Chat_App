@@ -23,6 +23,8 @@ class EditProfilePage: UIViewController {
     @IBOutlet weak var usertextField: UITextField!
     @IBOutlet weak var imageOutlet: UIImageView!
     @IBOutlet weak var birthDateTextField: UITextField!
+    @IBOutlet weak var doneButton: UIButton!
+    
     
     let imagePicker = UIImagePickerController()
     var ref : DatabaseReference!
@@ -37,6 +39,13 @@ class EditProfilePage: UIViewController {
         fir = Firestore.firestore()
     }
     func allUI() {
+        
+        doneButton.layer.cornerRadius = 9
+        doneButton.layer.shadowColor = UIColor.systemGray3.cgColor
+        doneButton.layer.shadowRadius = 4.0
+        doneButton.layer.shadowOpacity = 4.4
+        doneButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        doneButton.layer.masksToBounds = false
         
         imageOutlet.layer.cornerRadius = 45
         imageOutlet.layer.masksToBounds = true

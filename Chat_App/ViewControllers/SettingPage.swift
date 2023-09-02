@@ -3,6 +3,7 @@
 import UIKit
 import FirebaseAuth
 import FBSDKCoreKit
+import iOSDropDown
 
 class SettingPage: UIViewController {
 
@@ -17,6 +18,7 @@ class SettingPage: UIViewController {
     @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var notificationButton: UIButton!
     @IBOutlet weak var countryButton: UIButton!
+    @IBOutlet weak var countryOutlet: DropDown!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,8 @@ class SettingPage: UIViewController {
     }
    
     func set() {
+        
+        countryOutlet.optionArray = ["India","United States","Canada","United Kingdom", "Australia", "Germany","France","Italy", "Spain","Japan", "China","Brazil","Mexico","Argentina", "Russia","South Korea","South Africa", "Nigeria","Egypt","Saudi Arabia", "Turkey","Greece", "Sweden",  "Norway",  "Denmark", "Finland",  "Netherlands", "Belgium","Switzerland", "Austria","Portugal","Ireland","New Zealand", "Singapore", "Malaysia","Thailand", "Vietnam", "Indonesia","Philippines","Chile", "Colombia", "Peru","Venezuela","Poland","Czech","Republic","Hungary","Romania","Ukraine"]
         
         darkModeButton.layer.backgroundColor = UIColor.white.cgColor
         darkModeButton.layer.cornerRadius = 9
@@ -121,7 +125,7 @@ class SettingPage: UIViewController {
     }
     
     @IBAction func changePassword(_ sender: Any) {
-        let navigation = storyboard?.instantiateViewController(identifier: "ChangePasswordePage") as! ChangePasswordePage
+        let navigation = storyboard?.instantiateViewController(identifier: "PhoneNumberVerification") as! PhoneNumberVerification
         navigationController?.pushViewController(navigation, animated: true)
     }
     
