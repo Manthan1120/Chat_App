@@ -58,11 +58,7 @@ class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDeleg
         messageInputBar.delegate = self
         
         getConversation()
-        
-        messageArray.append(Message(sender: Sender(senderId: "1", displayName: "Kirtan", photoUrl: ""), messageId: "1", sentDate: Date(), kind: .text("lolll")))
-        
-        messageArray.append(Message(sender: Sender(senderId: "2", displayName: "Kirtan", photoUrl: ""), messageId: "1", sentDate: Date(), kind: .text("Wowwww")))
-        
+    
     }
     
     func currentSender() -> MessageKit.SenderType {
@@ -84,16 +80,16 @@ extension MessagePage : InputBarAccessoryViewDelegate {
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         
         if text.isEmpty {
-            messagesCollectionView.reloadData()
         }
         else {
             
-            ref.child("Conversation").child(userUid).childByAutoId().setValue(["Text":text,"Time":Date().formatted(),"Sender":userUid,"Receiver":receiverUid])
+            ref.child("Conversation").child(userUid).childByAutoId().setValue(["Text":text,"Time":Date().formatted(),"Receiver":receiverUid])
             
-            ref.child("Conversation").child(receiverUid).childByAutoId().setValue(["Text":text,"Time":Date().formatted(),"Sender":receiverUid,"Receiver":userUid])
+            ref.child("Conversation").child(receiverUid).childByAutoId().setValue(["Text":text,"Time":Date().formatted(),"Sender":userUid])
             
             messageArray.append(Message(sender: sender, messageId: "1", sentDate: Date(), kind: .text(text)))
             
+           
             
             inputBar.inputTextView.text = nil
         }
@@ -109,32 +105,31 @@ extension MessagePage : InputBarAccessoryViewDelegate {
                 for directory in value {
                     conversation = directory.value! as! [String :Any]
                     print(conversation)
-                    
-                    if let text = conversation["Text"] as? String {
-                        print(text)
-                        if let sender = conversation["Sender"] as? String {
-                            print("Sender",sender)
-                            if let receiver = conversation["Receiver"] as? String {
-                                print("Receiver",receiver)
-                                if sender == userUid {
-                                    messageArray.append(Message(sender: Sender(senderId: "1", displayName: "Manthan", photoUrl: ""), messageId: "1", sentDate: Date(), kind: .text(text)))
-                                    print("This if from sender",text)
-                                }
-                                
-                                
+                    if let receiver = conversation["Receiver"] as? String {
+                        print("Receiver",receiver)
+                        if receiver == receiverUid{
+                            print("ReceiverUid",receiverUid)
+                            if let text = conversation["Text"] as? String {
+                                messageArray.append(Message(sender: Sender(senderId: "1", displayName: "Manthan", photoUrl: ""), messageId: "1", sentDate: Date(), kind: .text(text)))
+                                messagesCollectionView.reloadData()
                             }
-                            
                         }
-                        
                     }
-                    
+                    else if let sender = conversation["Sender"] as? String {
+                        print("Sender",sender)
+                        if sender == receiverUid{
+                            print("UserUId",userUid)
+                            if let text = conversation["Text"] as? String {
+                                messageArray.append(Message(sender: Sender(senderId: "2", displayName: "Kirtan", photoUrl: ""), messageId: "2", sentDate: Date(), kind: .text(text)))
+                                messagesCollectionView.reloadData()
+                            }
+                        }
+                      
+                    }
                 }
-                
             }
-            messagesCollectionView.reloadData()
-            
         })
-        
     }
     
 }
+
