@@ -145,8 +145,17 @@ class SettingPage: UIViewController {
     }
     
     @IBAction func SwichAccount(_ sender: Any) {
-        let navigation = storyboard?.instantiateViewController(identifier: "SignInPage") as! SignInPage
-        navigationController?.pushViewController(navigation, animated: true)
+      
+        
+        do {
+                try Auth.auth().signOut()
+            let navigation = storyboard?.instantiateViewController(identifier: "SignInPage") as! SignInPage
+            navigationController?.popViewController(animated: true)
+            
+            } catch let error as NSError {
+                print("Error signing out: \(error.localizedDescription)")
+            }
+       
     }
     @IBAction func legalAction(_ sender: Any) {
         let navigation = storyboard?.instantiateViewController(identifier: "aboutPage") as! aboutPage
