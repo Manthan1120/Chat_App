@@ -4,7 +4,6 @@
 //
 //  Created by r86 on 25/07/23.
 
-
 import UIKit
 import FirebaseFirestore
 import FirebaseStorage
@@ -56,9 +55,8 @@ class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDeleg
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
         messageInputBar.delegate = self
-        
+       
         getConversation()
-    
     }
     
     func currentSender() -> MessageKit.SenderType {
@@ -80,6 +78,7 @@ extension MessagePage : InputBarAccessoryViewDelegate {
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         
         if text.isEmpty {
+            
         }
         else {
             
@@ -89,15 +88,14 @@ extension MessagePage : InputBarAccessoryViewDelegate {
             
             messageArray.append(Message(sender: sender, messageId: "1", sentDate: Date(), kind: .text(text)))
             
-           
-            
             inputBar.inputTextView.text = nil
         }
         messagesCollectionView.reloadData()
+        
     }
     
     func getConversation() {
-        
+            
         var conversation = [String:Any]()
         
         ref.child("Conversation").child(userUid).observeSingleEvent(of:.value, with: { [self] (snapShot) in
@@ -111,7 +109,7 @@ extension MessagePage : InputBarAccessoryViewDelegate {
                             print("ReceiverUid",receiverUid)
                             if let text = conversation["Text"] as? String {
                                 messageArray.append(Message(sender: Sender(senderId: "1", displayName: "Manthan", photoUrl: ""), messageId: "1", sentDate: Date(), kind: .text(text)))
-                                messagesCollectionView.reloadData()
+                               
                             }
                         }
                     }
@@ -121,13 +119,17 @@ extension MessagePage : InputBarAccessoryViewDelegate {
                             print("UserUId",userUid)
                             if let text = conversation["Text"] as? String {
                                 messageArray.append(Message(sender: Sender(senderId: "2", displayName: "Kirtan", photoUrl: ""), messageId: "2", sentDate: Date(), kind: .text(text)))
-                                messagesCollectionView.reloadData()
+                                
                             }
                         }
-                      
                     }
                 }
             }
+            
+            DispatchQueue.main.async {
+                self.messagesCollectionView.reloadDataAndKeepOffset()
+            }
+            
         })
     }
     
