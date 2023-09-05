@@ -158,7 +158,6 @@ class SignInPage: UIViewController {
     func navigation() {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "TabBar") as! TabBar
         navigationController?.pushViewController(navigation, animated: true)
-        present(navigation, animated: true)
     }
 //    func facebook(){
 //        let Facebook = UIButton(type: .system)

@@ -19,6 +19,7 @@ class SettingPage: UIViewController {
     @IBOutlet weak var notificationButton: UIButton!
     @IBOutlet weak var countryButton: UIButton!
     @IBOutlet weak var countryOutlet: DropDown!
+    @IBOutlet weak var languageText: DropDown!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,33 @@ class SettingPage: UIViewController {
     func set() {
         
         countryOutlet.optionArray = ["India","United States","Canada","United Kingdom", "Australia", "Germany","France","Italy", "Spain","Japan", "China","Brazil","Mexico","Argentina", "Russia","South Korea","South Africa", "Nigeria","Egypt","Saudi Arabia", "Turkey","Greece", "Sweden",  "Norway",  "Denmark", "Finland",  "Netherlands", "Belgium","Switzerland", "Austria","Portugal","Ireland","New Zealand", "Singapore", "Malaysia","Thailand", "Vietnam", "Indonesia","Philippines","Chile", "Colombia", "Peru","Venezuela","Poland","Czech","Republic","Hungary","Romania","Ukraine"]
+        
+        languageText.optionArray = [
+            "English",
+            "Spanish",
+            "French",
+            "German",
+            "Chinese",
+            "Japanese",
+            "Russian",
+            "Arabic",
+            "Portuguese",
+            "Italian",
+            "Dutch",
+            "Korean",
+            "Swedish",
+            "Turkish",
+            "Greek",
+            "Hindi",
+            "Thai",
+            "Vietnamese",
+            "Polish",
+            "Danish",
+            "Norwegian",
+            "Finnish",
+            "Hungarian",
+            "Czech"
+        ]
         
         darkModeButton.layer.backgroundColor = UIColor.white.cgColor
         darkModeButton.layer.cornerRadius = 9
@@ -115,8 +143,8 @@ class SettingPage: UIViewController {
     @IBAction func signOutButtonAction(_ sender: Any) {
         do {
                 try Auth.auth().signOut()
-            let navigation = storyboard?.instantiateViewController(withIdentifier: "SignInPage") as! SignInPage
-            navigationController?.popViewController(animated: true)
+//            let navigation = storyboard?.instantiateViewController(withIdentifier: "SignInPage") as! SignInPage
+//            navigationController?.popViewController(animated: true)
             
             } catch let error as NSError {
                 print("Error signing out: \(error.localizedDescription)")
@@ -146,10 +174,11 @@ class SettingPage: UIViewController {
     
     @IBAction func SwichAccount(_ sender: Any) {
       
+//        let navigation = storyboard?.instantiateViewController(identifier: "SignInPage") as! SignInPage
+        //navigationController?.popViewController(animated: true)
         do {
                 try Auth.auth().signOut()
-            let navigation = storyboard?.instantiateViewController(identifier: "SignInPage") as! SignInPage
-            navigationController?.popViewController(animated: true)
+            
             
             } catch let error as NSError {
                 print("Error signing out: \(error.localizedDescription)")
@@ -163,10 +192,11 @@ class SettingPage: UIViewController {
     
     @IBAction func darkMode(_ sender: Any) {
       
-
+        let navigation = storyboard?.instantiateViewController(identifier: "DarkModePage") as! DarkModePage
+        navigationController?.pushViewController(navigation, animated: true)
     }
 }
 
     
-    
+
                                 

@@ -45,6 +45,7 @@
 		DA9F825C2A9C65AA00EF54C7 /* NotificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F82592A9C65AA00EF54C7 /* NotificationPage.swift */; };
 		DA9F825F2A9C694F00EF54C7 /* FeedbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F825E2A9C694F00EF54C7 /* FeedbackCell.swift */; };
 		DAA491C12A6A554000354005 /* E-mailVerifyForOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */; };
+		DAD4A5352AA6FB9A003B6B40 /* DarkModePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4A5342AA6FB99003B6B40 /* DarkModePage.swift */; };
 		DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBF0A22A691D16004B7E10 /* ForgotPage.swift */; };
 		DAF47F9A2A837AC10080BA62 /* inspactPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF47F992A837AC10080BA62 /* inspactPage.swift */; };
 		DAF9DBBA2AA2F38E003F381F /* PhoneNumberVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9DBB92AA2F38E003F381F /* PhoneNumberVerification.swift */; };
@@ -110,6 +111,7 @@
 		DA9F825E2A9C694F00EF54C7 /* FeedbackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackCell.swift; sourceTree = "<group>"; };
 		DAA199802A820CBF0032EF40 /* Chat_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chat_App.entitlements; sourceTree = "<group>"; };
 		DAA491C02A6A554000354005 /* E-mailVerifyForOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "E-mailVerifyForOtp.swift"; sourceTree = "<group>"; };
+		DAD4A5342AA6FB99003B6B40 /* DarkModePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModePage.swift; sourceTree = "<group>"; };
 		DADBF0A22A691D16004B7E10 /* ForgotPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPage.swift; sourceTree = "<group>"; };
 		DAF47F992A837AC10080BA62 /* inspactPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inspactPage.swift; sourceTree = "<group>"; };
 		DAF9DBB92AA2F38E003F381F /* PhoneNumberVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberVerification.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				DE4CAC2F2AA19EAE002487E3 /* aboutPage.swift */,
 				DEA045162A6F93A20012976E /* MessagePage.swift */,
 				DE4D4BE62A679BAF00539859 /* SettingPage.swift */,
+				DAD4A5342AA6FB99003B6B40 /* DarkModePage.swift */,
 				DA4463FA2A932A620063C388 /* FeedBackPage.swift */,
 				DE4D4BE22A679AB300539859 /* ProfilePage.swift */,
 				DA9F82582A9C65AA00EF54C7 /* haptic.swift */,
@@ -625,6 +628,7 @@
 				DEA0451F2A6F94980012976E /* CellForUserFriendDetail.swift in Sources */,
 				DE4D4BE72A679BAF00539859 /* SettingPage.swift in Sources */,
 				DA4224212A7E5061008E0D2F /* ChangePasswordePage.swift in Sources */,
+				DAD4A5352AA6FB9A003B6B40 /* DarkModePage.swift in Sources */,
 				DE5112F72A66737300014723 /* SignInPage.swift in Sources */,
 				DADBF0A32A691D16004B7E10 /* ForgotPage.swift in Sources */,
 				DA9F825B2A9C65AA00EF54C7 /* haptic.swift in Sources */,
