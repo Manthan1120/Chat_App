@@ -122,7 +122,7 @@ extension MessagePage : InputBarAccessoryViewDelegate {
             }
             
             DispatchQueue.main.async {
-                self.messagesCollectionView.reloadDataAndKeepOffset()
+                self.messagesCollectionView.reloadData()
             }
             
         })
