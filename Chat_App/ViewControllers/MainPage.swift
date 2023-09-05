@@ -1,9 +1,4 @@
-//
 
-//  Chat_App
-//
-//  Created by r86 on 19/07/23.
-//
 
 import UIKit
 import FirebaseFirestore
