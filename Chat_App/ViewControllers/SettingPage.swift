@@ -123,7 +123,7 @@ class SettingPage: UIViewController {
             }
        
     }
-    
+     
     @IBAction func changePassword(_ sender: Any) {
         let navigation = storyboard?.instantiateViewController(identifier: "PhoneNumberVerification") as! PhoneNumberVerification
         navigationController?.pushViewController(navigation, animated: true)
@@ -146,7 +146,6 @@ class SettingPage: UIViewController {
     
     @IBAction func SwichAccount(_ sender: Any) {
       
-        
         do {
                 try Auth.auth().signOut()
             let navigation = storyboard?.instantiateViewController(identifier: "SignInPage") as! SignInPage
