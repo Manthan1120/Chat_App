@@ -50,7 +50,13 @@ class MessagePage: MessagesViewController,MessagesDataSource,MessagesLayoutDeleg
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
         messageInputBar.delegate = self
-       
+
+        DispatchQueue.main.async {
+            self.messagesCollectionView.reloadData()
+        }
+        
+        messagesCollectionView.scrollToLastItem()
+        
         getConversation()
     }
     
@@ -80,9 +86,7 @@ extension MessagePage : InputBarAccessoryViewDelegate {
             ref.child("Conversation").child(userUid).childByAutoId().setValue(["Text":text,"Time":Date().formatted(),"Receiver":receiverUid])
             
             ref.child("Conversation").child(receiverUid).childByAutoId().setValue(["Text":text,"Time":Date().formatted(),"Sender":userUid])
-            
-            messageArray.append(Message(sender: sender, messageId: "1", sentDate: Date(), kind: .text(text)))
-            
+        
             inputBar.inputTextView.text = nil
         }
         messagesCollectionView.reloadData()
@@ -94,6 +98,7 @@ extension MessagePage : InputBarAccessoryViewDelegate {
         var conversation = [String:Any]()
         
         ref.child("Conversation").child(userUid).observeSingleEvent(of:.value, with: { [self] (snapShot) in
+            messagesCollectionView.reloadData()
             if let value = snapShot.children.allObjects as? [DataSnapshot] {
                 for directory in value {
                     conversation = directory.value! as! [String :Any]
@@ -119,12 +124,8 @@ extension MessagePage : InputBarAccessoryViewDelegate {
                         }
                     }
                 }
+                
             }
-            
-            DispatchQueue.main.async {
-                self.messagesCollectionView.reloadData()
-            }
-            
         })
     }
     
