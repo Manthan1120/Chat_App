@@ -47,4 +47,9 @@ class E_mailVerifyForOtp: UIViewController {
         navigationController?.pushViewController(navigation, animated: true)
     }
     
+    @IBAction func tryAnotherNumberButton(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "ForgotPage") as! ForgotPage
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

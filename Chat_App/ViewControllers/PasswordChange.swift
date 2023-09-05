@@ -58,4 +58,10 @@ class PasswordChange: UIViewController {
         navigationController?.pushViewController(navigation, animated: true)
     }
     
+    @IBAction func back(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "SignInPage") as! SignInPage
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
 }

@@ -309,7 +309,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooZ-ZE-SdB">
-                                <rect key="frame" x="20" y="59" width="48" height="50"/>
+                                <rect key="frame" x="0.0" y="59" width="48" height="50"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow-left">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -324,7 +324,7 @@
                         <constraints>
                             <constraint firstItem="Daz-JC-LjI" firstAttribute="leading" secondItem="fhe-RU-3em" secondAttribute="leading" constant="20" id="0Xe-gl-HZU"/>
                             <constraint firstItem="0lR-AX-Fle" firstAttribute="top" secondItem="Daz-JC-LjI" secondAttribute="bottom" constant="20" id="40a-gj-RCb"/>
-                            <constraint firstItem="ooZ-ZE-SdB" firstAttribute="leading" secondItem="US7-Fe-aFB" secondAttribute="leading" id="55c-0G-7vm"/>
+                            <constraint firstItem="ooZ-ZE-SdB" firstAttribute="leading" secondItem="US7-Fe-aFB" secondAttribute="leading" constant="-20" id="55c-0G-7vm"/>
                             <constraint firstItem="fhe-RU-3em" firstAttribute="trailing" secondItem="ZFe-Vm-Ua4" secondAttribute="trailing" constant="20" id="85W-0I-SCI"/>
                             <constraint firstItem="ZFe-Vm-Ua4" firstAttribute="top" secondItem="z8M-hz-mu6" secondAttribute="bottom" constant="15" id="8wm-X4-7Le"/>
                             <constraint firstItem="eaw-Bp-emp" firstAttribute="leading" secondItem="fhe-RU-3em" secondAttribute="leading" constant="20" id="AQH-I0-KIV"/>
@@ -370,7 +370,7 @@
         <!--Tab Bar-->
         <scene sceneID="YXz-ys-WmM">
             <objects>
-                <tabBarController restorationIdentifier="TabBar" storyboardIdentifier="TabBar" modalPresentationStyle="fullScreen" id="tFg-XO-pWi" customClass="TabBar" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" modalPresentationStyle="fullScreen" id="tFg-XO-pWi" customClass="TabBar" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="vIl-ch-mz2"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dk7-gS-9WL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -2121,6 +2121,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <color key="baseForegroundColor" systemColor="systemGray2Color"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tryAnotherNumberButton:" destination="eDK-D6-W82" eventType="touchUpInside" id="Ync-v7-sKp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x3c-nW-SyO"/>
@@ -2211,6 +2214,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="DoneButtonAction:" destination="mfD-IG-4fq" eventType="touchUpInside" id="Na2-jr-e4r"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7G-fh-Ccr">
                                 <rect key="frame" x="86" y="127" width="221" height="220"/>
@@ -2231,6 +2237,19 @@
                                     <constraint firstAttribute="trailing" secondItem="jLx-w0-MNe" secondAttribute="trailing" constant="28" id="rE3-92-QwQ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhP-8u-0cZ">
+                                <rect key="frame" x="0.0" y="59" width="48" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hzT-JT-KHa"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow-left">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="back:" destination="mfD-IG-4fq" eventType="touchUpInside" id="IdD-Ug-rFD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pCg-qp-lkZ"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -2241,6 +2260,7 @@
                             <constraint firstItem="c7G-fh-Ccr" firstAttribute="top" secondItem="VEs-qh-N4u" secondAttribute="bottom" constant="18" id="Ae9-mE-HVi"/>
                             <constraint firstItem="VEs-qh-N4u" firstAttribute="leading" secondItem="pCg-qp-lkZ" secondAttribute="leading" constant="97" id="Aph-Wd-jze"/>
                             <constraint firstItem="pCg-qp-lkZ" firstAttribute="trailing" secondItem="VEs-qh-N4u" secondAttribute="trailing" constant="97" id="Cv0-nd-yiR"/>
+                            <constraint firstItem="YhP-8u-0cZ" firstAttribute="leading" secondItem="pCg-qp-lkZ" secondAttribute="leading" id="Fu8-eh-7TP"/>
                             <constraint firstItem="bKd-06-2S2" firstAttribute="leading" secondItem="pCg-qp-lkZ" secondAttribute="leading" constant="60" id="IDu-2R-QLP"/>
                             <constraint firstItem="bKd-06-2S2" firstAttribute="top" secondItem="7ae-LI-Vp1" secondAttribute="bottom" constant="160" id="Kk9-GX-tIe"/>
                             <constraint firstItem="c7G-fh-Ccr" firstAttribute="leading" secondItem="pCg-qp-lkZ" secondAttribute="leading" constant="86" id="Lq1-qn-GJ5"/>
@@ -2248,6 +2268,7 @@
                             <constraint firstItem="Rbe-Pt-Yxb" firstAttribute="top" secondItem="c7G-fh-Ccr" secondAttribute="bottom" constant="20" id="WRI-gG-QkK"/>
                             <constraint firstItem="pCg-qp-lkZ" firstAttribute="trailing" secondItem="7ae-LI-Vp1" secondAttribute="trailing" constant="20" id="Xwk-Ur-Ahr"/>
                             <constraint firstItem="W2t-nG-2QQ" firstAttribute="top" secondItem="Rbe-Pt-Yxb" secondAttribute="bottom" constant="20" id="YeV-NH-Ded"/>
+                            <constraint firstItem="YhP-8u-0cZ" firstAttribute="top" secondItem="VEs-qh-N4u" secondAttribute="top" id="e0H-PY-9X8"/>
                             <constraint firstItem="pCg-qp-lkZ" firstAttribute="trailing" secondItem="Rbe-Pt-Yxb" secondAttribute="trailing" constant="20" id="mzt-OS-rwv"/>
                             <constraint firstItem="pCg-qp-lkZ" firstAttribute="trailing" secondItem="c7G-fh-Ccr" secondAttribute="trailing" constant="86" id="pHU-28-mvp"/>
                             <constraint firstItem="pCg-qp-lkZ" firstAttribute="trailing" secondItem="bKd-06-2S2" secondAttribute="trailing" constant="60" id="q5q-Zd-7wW"/>

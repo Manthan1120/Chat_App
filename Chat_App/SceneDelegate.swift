@@ -25,16 +25,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         //guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        guard let _ = (scene as? UIWindowScene) else {return}
-        if Auth.auth().currentUser != nil{
-            print(">>>>>>",Auth.auth().currentUser?.email as Any)
-            let a = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBar")
-            window?.rootViewController = a
-        }
-        else{
-            let a = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInPage")
-            window?.rootViewController = a
-        }
+//        guard let _ = (scene as? UIWindowScene) else {return}
+//        if Auth.auth().currentUser != nil{
+//            print(">>>>>>",Auth.auth().currentUser?.email as Any)
+//            let a = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBar")
+//            window?.rootViewController = a
+//        }
+//        else{
+//            let a = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInPage")
+//            window?.rootViewController = a
+//        }
            
     }
     func sceneDidDisconnect(_ scene: UIScene) {
