@@ -74,7 +74,7 @@
 		DEA045172A6F93A20012976E /* MessagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA045162A6F93A20012976E /* MessagePage.swift */; };
 		DEA0451F2A6F94980012976E /* CellForUserFriendDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA0451D2A6F94980012976E /* CellForUserFriendDetail.swift */; };
 		DEA045202A6F94980012976E /* CellForUserFriendDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA0451E2A6F94980012976E /* CellForUserFriendDetail.xib */; };
-		DEC37B062A9CBEC500A4D481 /* showFeedBackPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC37B052A9CBEC500A4D481 /* showFeedBackPage.swift */; };
+		DEA190472AA6F2CA00183FEF /* showFeedBackPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA190462AA6F2CA00183FEF /* showFeedBackPage.swift */; };
 		DED96FF92A84A50A00A0CA33 /* Containt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED96FF82A84A50A00A0CA33 /* Containt.swift */; };
 /* End PBXBuildFile section */
 
@@ -141,7 +141,7 @@
 		DEA045162A6F93A20012976E /* MessagePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePage.swift; sourceTree = "<group>"; };
 		DEA0451D2A6F94980012976E /* CellForUserFriendDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForUserFriendDetail.swift; sourceTree = "<group>"; };
 		DEA0451E2A6F94980012976E /* CellForUserFriendDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellForUserFriendDetail.xib; sourceTree = "<group>"; };
-		DEC37B052A9CBEC500A4D481 /* showFeedBackPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = showFeedBackPage.swift; path = ../../../../Downloads/showFeedBackPage.swift; sourceTree = "<group>"; };
+		DEA190462AA6F2CA00183FEF /* showFeedBackPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = showFeedBackPage.swift; path = ../../../../Downloads/showFeedBackPage.swift; sourceTree = "<group>"; };
 		DED96FF82A84A50A00A0CA33 /* Containt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Containt.swift; sourceTree = "<group>"; };
 		E425BD41DD8F55D2D9538BD8 /* Pods-Chat_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Chat_AppTests/Pods-Chat_AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		E5E2185E734D703265D0908B /* Pods-Chat_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Chat_AppTests/Pods-Chat_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 				DE5112C92A66719B00014723 /* Main.storyboard */,
 				DED96FF82A84A50A00A0CA33 /* Containt.swift */,
 				DA4224202A7E5061008E0D2F /* ChangePasswordePage.swift */,
-				DEC37B052A9CBEC500A4D481 /* showFeedBackPage.swift */,
+				DEA190462AA6F2CA00183FEF /* showFeedBackPage.swift */,
 				DA2D6C962A909B1F0015899F /* FeedBackPage.swift */,
 				DE4CAC2F2AA19EAE002487E3 /* aboutPage.swift */,
 				DEA045162A6F93A20012976E /* MessagePage.swift */,
@@ -623,7 +623,6 @@
 				DE5112C82A66719B00014723 /* SignUpPage.swift in Sources */,
 				DA9F825C2A9C65AA00EF54C7 /* NotificationPage.swift in Sources */,
 				DEA0451F2A6F94980012976E /* CellForUserFriendDetail.swift in Sources */,
-				DEC37B062A9CBEC500A4D481 /* showFeedBackPage.swift in Sources */,
 				DE4D4BE72A679BAF00539859 /* SettingPage.swift in Sources */,
 				DA4224212A7E5061008E0D2F /* ChangePasswordePage.swift in Sources */,
 				DE5112F72A66737300014723 /* SignInPage.swift in Sources */,
@@ -645,6 +644,7 @@
 				DE5112C62A66719B00014723 /* SceneDelegate.swift in Sources */,
 				DE4D4BE52A679B6F00539859 /* MainPage.swift in Sources */,
 				DAF47F9A2A837AC10080BA62 /* inspactPage.swift in Sources */,
+				DEA190472AA6F2CA00183FEF /* showFeedBackPage.swift in Sources */,
 				DA4463FB2A932A620063C388 /* FeedBackPage.swift in Sources */,
 				DAF9DBBA2AA2F38E003F381F /* PhoneNumberVerification.swift in Sources */,
 				DED96FF92A84A50A00A0CA33 /* Containt.swift in Sources */,
